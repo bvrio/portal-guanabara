@@ -1,0 +1,78 @@
+.field {
+  width: min(100%, 360px);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.control {
+  position: relative;
+  width: 100%;
+  padding-top: var(--spacing-2);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+
+  padding: var(--spacing-4);
+
+  border: 1px solid var(--color-border-interactive);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-control-bg);
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+
+  transition:
+    background-color var(--duration-normal) var(--easing-standard),
+    border-color var(--duration-normal) var(--easing-standard),
+    box-shadow var(--duration-normal) var(--easing-standard);
+}
+
+.input:hover:not(:disabled) {
+  background: var(--color-control-bg-hover);
+  border-color: var(--color-border-strong);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 3px var(--color-focus-halo);
+}
+
+.input:disabled {
+  background: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--color-feedback-error);
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: var(--spacing-3);
+
+  padding: 0 var(--spacing-1);
+
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.description {
+  margin-top: var(--spacing-2);
+}
+
+.error {
+  color: var(--color-feedback-error);
+}

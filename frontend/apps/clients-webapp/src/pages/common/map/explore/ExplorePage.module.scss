@@ -1,0 +1,90 @@
+.root {
+  flex: 1 0 auto;
+  background: var(--color-bg-canvas);
+
+  /*
+   * The band reaches the top of the map's caption ("Passe o mouse…", v0.9.23):
+   * the strip above the panel, the panel's border and padding, then the
+   * caption's offset in the map.
+   */
+  --map-band-above: var(--spacing-4);
+  --map-caption-top: var(--spacing-8);
+  --map-band-height: calc(var(--map-band-above) + 1px + var(--spacing-5) + var(--map-caption-top));
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The structure band under the header; the panel overlaps it down to the caption's top. */
+.band {
+  height: var(--map-band-height);
+  background: var(--color-structure-bg);
+}
+
+.content {
+  display: grid;
+  gap: var(--spacing-6);
+  max-width: var(--layout-max-width, 1120px);
+  margin: 0 auto;
+  padding: 0 var(--space-page-gutter) var(--spacing-16);
+}
+
+.panel {
+  display: grid;
+  gap: var(--spacing-5);
+  margin-top: calc(var(--map-band-above) - var(--map-band-height));
+  padding: var(--spacing-5);
+  border: 1px solid var(--color-border-subtle, var(--color-nevoa-200));
+  border-radius: var(--radius-xl, 16px);
+  background: var(--color-bg-surface, var(--color-nevoa-0));
+  box-shadow: var(--shadow-md, 0 8px 24px rgb(11 23 26 / 8%));
+}
+
+/* The map at a calmer size (v0.9.10): at most 52rem wide, centred, proportions kept. */
+.panel > * {
+  justify-self: center;
+  width: min(100%, 52rem);
+}
+
+/*
+ * The caption sits across the map's left edge, half on the white panel
+ * (v0.9.13), as far as the room beside the map allows.
+ */
+@media (min-width: 960px) {
+  .panel {
+    --map-caption-left: -2.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .panel {
+    --map-caption-left: -6rem;
+  }
+}
+
+.source {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--color-text-muted, var(--color-text-secondary));
+  font-size: var(--font-size-xs);
+}
+
+.source a {
+  margin-left: var(--spacing-1);
+  color: var(--color-link);
+}
+
+.unknown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--spacing-1);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}

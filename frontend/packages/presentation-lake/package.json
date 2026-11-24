@@ -1,0 +1,46 @@
+{
+  "name": "@portal-guanabara/presentation-lake",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Brand-neutral Vue presentation foundation for the Portal Guanabara monorepo.",
+  "type": "module",
+  "sideEffects": ["**/*.scss", "**/*.vue"],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./styles": "./src/Shared/foundations/styles/index.scss"
+  },
+  "scripts": {
+    "build": "vue-tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "@formatjs/intl": ">=6 <7",
+    "vue": "^3.5.0",
+    "vue-intl": ">=8 <9"
+  },
+  "devDependencies": {
+    "@formatjs/intl": "^6.2.0",
+    "@storybook/vue3-vite": "^10.6.8",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "^24.10.0",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "@vue/compiler-sfc": "^3.5.46",
+    "jsdom": "^31.0.1",
+    "sass": "^1.108.2",
+    "storybook": "^10.6.8",
+    "typescript": "6.0.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1",
+    "vue": "^3.5.46",
+    "vue-intl": "^8.1.7",
+    "vue-tsc": "^3.3.14"
+  }
+}

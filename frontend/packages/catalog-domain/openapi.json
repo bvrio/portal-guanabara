@@ -1,0 +1,2384 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Portal Guanabara API",
+    "version": "0.9.1",
+    "description": "Contract between the Portal Guanabara web app and its backend. Today the Catalog paths are served by the web app's own server routes (Nitro) from the published snapshot; the target is a Spring Boot service in BVRio's core-bvrio over MySQL (docs/architecture/backend.md). Operations marked PROPOSED (x-status: proposed) are not implemented yet. The read schemas are checked against the server's real responses by `src/contracts/openapi.tests.ts`."
+  },
+  "servers": [
+    {
+      "url": "/api",
+      "description": "Same origin (CloudFront routes /api/* to the backend)."
+    }
+  ],
+  "tags": [
+    {
+      "name": "catalog",
+      "description": "Public reads of the catalogue."
+    },
+    {
+      "name": "map",
+      "description": "Public reads for the Map Journey."
+    },
+    {
+      "name": "submissions",
+      "description": "PROPOSED — public suggestions, reviewed before publishing."
+    },
+    {
+      "name": "admin",
+      "description": "PROPOSED — editors only."
+    }
+  ],
+  "paths": {
+    "/catalog/overview": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "operationId": "getOverview",
+        "summary": "Panorama of the catalogue (Início)",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AcceptLanguage"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Totals, distributions, unknowns and highlights.",
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "public, max-age=300 (the catalog changes only when data is published)."
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "accept-language"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Overview"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/entries": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "operationId": "listEntries",
+        "summary": "Entries with search, filters, facets and paging (Catálogo)",
+        "description": "Unknown filter codes are dropped; the response echoes the query it understood.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AcceptLanguage"
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            },
+            "description": "Words in name, objective, keywords, places or institutions (accents and case ignored)."
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/EntryKind"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/EntryStatus"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+              "description": "A month, YYYY-MM."
+            },
+            "description": "Period filter: activity overlaps [from, to]; entries without a start never match while set."
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+              "description": "A month, YYYY-MM."
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "municipality",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sector",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mechanism",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "institution",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Institution slug, any role."
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "recent",
+                "name"
+              ],
+              "default": "recent"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 48
+            },
+            "description": "Default 12."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "One page of entries with facets.",
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "public, max-age=300 (the catalog changes only when data is published)."
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "accept-language"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/entries/{ref}": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "operationId": "getEntry",
+        "summary": "One entry by its workbook ID (Detalhes)",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AcceptLanguage"
+          },
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The entry. Person names only when the LGPD flag allows it.",
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "public, max-age=300 (the catalog changes only when data is published)."
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "accept-language"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntryDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No entry has this ID (data.code CATALOG_ENTRY_NOT_FOUND).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/institutions": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "operationId": "listInstitutions",
+        "summary": "Institutions with what they do (Instituições)",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AcceptLanguage"
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            }
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/EntryKind"
+            }
+          },
+          {
+            "name": "role",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/InstitutionRole"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Institution type code."
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "entries",
+                "name"
+              ],
+              "default": "entries"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 48
+            },
+            "description": "Default 12."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "One page of institutions with facets.",
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "public, max-age=300 (the catalog changes only when data is published)."
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "accept-language"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InstitutionListResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/map": {
+      "get": {
+        "tags": [
+          "map"
+        ],
+        "operationId": "getMap",
+        "summary": "Municipalities around the bay and bay sectors, with their entries (Mapa)",
+        "description": "Outlines are provisional (simplified, IBGE-derived) and the sector zones are hand-drawn until their storage is decided with BVRio.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AcceptLanguage"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Outlines and counts.",
+            "headers": {
+              "Cache-Control": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "public, max-age=300 (the catalog changes only when data is published)."
+              },
+              "Vary": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "accept-language"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Map"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/submissions": {
+      "post": {
+        "tags": [
+          "submissions"
+        ],
+        "operationId": "createSubmission",
+        "x-status": "proposed",
+        "summary": "PROPOSED — suggest a new entry or a correction (public, no login)",
+        "description": "Rate-limited and protected by a captcha. Nothing is published until an editor approves it.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmissionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Received for review.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmissionReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid suggestion (SUBMISSION_INVALID).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many suggestions (RATE_LIMITED).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/submissions": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "operationId": "listSubmissions",
+        "x-status": "proposed",
+        "summary": "PROPOSED — suggestions waiting for review (editors)",
+        "security": [
+          {
+            "staff": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "received",
+                "in_review",
+                "approved",
+                "rejected"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 48
+            },
+            "description": "Default 12."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Suggestions.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Submission"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not signed in.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an editor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/submissions/{id}/decision": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "operationId": "decideSubmission",
+        "x-status": "proposed",
+        "summary": "PROPOSED — approve (creates or changes the entry) or reject a suggestion",
+        "security": [
+          {
+            "staff": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmissionDecision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Decided.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Submission"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not signed in.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an editor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/entries": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "operationId": "createEntry",
+        "x-status": "proposed",
+        "summary": "PROPOSED — create an entry (editors)",
+        "security": [
+          {
+            "staff": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntryWrite"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntryDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not signed in.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an editor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/entries/{ref}": {
+      "put": {
+        "tags": [
+          "admin"
+        ],
+        "operationId": "updateEntry",
+        "x-status": "proposed",
+        "summary": "PROPOSED — change an entry (editors)",
+        "security": [
+          {
+            "staff": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EntryWrite"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Changed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntryDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not signed in.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an editor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unknown entry.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "admin"
+        ],
+        "operationId": "retireEntry",
+        "x-status": "proposed",
+        "summary": "PROPOSED — retire an entry (its ID is never reused, D-047)",
+        "security": [
+          {
+            "staff": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Retired."
+          },
+          "401": {
+            "description": "Not signed in.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not an editor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unknown entry.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "AcceptLanguage": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "examples": [
+            "pt-BR",
+            "en",
+            "es",
+            "fr"
+          ]
+        },
+        "description": "Language of the controlled vocabularies (keywords, sectors, mechanisms, types). pt-BR (default), en, es or fr. Free text and proper names stay in Portuguese."
+      }
+    },
+    "securitySchemes": {
+      "staff": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "PROPOSED. Editors only (BVRio staff), e.g. BVRio's Keycloak validated by Spring's OAuth2 resource server. The public site has no login."
+      }
+    },
+    "schemas": {
+      "EntryKind": {
+        "type": "string",
+        "enum": [
+          "project",
+          "study"
+        ],
+        "description": "project = iniciativa (action); study = estudo (research)."
+      },
+      "EntryStatus": {
+        "type": "string",
+        "enum": [
+          "active",
+          "in_implementation",
+          "ended",
+          "published",
+          "in_progress"
+        ],
+        "description": "Projects: active, in_implementation, ended. Studies: published, in_progress."
+      },
+      "PartyRole": {
+        "type": "string",
+        "enum": [
+          "executor",
+          "funder",
+          "partner",
+          "coordinator",
+          "author"
+        ]
+      },
+      "InstitutionRole": {
+        "type": "string",
+        "enum": [
+          "executor",
+          "funder",
+          "partner",
+          "author"
+        ]
+      },
+      "PlaceType": {
+        "type": "string",
+        "enum": [
+          "sector",
+          "municipality",
+          "locality",
+          "river",
+          "conservation_unit",
+          "fishing_colony"
+        ]
+      },
+      "Periodicity": {
+        "type": "string",
+        "enum": [
+          "continuous",
+          "periodic",
+          "one_off"
+        ]
+      },
+      "PartialDate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO date; missing parts filled with 01."
+          },
+          "precision": {
+            "type": "string",
+            "enum": [
+              "day",
+              "month",
+              "year"
+            ]
+          }
+        },
+        "required": [
+          "date",
+          "precision"
+        ],
+        "description": "A date known only as precisely as the source says (D-033)."
+      },
+      "Labeled": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string",
+            "description": "In the language of Accept-Language for controlled vocabularies; proper names stay as they are."
+          }
+        },
+        "required": [
+          "code",
+          "label"
+        ]
+      },
+      "Bucket": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "code",
+          "label",
+          "count"
+        ],
+        "description": "A category and how many entries it reaches."
+      },
+      "KindBucket": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "projects": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Initiatives in the bucket."
+          },
+          "studies": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Studies in the bucket."
+          }
+        },
+        "required": [
+          "code",
+          "label",
+          "count",
+          "projects",
+          "studies"
+        ],
+        "description": "A bucket split by kind (v0.8): count = projects + studies."
+      },
+      "EntrySummary": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ref": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Workbook ID (D-047); never reused."
+          },
+          "kind": {
+            "$ref": "#/components/schemas/EntryKind"
+          },
+          "name": {
+            "type": "string",
+            "description": "Free text, Portuguese."
+          },
+          "objective": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Free text, Portuguese."
+          },
+          "status": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EntryStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "start": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PartialDate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "end": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PartialDate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ongoing": {
+            "type": "boolean"
+          },
+          "municipalities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Labeled"
+            }
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Labeled"
+            }
+          },
+          "publicationYears": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "ref",
+          "kind",
+          "name",
+          "objective",
+          "status",
+          "start",
+          "end",
+          "ongoing",
+          "municipalities",
+          "sectors",
+          "keywords",
+          "publicationYears"
+        ]
+      },
+      "Overview": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "importedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totals": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "entries": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "projects": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "studies": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "activeProjects": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "institutions": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "municipalities": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "entries",
+              "projects",
+              "studies",
+              "activeProjects",
+              "institutions",
+              "municipalities"
+            ]
+          },
+          "distributions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "keywords": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/KindBucket"
+                }
+              },
+              "municipalities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/KindBucket"
+                }
+              },
+              "sectors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/KindBucket"
+                }
+              },
+              "mechanisms": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/KindBucket"
+                }
+              }
+            },
+            "required": [
+              "keywords",
+              "municipalities",
+              "sectors",
+              "mechanisms"
+            ],
+            "description": "Sorted by count, then name. Unknown values are never a bucket (D-032)."
+          },
+          "unknown": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "keywords": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "municipalities": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sectors": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "mechanisms": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "keywords",
+              "municipalities",
+              "sectors",
+              "mechanisms"
+            ],
+            "description": "Entries with no confirmed value for the dimension."
+          },
+          "highlights": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "ongoingProjects": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EntrySummary"
+                }
+              },
+              "recentStudies": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EntrySummary"
+                }
+              }
+            },
+            "required": [
+              "ongoingProjects",
+              "recentStudies"
+            ]
+          }
+        },
+        "required": [
+          "importedAt",
+          "totals",
+          "distributions",
+          "unknown",
+          "highlights"
+        ]
+      },
+      "ListQuery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/EntryKind"
+          },
+          "status": {
+            "$ref": "#/components/schemas/EntryStatus"
+          },
+          "from": {
+            "type": "string",
+            "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+            "description": "A month, YYYY-MM."
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+            "description": "A month, YYYY-MM."
+          },
+          "keyword": {
+            "type": "string"
+          },
+          "municipality": {
+            "type": "string"
+          },
+          "sector": {
+            "type": "string"
+          },
+          "mechanism": {
+            "type": "string"
+          },
+          "institution": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "recent",
+              "name"
+            ]
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pageSize": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 48
+          }
+        },
+        "required": [
+          "sort",
+          "page",
+          "pageSize"
+        ],
+        "description": "The query as the server understood it: unknown values dropped, defaults applied."
+      },
+      "ListResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EntrySummary"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pageSize": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pageCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "query": {
+            "$ref": "#/components/schemas/ListQuery"
+          },
+          "facets": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kinds": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "statuses": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "keywords": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "municipalities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "sectors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "mechanisms": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "institutions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "period": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "first": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+                    "description": "A month, YYYY-MM."
+                  },
+                  "last": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+                    "description": "A month, YYYY-MM."
+                  }
+                },
+                "required": [
+                  "first",
+                  "last"
+                ]
+              }
+            },
+            "required": [
+              "kinds",
+              "statuses",
+              "keywords",
+              "municipalities",
+              "sectors",
+              "mechanisms",
+              "institutions",
+              "period"
+            ],
+            "description": "Options per filter, counted against every other active filter."
+          }
+        },
+        "required": [
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "pageCount",
+          "query",
+          "facets"
+        ]
+      },
+      "PlaceGroup": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/PlaceType"
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "type",
+          "names"
+        ]
+      },
+      "PartyView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "institution",
+              "person"
+            ]
+          },
+          "code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Institution filter code (slug), as in ?institution=; null for people (v0.9)."
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "kind",
+          "code",
+          "note"
+        ]
+      },
+      "PartyGroup": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "$ref": "#/components/schemas/PartyRole"
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartyView"
+            }
+          }
+        },
+        "required": [
+          "role",
+          "parties"
+        ]
+      },
+      "SourceView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "doi": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "venue": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "publishedYear": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "url",
+          "doi",
+          "note",
+          "sourceType",
+          "venue",
+          "publishedYear"
+        ]
+      },
+      "DetailNote": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label",
+          "text"
+        ]
+      },
+      "EntryDetails": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ref": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Workbook ID (D-047); never reused."
+          },
+          "kind": {
+            "$ref": "#/components/schemas/EntryKind"
+          },
+          "name": {
+            "type": "string",
+            "description": "Free text, Portuguese."
+          },
+          "objective": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Free text, Portuguese."
+          },
+          "status": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EntryStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "start": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PartialDate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "end": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PartialDate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ongoing": {
+            "type": "boolean"
+          },
+          "municipalities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Labeled"
+            }
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Labeled"
+            }
+          },
+          "publicationYears": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "periodicity": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Periodicity"
+            }
+          },
+          "mechanisms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Labeled"
+            }
+          },
+          "siteTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Labeled"
+            }
+          },
+          "places": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceGroup"
+            }
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartyGroup"
+            }
+          },
+          "personsHidden": {
+            "type": "boolean",
+            "description": "True when person names exist but were left out (LGPD flag)."
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceView"
+            }
+          },
+          "sourceTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "venues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "resultsSummary": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dataAvailability": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "detailNotes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetailNote"
+            }
+          }
+        },
+        "required": [
+          "ref",
+          "kind",
+          "name",
+          "objective",
+          "status",
+          "start",
+          "end",
+          "ongoing",
+          "municipalities",
+          "sectors",
+          "keywords",
+          "publicationYears",
+          "periodicity",
+          "mechanisms",
+          "siteTypes",
+          "places",
+          "parties",
+          "personsHidden",
+          "sources",
+          "sourceTypes",
+          "venues",
+          "indicators",
+          "resultsSummary",
+          "dataAvailability",
+          "detailNotes"
+        ]
+      },
+      "InstitutionQuery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "q": {
+            "type": "string"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/EntryKind"
+          },
+          "role": {
+            "$ref": "#/components/schemas/InstitutionRole"
+          },
+          "type": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "entries",
+              "name"
+            ]
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pageSize": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 48
+          }
+        },
+        "required": [
+          "sort",
+          "page",
+          "pageSize"
+        ]
+      },
+      "InstitutionSummary": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Slug — the value of the entry list's `institution` filter."
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Labeled"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "entries": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "projects": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "studies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "role": {
+                  "$ref": "#/components/schemas/InstitutionRole"
+                },
+                "count": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "role",
+                "count"
+              ]
+            }
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "type",
+          "entries",
+          "projects",
+          "studies",
+          "roles"
+        ]
+      },
+      "InstitutionListResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstitutionSummary"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pageSize": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pageCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "query": {
+            "$ref": "#/components/schemas/InstitutionQuery"
+          },
+          "facets": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "allKinds": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Institutions matching every other filter, whatever the kind (the \"Todos\" count of the kind toggle)."
+              },
+              "kinds": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "types": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bucket"
+                }
+              },
+              "unknownTypes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "allKinds",
+              "kinds",
+              "roles",
+              "types",
+              "unknownTypes"
+            ]
+          }
+        },
+        "required": [
+          "items",
+          "total",
+          "page",
+          "pageSize",
+          "pageCount",
+          "query",
+          "facets"
+        ]
+      },
+      "MultiPolygon": {
+        "type": "array",
+        "description": "GeoJSON MultiPolygon coordinates (WGS 84 longitude, latitude): polygons → rings → positions.",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                },
+                {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      },
+      "MapMunicipality": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Municipality filter code (slug)."
+          },
+          "ibgeCode": {
+            "type": "string",
+            "pattern": "^\\d{7}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "entries": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "projects": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "studies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/MultiPolygon"
+          }
+        },
+        "required": [
+          "code",
+          "ibgeCode",
+          "name",
+          "entries",
+          "projects",
+          "studies",
+          "geometry"
+        ]
+      },
+      "MapSector": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Sector filter code (slug)."
+          },
+          "name": {
+            "type": "string"
+          },
+          "entries": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "projects": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "studies": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "geometry": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MultiPolygon"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Provisional zone in the water; null for sectors that are not one area (Baía inteira)."
+          },
+          "label": {
+            "oneOf": [
+              {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180
+                  },
+                  {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90
+                  }
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Where the map writes the name and counts (longitude, latitude)."
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "entries",
+          "projects",
+          "studies",
+          "geometry",
+          "label"
+        ]
+      },
+      "Map": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "view": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "west": {
+                "type": "number"
+              },
+              "south": {
+                "type": "number"
+              },
+              "east": {
+                "type": "number"
+              },
+              "north": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "west",
+              "south",
+              "east",
+              "north"
+            ]
+          },
+          "municipalities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MapMunicipality"
+            },
+            "description": "With entries first (by count, then name), then the neighbours drawn for context."
+          },
+          "unknown": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Entries with no confirmed municipality."
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MapSector"
+            },
+            "description": "Every bay sector of the catalog, from the bay's head to the open sea (v0.8)."
+          },
+          "unknownSectors": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Entries with no confirmed sector."
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "note": {
+                "type": "string"
+              },
+              "provisional": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "name",
+              "url",
+              "note",
+              "provisional"
+            ]
+          }
+        },
+        "required": [
+          "view",
+          "municipalities",
+          "unknown",
+          "sectors",
+          "unknownSectors",
+          "source"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "statusCode",
+          "data"
+        ],
+        "properties": {
+          "statusCode": {
+            "type": "integer"
+          },
+          "statusMessage": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "required": [
+              "code"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "examples": [
+                  "CATALOG_ENTRY_NOT_FOUND",
+                  "SUBMISSION_INVALID",
+                  "RATE_LIMITED"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "SubmissionRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "entry",
+          "contact",
+          "consent"
+        ],
+        "description": "PROPOSED. A public suggestion: a new entry, or a correction to one (`ref`). Reviewed by editors before anything is published.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "new_entry",
+              "correction"
+            ]
+          },
+          "ref": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Entry being corrected (type = correction)."
+          },
+          "entry": {
+            "type": "object",
+            "description": "The proposed fields, same names as EntryDetails (free text in Portuguese). Validated by the editors, not trusted."
+          },
+          "message": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "contact": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "email"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "institution": {
+                "type": "string",
+                "maxLength": 200
+              }
+            },
+            "description": "Only to follow up on the suggestion; never published; deleted after the retention period (LGPD)."
+          },
+          "consent": {
+            "type": "boolean",
+            "const": true
+          },
+          "captchaToken": {
+            "type": "string"
+          }
+        }
+      },
+      "SubmissionReceipt": {
+        "type": "object",
+        "required": [
+          "id",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "received"
+            ]
+          }
+        }
+      },
+      "Submission": {
+        "type": "object",
+        "description": "PROPOSED. As editors see it.",
+        "required": [
+          "id",
+          "type",
+          "status",
+          "receivedAt",
+          "entry"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "new_entry",
+              "correction"
+            ]
+          },
+          "ref": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "received",
+              "in_review",
+              "approved",
+              "rejected"
+            ]
+          },
+          "receivedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "entry": {
+            "type": "object"
+          },
+          "message": {
+            "type": "string"
+          },
+          "contact": {
+            "type": "object"
+          },
+          "reviewNote": {
+            "type": "string"
+          },
+          "reviewedBy": {
+            "type": "string"
+          },
+          "reviewedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "SubmissionDecision": {
+        "type": "object",
+        "required": [
+          "decision"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "reject"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        }
+      },
+      "EntryWrite": {
+        "type": "object",
+        "description": "PROPOSED. An entry as editors create or change it (same fields as EntryDetails, codes for vocabularies, places and parties)."
+      }
+    }
+  }
+}

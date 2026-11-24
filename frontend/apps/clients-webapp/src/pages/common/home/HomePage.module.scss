@@ -1,0 +1,263 @@
+.root {
+  flex: 1 0 auto;
+  background: var(--color-bg-canvas);
+}
+
+.hero {
+  /* The mark's size, and the islands' contour on its 20-unit grid (0.495). */
+  --hero-mark-size: 240px;
+  /* Half the islands' contour (0.495 of the mark's 20-unit grid): about 3px. */
+  --hero-outline: calc(var(--hero-mark-size) * 0.495 / 20 / 2);
+  /*
+   * v0.9.28: the name in two lines of capitals under the mark, GUANABARA
+   * about as wide as the mark (it was the band's largest words since v0.9.19).
+   */
+  --hero-name-size: 2.125rem;
+  --page-hero-title-size: clamp(var(--font-size-2xl), 3.2vw, var(--font-size-4xl));
+  /* The same room above and below the band's content (v0.9.18). */
+  --page-hero-padding-top: calc(var(--spacing-12) + var(--spacing-2));
+  --page-hero-padding-bottom: calc(var(--spacing-12) + var(--spacing-2));
+}
+
+@media (min-width: 880px) {
+  .hero {
+    /*
+     * v0.9.23: three equal distances across the band — from the window's left
+     * edge to the name, from the name to the text, and from the end of the
+     * text to the right edge. Two columns sized to their content (the text at
+     * most 40rem) and `space-evenly`; the padding and the gap (equal) keep a
+     * least distance when the window narrows. The description is justified,
+     * so the text ends on one line.
+     */
+    --hero-space-min: var(--spacing-8);
+    --page-hero-max-width: none;
+    --page-hero-padding-inline: var(--hero-space-min);
+    --page-hero-columns: max-content minmax(0, 40rem);
+    --page-hero-justify: space-evenly;
+    --page-hero-aside-gap: var(--hero-space-min);
+    --page-hero-description-align: justify;
+    /* The title starts level with the mark, both at the top (v0.9.20; the name until v0.9.28). */
+    --page-hero-align: start;
+  }
+}
+
+/*
+ * The mark, and the name under it in two lines (v0.9.28): PORTAL / GUANABARA
+ * in capitals, centred, as wide as the mark, so it no longer competes with
+ * the title beside it (it sat over the mark in one line since v0.9.17).
+ */
+.heroBrand {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-5);
+}
+
+/* White capitals with the same black contour as "estuda" and "atua" (v0.9.19). */
+.heroBrandName {
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  color: var(--color-structure-text);
+  font-size: var(--hero-name-size);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+/* Each line carries its own contour (a copy behind it, see below). */
+.heroBrandLine {
+  position: relative;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.heroMap {
+  /* Left of the title and text (v0.9.4). */
+  width: var(--hero-mark-size);
+  height: var(--hero-mark-size);
+  filter: drop-shadow(0 12px 28px rgb(4 24 30 / 35%));
+}
+
+/* One line of the title each (v0.9.17): "… pela" / "Baía de Guanabara …". */
+.titleLine {
+  display: block;
+  text-wrap: balance;
+}
+
+/*
+ * The title names both halves in their colours (large text: ≥3:1 on the band),
+ * each word with a black contour half as thick as the mark's islands (v0.9.17; halved v0.9.18): a
+ * copy of the word drawn behind it with a stroke twice that width, so the
+ * contour shows outside the letters only.
+ */
+.titleStudy,
+.titleAct {
+  position: relative;
+  z-index: 0;
+}
+
+.titleStudy {
+  color: var(--color-kind-study);
+}
+
+.titleAct {
+  color: var(--color-kind-project);
+}
+
+.titleStudy::before,
+.titleAct::before,
+.heroBrandLine::before {
+  content: attr(data-outline) / '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: var(--color-nevoa-950);
+  -webkit-text-stroke: calc(var(--hero-outline) * 2) var(--color-nevoa-950);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* The tour: the orange action and what it is, side by side. */
+.tourCta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-3) var(--spacing-4);
+}
+
+.tourHint {
+  max-width: 28ch;
+  color: var(--color-structure-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+}
+
+.updated {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin: 0;
+  color: var(--color-structure-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.content {
+  display: grid;
+  gap: var(--spacing-12);
+  max-width: var(--layout-max-width, 1120px);
+  margin: 0 auto;
+  padding: var(--spacing-10) var(--space-page-gutter) var(--spacing-16);
+}
+
+/* The hero band ends above "Explorar o catálogo": every section starts on the canvas. */
+.duo {
+  display: grid;
+  gap: var(--spacing-5);
+}
+
+/* Two rows of two, one card design: the same gap between rows as between cards. */
+.explore {
+  display: grid;
+  gap: var(--card-grid-gap, var(--spacing-4));
+}
+
+#home-municipalities:focus {
+  outline: none;
+}
+
+.section {
+  display: grid;
+  gap: var(--spacing-5);
+}
+
+.sectionHeader {
+  display: grid;
+  gap: var(--spacing-2);
+  justify-items: center;
+  text-align: center;
+}
+
+/* Section titles sit between two hairlines: line — icon + title — line. */
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-5);
+  width: 100%;
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+.sectionTitle::before,
+.sectionTitle::after {
+  flex: 1 1 var(--spacing-6);
+  min-width: var(--spacing-6);
+  height: 1px;
+  background: var(--color-border);
+  content: '';
+}
+
+.sectionTitleText {
+  display: inline-flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+.sectionIcon {
+  color: var(--color-structure-bg);
+
+  --icon-tint: var(--color-agua-500);
+  --icon-tint-opacity: 0.22;
+}
+
+.sectionDescription {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* Card rule (CardGrid): 1 / 2 / 3 columns; the long keyword card spans two rows at 2 columns. */
+.distributions {
+  display: grid;
+  gap: var(--spacing-4);
+  align-items: start;
+}
+
+@media (min-width: 720px) {
+  .distributions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .keywords {
+    grid-row: span 2;
+  }
+}
+
+@media (min-width: 1600px) {
+  .distributions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .keywords {
+    grid-row: auto;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

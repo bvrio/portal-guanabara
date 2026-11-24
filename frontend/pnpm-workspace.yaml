@@ -1,0 +1,8 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# pnpm 11+ blocks dependency build scripts unless they are explicitly allowed.
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true

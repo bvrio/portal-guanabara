@@ -1,0 +1,49 @@
+.root {
+  position: fixed;
+  z-index: 1000;
+  bottom: var(--spacing-3);
+  left: var(--spacing-3);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-3);
+
+  max-width: calc(100vw - 2 * var(--spacing-3));
+  padding: var(--spacing-2) var(--spacing-3);
+
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  opacity: 0.9;
+}
+
+.root:hover {
+  opacity: 1;
+}
+
+.badge {
+  border: 0;
+  cursor: pointer;
+  padding: 2px var(--spacing-2);
+  border-radius: var(--radius-full);
+  background: var(--color-action-primary);
+  color: var(--color-action-primary-contrast);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.select {
+  font: inherit;
+  padding: 2px var(--spacing-1);
+}

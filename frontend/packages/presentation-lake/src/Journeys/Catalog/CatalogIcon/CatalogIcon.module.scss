@@ -1,0 +1,86 @@
+/*
+ * Meaning colours for catalogue icons. `.mark` colours the glyph; `.framed`
+ * adds a tinted tile behind it (cards, heroes, stat tiles).
+ */
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--tone-mark);
+  --icon-accent: var(--tone-mark);
+}
+
+.framed {
+  padding: var(--frame-padding, 6px);
+  border-radius: var(--radius-md);
+  background: var(--tone-tint);
+}
+
+.framedLarge {
+  --frame-padding: 10px;
+  border-radius: var(--radius-lg);
+}
+
+/* Kind duo: dark line in the kind's ink, soft fills in its colour. */
+.project {
+  --tone-mark: var(--color-kind-project-ink);
+  --tone-tint: var(--color-kind-project-tint);
+  --icon-accent: var(--color-kind-project);
+  --icon-accent-opacity: 1;
+  --icon-tint: var(--color-kind-project);
+  --icon-tint-opacity: 0.35;
+}
+
+.study {
+  --tone-mark: var(--color-kind-study-ink);
+  --tone-tint: var(--color-kind-study-tint);
+  --icon-accent: var(--color-kind-study);
+  --icon-accent-opacity: 1;
+  --icon-tint: var(--color-kind-study);
+  --icon-tint-opacity: 0.3;
+}
+
+/* Sectors: shoreline in deep blue, water in teal; the sector's band in soft
+   orange (water) and soft purple (land). */
+.sector {
+  --tone-mark: var(--color-sector-outline);
+  --tone-tint: var(--color-structure-tint);
+  --icon-tint: var(--color-sector-water);
+  --icon-tint-opacity: 0.22;
+  --icon-accent: var(--color-sector-zone-water);
+  --icon-accent-opacity: 1;
+  --icon-secondary: var(--color-sector-zone-land);
+  --icon-secondary-opacity: 1;
+}
+
+/* Keyword categories. */
+.waste {
+  --tone-mark: var(--color-topic-waste);
+  --tone-tint: var(--color-topic-waste-tint);
+}
+
+.environment {
+  --tone-mark: var(--color-topic-environment);
+  --tone-tint: var(--color-topic-environment-tint);
+}
+
+.biota {
+  --tone-mark: var(--color-topic-biota);
+  --tone-tint: var(--color-topic-biota-tint);
+}
+
+.physical {
+  --tone-mark: var(--color-topic-physical);
+  --tone-tint: var(--color-topic-physical-tint);
+}
+
+.social {
+  --tone-mark: var(--color-topic-social);
+  --tone-tint: var(--color-topic-social-tint);
+}
+
+.other {
+  --tone-mark: var(--color-topic-other);
+  --tone-tint: var(--color-topic-other-tint);
+}

@@ -1,0 +1,71 @@
+.root {
+  /* Its own stacking context, so the band below paints behind it (v0.9.24). */
+  position: relative;
+  isolation: isolate;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 720px) {
+  .sticky {
+    position: sticky;
+    top: var(--filter-panel-top, calc(var(--layout-header-height, 64px) + var(--layout-header-overhang, 0px) + var(--spacing-2)));
+    z-index: 15;
+  }
+}
+
+.body {
+  position: relative;
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-3);
+  border-radius: calc(var(--radius-xl) - 1px) calc(var(--radius-xl) - 1px) 0 0;
+  background: var(--color-surface);
+}
+
+.body:last-child {
+  border-radius: calc(var(--radius-xl) - 1px);
+}
+
+/*
+ * A band behind the panel, down to the line under the filters (v0.9.24): a
+ * page sets its colour (--filter-panel-band) and how far it reaches past the
+ * panel on each side (--filter-panel-band-bleed, negative; the window's edges
+ * are calc(50% - 50vw), and the page then clips its overflow). By default it
+ * stays hidden behind the filters.
+ */
+.body::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -1px var(--filter-panel-band-bleed, 0px) 0;
+  background: var(--filter-panel-band, transparent);
+  pointer-events: none;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2) var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-top: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  background: var(--color-bg-subtle);
+}
+
+.summary {
+  flex: 1 1 18rem;
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal, 1.45);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-left: auto;
+}

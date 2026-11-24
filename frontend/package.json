@@ -1,0 +1,29 @@
+{
+  "name": "portal-guanabara",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@12.21.0",
+  "engines": {
+    "node": ">=22.22.3"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test",
+    "storybook": "pnpm --dir packages/presentation-lake storybook",
+    "architecture:validate": "node scripts/validate-architecture.mjs",
+    "dev:clients": "pnpm --filter clients-webapp dev",
+    "catalog:import": "node packages/catalog-domain/src/cli/import.ts",
+    "catalog:boundaries": "node packages/catalog-domain/src/cli/boundaries.ts",
+    "i18n:extract": "node scripts/i18n-messages.mjs --write",
+    "i18n:check": "node scripts/i18n-messages.mjs --check",
+    "verify": "pnpm architecture:validate && pnpm i18n:check && pnpm typecheck && pnpm test"
+  },
+  "devDependencies": {
+    "@formatjs/cli": "6.20.0",
+    "@formatjs/icu-messageformat-parser": "^3.5.23",
+    "turbo": "2.11.13",
+    "typescript": "6.0.3"
+  }
+}

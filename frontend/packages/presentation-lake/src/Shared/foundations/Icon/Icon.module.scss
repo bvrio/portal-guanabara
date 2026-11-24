@@ -1,0 +1,41 @@
+.root {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+.tint {
+  fill: var(--icon-tint, currentColor);
+  fill-opacity: var(--icon-tint-opacity, 0.18);
+}
+
+.accent {
+  fill: var(--icon-accent, currentColor);
+  fill-opacity: var(--icon-accent-opacity, 0.9);
+}
+
+.secondary {
+  fill: var(--icon-secondary, currentColor);
+  fill-opacity: var(--icon-secondary-opacity, 0.9);
+}
+
+.detail {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--icon-detail-width, 1);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--icon-stroke-width, 1.75);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.solid {
+  fill: currentColor;
+}

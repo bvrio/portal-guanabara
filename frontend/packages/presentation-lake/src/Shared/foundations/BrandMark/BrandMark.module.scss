@@ -1,0 +1,48 @@
+.root {
+  flex-shrink: 0;
+  overflow: visible;
+
+  --brand-mark-ink: var(--color-nevoa-50);
+  /* The black of the contours on Início's band (v0.9.27). */
+  --brand-mark-contour: var(--color-nevoa-950);
+}
+
+.onLight {
+  --brand-mark-ink: var(--color-baia-800);
+}
+
+.water {
+  fill: var(--color-agua-400);
+}
+
+/* Black eyes (v0.9.27; they were the G's colour in v0.9.26). */
+.eye {
+  fill: var(--brand-mark-contour);
+}
+
+/*
+ * The G's contour (v0.9.27): 0.8 units each side, the width of the name's
+ * contour on Início (about 3px at 240px).
+ */
+.outline {
+  fill: none;
+  stroke: var(--brand-mark-contour);
+  stroke-width: 10.1;
+  stroke-linecap: round;
+}
+
+.g {
+  fill: none;
+  stroke: var(--brand-mark-ink);
+  stroke-width: 8.5;
+  stroke-linecap: round;
+}
+
+/* Who acts (initiatives) and who studies (studies). */
+.act {
+  fill: var(--color-kind-project);
+}
+
+.study {
+  fill: var(--color-kind-study);
+}

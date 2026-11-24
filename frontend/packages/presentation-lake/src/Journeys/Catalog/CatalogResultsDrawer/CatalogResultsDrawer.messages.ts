@@ -1,0 +1,35 @@
+import { defineMessages } from '../../../Shared/foundations/i18n';
+
+export const defaultMessages = defineMessages({
+  kind: { id: 'presentationLake.catalog.resultsDrawer.kind', defaultMessage: 'Tipo' },
+  status: { id: 'presentationLake.catalog.resultsDrawer.status', defaultMessage: 'Situação' },
+  keyword: { id: 'presentationLake.catalog.resultsDrawer.keyword', defaultMessage: 'Palavra-chave' },
+  sector: { id: 'presentationLake.catalog.resultsDrawer.sector', defaultMessage: 'Setor da baía' },
+  municipality: { id: 'presentationLake.catalog.resultsDrawer.municipality', defaultMessage: 'Município' },
+  institution: { id: 'presentationLake.catalog.resultsDrawer.institution', defaultMessage: 'Instituição' },
+  mechanism: { id: 'presentationLake.catalog.resultsDrawer.mechanism', defaultMessage: 'Mecanismo de atuação' },
+  everything: { id: 'presentationLake.catalog.resultsDrawer.everything', defaultMessage: 'Catálogo' },
+  allEntries: { id: 'presentationLake.catalog.resultsDrawer.allEntries', defaultMessage: 'Todas as entradas' },
+  addFilter: { id: 'presentationLake.catalog.resultsDrawer.addFilter', defaultMessage: '+ Filtro' },
+  addFilterTitle: { id: 'presentationLake.catalog.resultsDrawer.addFilterTitle', defaultMessage: 'Adicionar filtro' },
+  inUse: { id: 'presentationLake.catalog.resultsDrawer.inUse', defaultMessage: 'em uso' },
+  searchLabel: { id: 'presentationLake.catalog.resultsDrawer.searchLabel', defaultMessage: 'Buscar em {dimension}' },
+  searchPlaceholder: { id: 'presentationLake.catalog.resultsDrawer.searchPlaceholder', defaultMessage: 'Digite para buscar…' },
+  noMatch: { id: 'presentationLake.catalog.resultsDrawer.noMatch', defaultMessage: 'Nada encontrado' },
+  stackLabel: { id: 'presentationLake.catalog.resultsDrawer.stackLabel', defaultMessage: 'Filtros' },
+  remove: { id: 'presentationLake.catalog.resultsDrawer.remove', defaultMessage: 'Remover filtro: {label}' },
+  clear: { id: 'presentationLake.catalog.resultsDrawer.clear', defaultMessage: 'Limpar' },
+  count: {
+    id: 'presentationLake.catalog.resultsDrawer.count',
+    defaultMessage: '{count, plural, =0 {Nenhuma entrada} one {# entrada} other {# entradas}}',
+  },
+  loading: { id: 'presentationLake.catalog.resultsDrawer.loading', defaultMessage: 'Carregando entradas…' },
+  error: { id: 'presentationLake.catalog.resultsDrawer.error', defaultMessage: 'Não foi possível carregar as entradas agora.' },
+  retry: { id: 'presentationLake.catalog.resultsDrawer.retry', defaultMessage: 'Tentar de novo' },
+  showing: { id: 'presentationLake.catalog.resultsDrawer.showing', defaultMessage: 'Mostrando {shown} de {total}' },
+  seeAll: { id: 'presentationLake.catalog.resultsDrawer.seeAll', defaultMessage: 'Abrir no Catálogo' },
+  nothingToAdd: {
+    id: 'presentationLake.catalog.resultsDrawer.nothingToAdd',
+    defaultMessage: 'Nenhum filtro novo muda estes resultados — mas você pode trocar um filtro em uso.',
+  },
+});

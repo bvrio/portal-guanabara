@@ -1,0 +1,16 @@
+node_modules/
+.pnpm-store/
+.nuxt/
+.output/
+.data/
+.nitro/
+.cache/
+dist/
+coverage/
+storybook-static/
+.turbo/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log

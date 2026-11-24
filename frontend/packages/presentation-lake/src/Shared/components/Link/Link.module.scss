@@ -1,0 +1,22 @@
+// Base link styles have zero specificity (:where) so a consumer's class always
+// wins, whatever order the CSS chunks load in. In a production build Link's CSS
+// lands in a shared chunk that loads after the entry CSS (SiteHeader, SiteFooter),
+// so equal-specificity overrides there would lose.
+:where(.root) {
+  color: var(--color-text-secondary);
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+:where(.root:hover),
+:where(.root:focus-visible) {
+  color: var(--color-text-primary);
+}
+
+.root[aria-disabled='true'] {
+  color: var(--color-disabled-text);
+  cursor: not-allowed;
+}

@@ -1,0 +1,21 @@
+@use '@portal-guanabara/presentation-lake/styles';
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * View size (header "Tamanho" menu, shared/hooks/view-zoom): 100% (default) is
+ * the designed size; 110% and 120% zoom everything — text, icons, spacing.
+ * Tablets and up only: phones keep their own text settings.
+ */
+@media (min-width: 720px) {
+  html[data-zoom='110'] {
+    zoom: 1.125;
+  }
+
+  html[data-zoom='120'] {
+    zoom: 1.25;
+  }
+}
+

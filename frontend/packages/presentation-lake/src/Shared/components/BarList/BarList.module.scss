@@ -1,0 +1,138 @@
+/*
+ * Mark specs (dataviz): bars at most 24px thick (12px here), square at the
+ * baseline with a 4px rounded data end; values in text tokens at the tip.
+ */
+.root {
+  display: grid;
+  gap: var(--spacing-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: block;
+}
+
+/* The row is the control (link, button) when the bars drill down. */
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--spacing-1);
+  width: 100%;
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+@media (min-width: 560px) {
+  .row {
+    grid-template-columns: minmax(7rem, 2fr) 3fr;
+    align-items: center;
+    gap: var(--spacing-4);
+  }
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.interactive:hover,
+.interactive:focus-visible {
+  background: var(--color-bg-subtle);
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-width: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+}
+
+.labelText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The name stays plain text; the row's hover background says it is clickable. */
+.interactive:hover .labelText {
+  color: var(--color-text-heading);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-width: 0;
+}
+
+.bar {
+  flex: none;
+  /* Leave room for the value printed at the tip. */
+  width: calc((100% - 3rem) * var(--bar-share, 0));
+  min-width: 2px;
+  height: 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--bar-color, var(--color-data-series-1));
+  transition: filter var(--duration-fast) var(--easing-standard);
+}
+
+.bar[data-empty] {
+  min-width: 0;
+}
+
+/* A split bar: its parts side by side, a hairline of white between them. */
+.bar:has(.segment) {
+  display: flex;
+  gap: 1px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.segment {
+  flex: var(--segment-grow, 1) 1 0;
+  min-width: 2px;
+  background: var(--segment-color);
+}
+
+.interactive:hover .bar,
+.interactive:focus-visible .bar {
+  filter: brightness(0.9);
+}
+
+.value {
+  flex: none;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--font-weight-medium);
+}
+
+.empty:empty {
+  display: none;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

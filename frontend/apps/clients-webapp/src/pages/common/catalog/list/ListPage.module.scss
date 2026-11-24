@@ -1,0 +1,115 @@
+.root {
+  flex: 1 0 auto;
+  background: var(--color-bg-canvas);
+
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/*
+ * The filter panel stays glued to the header and anchored with it from tablets
+ * up (v0.9.4, v0.9.23). The structure band behind it reaches exactly the line
+ * under the filters (v0.9.24): FilterPanel draws it, across the window, and
+ * this wrapper clips what passes the window's edges.
+ */
+.filterBand {
+  overflow-x: clip;
+
+  --filter-panel-band: var(--color-structure-bg);
+  --filter-panel-band-bleed: calc(50% - 50vw);
+}
+
+@media (min-width: 720px) {
+  .filterBand {
+    position: sticky;
+    top: var(--layout-header-height, 64px);
+    z-index: 15;
+  }
+}
+
+.filterBandInner {
+  max-width: var(--layout-max-width, 1120px);
+  margin: 0 auto;
+  padding: 0 var(--space-page-gutter);
+}
+
+.content {
+  display: grid;
+  gap: var(--spacing-6);
+  max-width: var(--layout-max-width, 1120px);
+  margin: 0 auto;
+  padding: var(--spacing-6) var(--space-page-gutter) var(--spacing-16);
+}
+
+/*
+ * Glued to the header, with FilterPanel's own rounded corners (v0.9.7); from
+ * tablets up it reaches 12px past the cards on each side.
+ */
+@media (min-width: 720px) {
+  .root .filters {
+    margin-inline: -12px;
+  }
+}
+
+/* A little more air between rows of cards (v0.9.4). */
+.root .list {
+  row-gap: var(--spacing-8);
+}
+
+.total {
+  margin-right: var(--spacing-2);
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md, 16px);
+}
+
+.about {
+  color: var(--color-text-secondary);
+}
+
+.results {
+  display: grid;
+  gap: var(--spacing-4);
+
+  /* Clears the anchored filter panel when a page change scrolls here. */
+  scroll-margin-top: calc(var(--layout-header-height, 64px) + var(--layout-header-overhang, 0px) + var(--spacing-4));
+}
+
+@media (min-width: 720px) {
+  .results {
+    scroll-margin-top: calc(var(--layout-header-height, 64px) + 216px);
+  }
+
+  .bottomPagination {
+    display: none;
+  }
+}
+
+.bottomPagination {
+  justify-self: center;
+}
+
+.list {
+  transition: opacity var(--duration-normal) var(--easing-standard);
+}
+
+.loading {
+  opacity: 0.6;
+}
+
+/* The way into the contribution form (v0.9.25, `contributionForms` flag). */
+.suggest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-1) var(--spacing-2);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}

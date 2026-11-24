@@ -1,0 +1,28 @@
+/* Breakpoints mirror --layout-breakpoint-md / -xl (media queries cannot read custom properties). */
+.root {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--card-grid-gap, var(--spacing-4));
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.root > * {
+  display: grid;
+  min-width: 0;
+}
+
+@media (min-width: 720px) {
+  .max2,
+  .max3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1600px) {
+  .max3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

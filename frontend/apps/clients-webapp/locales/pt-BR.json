@@ -1,0 +1,1445 @@
+{
+  "clients.aboutPage.acciolyDescription": {
+    "defaultMessage": "Ecóloga, doutora em ecologia social e mestre em geografia. Identifica oportunidades de ativos ambientais, analisa dados e coordena projetos de resíduos sólidos e economia circular."
+  },
+  "clients.aboutPage.acciolyRole": {
+    "defaultMessage": "Especialista em Economia Circular"
+  },
+  "clients.aboutPage.areaLabel": {
+    "defaultMessage": "Área principal: {area}"
+  },
+  "clients.aboutPage.bertocheDescription": {
+    "defaultMessage": "Analista de sistemas. Gerencia o desenvolvimento das plataformas e sistemas da BVRio e liga as equipes que precisam de produtos de TI à equipe técnica."
+  },
+  "clients.aboutPage.bertocheRole": {
+    "defaultMessage": "Gerente de TI"
+  },
+  "clients.aboutPage.bvrioTitle": {
+    "defaultMessage": "Equipe Instituto BVRio"
+  },
+  "clients.aboutPage.de2Focus": {
+    "defaultMessage": "Plataforma metodológica aplicada para indicadores e MRV de iniciativas de economia circular e recuperação ambiental."
+  },
+  "clients.aboutPage.de2Title": {
+    "defaultMessage": "Doutor-Empresa (DE2)"
+  },
+  "clients.aboutPage.doctorArea": {
+    "defaultMessage": "Oceanografia Física"
+  },
+  "clients.aboutPage.doctorDescription": {
+    "defaultMessage": "Conduz o desenho metodológico, a matriz de indicadores comparáveis e os critérios de monitoramento, reporte e verificação (MRV)."
+  },
+  "clients.aboutPage.doctorRole": {
+    "defaultMessage": "Bolsista Doutor-Empresa (DE2)"
+  },
+  "clients.aboutPage.documentTitle": {
+    "defaultMessage": "Sobre nós · Portal Guanabara"
+  },
+  "clients.aboutPage.factDuration": {
+    "defaultMessage": "Duração"
+  },
+  "clients.aboutPage.factDurationValue": {
+    "defaultMessage": "24 meses (o segundo ano depende da renovação das bolsas)"
+  },
+  "clients.aboutPage.factFunding": {
+    "defaultMessage": "Fomento"
+  },
+  "clients.aboutPage.factFundingValue": {
+    "defaultMessage": "FAPERJ — bolsas Mestre-Empresa (ME2) e Doutor-Empresa (DE2)"
+  },
+  "clients.aboutPage.factInstitution": {
+    "defaultMessage": "Instituição"
+  },
+  "clients.aboutPage.factInstitutionValue": {
+    "defaultMessage": "Instituto BVRio, organização sem fins lucrativos fundada em 2011"
+  },
+  "clients.aboutPage.factPilot": {
+    "defaultMessage": "Caso-piloto"
+  },
+  "clients.aboutPage.factPilotValue": {
+    "defaultMessage": "Programa Pescando Resíduos, que remunera pescadores artesanais pela remoção rastreável de resíduos desde 2021"
+  },
+  "clients.aboutPage.fellowsTitle": {
+    "defaultMessage": "Bolsistas FAPERJ"
+  },
+  "clients.aboutPage.fundingBody": {
+    "defaultMessage": "Bolsas concedidas por até 12 meses, com 40 horas semanais; o plano de trabalho prevê 24 meses, e o segundo ano depende de renovação."
+  },
+  "clients.aboutPage.fundingTitle": {
+    "defaultMessage": "Bolsas FAPERJ"
+  },
+  "clients.aboutPage.introduction": {
+    "defaultMessage": "O Portal Guanabara nasce da pesquisa aplicada do Instituto BVRio com bolsas FAPERJ: reunir, num só lugar, quem estuda e quem atua pela Baía de Guanabara, com dados e indicadores comparáveis."
+  },
+  "clients.aboutPage.me2Focus": {
+    "defaultMessage": "Pesquisa aplicada com foco na organização de dados, indicadores, protótipo de plataforma digital/web e aplicação piloto ao Pescando Resíduos."
+  },
+  "clients.aboutPage.me2Title": {
+    "defaultMessage": "Mestre-Empresa (ME2)"
+  },
+  "clients.aboutPage.mirandaDescription": {
+    "defaultMessage": "Estudante de ciência ambiental na UFF. Desenvolve Programas de Ação Circular para empresas com o aplicativo KOLEKT."
+  },
+  "clients.aboutPage.mirandaRole": {
+    "defaultMessage": "Analista Júnior de Economia Circular"
+  },
+  "clients.aboutPage.partnerCoopromar": {
+    "defaultMessage": "cooperativa de pescadores: execução no território e coprodução de dados"
+  },
+  "clients.aboutPage.partnerInea": {
+    "defaultMessage": "interlocução institucional e uso dos resultados"
+  },
+  "clients.aboutPage.partnerOgyre": {
+    "defaultMessage": "rastreabilidade e financiamento das operações"
+  },
+  "clients.aboutPage.partnerUfrj": {
+    "defaultMessage": "apoio metodológico e análises de laboratório"
+  },
+  "clients.aboutPage.partnersTitle": {
+    "defaultMessage": "Parceiros"
+  },
+  "clients.aboutPage.photosPending": {
+    "defaultMessage": "Fotos chegam em breve."
+  },
+  "clients.aboutPage.projectName": {
+    "defaultMessage": "Logística reversa costeira e carbono azul: protocolos inovadores para economia circular inclusiva em manguezais da Baía de Guanabara",
+    "description": "Title of the FAPERJ project: a proper name, kept in Portuguese in every language."
+  },
+  "clients.aboutPage.projectObjective": {
+    "defaultMessage": "Gerar conhecimento aplicado e protocolos técnico-científicos para qualificar a logística reversa costeira em manguezais urbanos da Baía de Guanabara, integrando dados operacionais rastreáveis, priorização territorial, testes de tecnologias e evidências ambientais mensuráveis — e transformar uma operação que já funciona numa base replicável para outros territórios costeiros."
+  },
+  "clients.aboutPage.projectTitle": {
+    "defaultMessage": "O projeto"
+  },
+  "clients.aboutPage.studentArea": {
+    "defaultMessage": "Engenharia de Software"
+  },
+  "clients.aboutPage.studentDescription": {
+    "defaultMessage": "Organiza os dados e os indicadores, constrói este portal e aplica a matriz de indicadores ao Pescando Resíduos."
+  },
+  "clients.aboutPage.studentRole": {
+    "defaultMessage": "Bolsista Mestre-Empresa (ME2)"
+  },
+  "clients.aboutPage.succarDescription": {
+    "defaultMessage": "Engenheiro, mestre em governança urbana. Lidera a gestão de projetos e o trabalho para aumentar a circularidade dos resíduos no Brasil."
+  },
+  "clients.aboutPage.succarRole": {
+    "defaultMessage": "Diretor de Economia Circular"
+  },
+  "clients.aboutPage.teamTitle": {
+    "defaultMessage": "Quem faz o portal"
+  },
+  "clients.aboutPage.title": {
+    "defaultMessage": "Sobre nós"
+  },
+  "clients.app.footer": {
+    "defaultMessage": "Informação pública sobre resíduos na Baía de Guanabara, a partir do mapeamento de iniciativas e estudos da BVRio."
+  },
+  "clients.app.nav.about": {
+    "defaultMessage": "Sobre nós"
+  },
+  "clients.app.nav.catalog": {
+    "defaultMessage": "Catálogo"
+  },
+  "clients.app.nav.home": {
+    "defaultMessage": "Início"
+  },
+  "clients.app.nav.institutions": {
+    "defaultMessage": "Instituições"
+  },
+  "clients.app.nav.map": {
+    "defaultMessage": "Mapa"
+  },
+  "clients.catalogDetailsPage.browseAll": {
+    "defaultMessage": "Ver todas as entradas"
+  },
+  "clients.catalogDetailsPage.documentTitle": {
+    "defaultMessage": "{name} · Catálogo · Portal Guanabara"
+  },
+  "clients.catalogDetailsPage.loadError": {
+    "defaultMessage": "Não foi possível carregar esta entrada agora."
+  },
+  "clients.catalogDetailsPage.mapLabel": {
+    "defaultMessage": "Mapa da Baía de Guanabara com {places} em destaque"
+  },
+  "clients.catalogDetailsPage.mapLink": {
+    "defaultMessage": "Abrir o mapa"
+  },
+  "clients.catalogDetailsPage.mapTitle": {
+    "defaultMessage": "No mapa"
+  },
+  "clients.catalogDetailsPage.notFoundDescription": {
+    "defaultMessage": "Nenhuma iniciativa ou estudo do catálogo tem o ID “{id}”. IDs de entradas removidas não são reutilizados."
+  },
+  "clients.catalogDetailsPage.notFoundDocumentTitle": {
+    "defaultMessage": "Entrada não encontrada · Catálogo · Portal Guanabara"
+  },
+  "clients.catalogDetailsPage.notFoundTitle": {
+    "defaultMessage": "Entrada não encontrada"
+  },
+  "clients.catalogDetailsPage.partiesTitle": {
+    "defaultMessage": "Quem participa"
+  },
+  "clients.catalogDetailsPage.retry": {
+    "defaultMessage": "Tentar de novo"
+  },
+  "clients.catalogDetailsPage.sourcesTitle": {
+    "defaultMessage": "Fontes"
+  },
+  "clients.catalogDetailsPage.suggestFix": {
+    "defaultMessage": "Viu algo a corrigir? Sugira uma correção"
+  },
+  "clients.catalogDetailsPage.whatTitle": {
+    "defaultMessage": "O quê"
+  },
+  "clients.catalogDetailsPage.whereTitle": {
+    "defaultMessage": "Onde"
+  },
+  "clients.catalogListPage.clearFilters": {
+    "defaultMessage": "Limpar filtros"
+  },
+  "clients.catalogListPage.count": {
+    "defaultMessage": "{total, plural, =0 {Nenhuma entrada encontrada} one {# entrada encontrada} other {# entradas encontradas}}"
+  },
+  "clients.catalogListPage.documentTitle": {
+    "defaultMessage": "Catálogo · Portal Guanabara"
+  },
+  "clients.catalogListPage.emptyDescription": {
+    "defaultMessage": "Tente outras palavras ou remova algum filtro."
+  },
+  "clients.catalogListPage.emptyTitle": {
+    "defaultMessage": "Nada por aqui com esses filtros"
+  },
+  "clients.catalogListPage.introduction": {
+    "defaultMessage": "Iniciativas em campo e estudos sobre resíduos na Baía de Guanabara. Combine os filtros para chegar ao que procura."
+  },
+  "clients.catalogListPage.loadError": {
+    "defaultMessage": "Não foi possível carregar as entradas agora."
+  },
+  "clients.catalogListPage.retry": {
+    "defaultMessage": "Tentar de novo"
+  },
+  "clients.catalogListPage.suggest": {
+    "defaultMessage": "Sugira uma entrada"
+  },
+  "clients.catalogListPage.suggestQuestion": {
+    "defaultMessage": "Conhece uma iniciativa ou um estudo que não está aqui?"
+  },
+  "clients.catalogListPage.title": {
+    "defaultMessage": "Catálogo de iniciativas e estudos"
+  },
+  "clients.catalogListPage.total": {
+    "defaultMessage": "{total, plural, =0 {Nenhuma entrada} one {# entrada} other {# entradas}}"
+  },
+  "clients.contributePage.another": {
+    "defaultMessage": "Enviar outra"
+  },
+  "clients.contributePage.description": {
+    "defaultMessage": "Conhece uma iniciativa, um estudo ou uma instituição que falta, ou viu algo a corrigir? Conte para nós: a equipe do mapeamento confere antes de publicar."
+  },
+  "clients.contributePage.disabledDescription": {
+    "defaultMessage": "As contribuições ainda não estão abertas."
+  },
+  "clients.contributePage.disabledTitle": {
+    "defaultMessage": "Formulário indisponível"
+  },
+  "clients.contributePage.documentTitle": {
+    "defaultMessage": "Contribuir · Portal Guanabara"
+  },
+  "clients.contributePage.error": {
+    "defaultMessage": "Não foi possível enviar agora. Confira os campos e tente de novo."
+  },
+  "clients.contributePage.receipt": {
+    "defaultMessage": "Protocolo {id}. A equipe do mapeamento confere antes de entrar no catálogo."
+  },
+  "clients.contributePage.recordedTitle": {
+    "defaultMessage": "Alteração registrada"
+  },
+  "clients.contributePage.sentTitle": {
+    "defaultMessage": "Sugestão recebida, obrigado!"
+  },
+  "clients.contributePage.title": {
+    "defaultMessage": "Contribuir com o catálogo"
+  },
+  "clients.homePage.academiaDescription": {
+    "defaultMessage": "Universidades e centros de pesquisa, pelo número de estudos de que participam."
+  },
+  "clients.homePage.academiaTitle": {
+    "defaultMessage": "Estudos por academia"
+  },
+  "clients.homePage.brand": {
+    "defaultMessage": "Portal Guanabara",
+    "description": "The brand name over the large mark in the hero; never translated."
+  },
+  "clients.homePage.distributionsDescription": {
+    "defaultMessage": "Clique em uma barra para ver as entradas daquele recorte. Uma entrada pode aparecer em mais de uma categoria; entradas sem informação confirmada são contadas à parte, nunca como categoria."
+  },
+  "clients.homePage.distributionsTitle": {
+    "defaultMessage": "Temas, formas de atuação e academia"
+  },
+  "clients.homePage.documentTitle": {
+    "defaultMessage": "Portal Guanabara"
+  },
+  "clients.homePage.explore": {
+    "defaultMessage": "Explorar o catálogo"
+  },
+  "clients.homePage.explore.institutionsLine": {
+    "defaultMessage": "Executam, financiam, apoiam ou assinam"
+  },
+  "clients.homePage.explore.institutionsTitle": {
+    "defaultMessage": "Instituições"
+  },
+  "clients.homePage.explore.municipalitiesLine": {
+    "defaultMessage": "Com atuação em volta da Baía de Guanabara"
+  },
+  "clients.homePage.explore.municipalitiesTitle": {
+    "defaultMessage": "Municípios"
+  },
+  "clients.homePage.highlightsTitle": {
+    "defaultMessage": "Destaques"
+  },
+  "clients.homePage.introduction": {
+    "defaultMessage": "O mapeamento da BVRio reúne as iniciativas que limpam, coletam e restauram a baía e os estudos que medem o lixo no mar, nos rios e nos manguezais. Veja abaixo onde e sobre o que atuam — e clique em qualquer setor, tema, mecanismo ou universidade para ver as entradas ao lado."
+  },
+  "clients.homePage.keywordsTitle": {
+    "defaultMessage": "Palavras-chave"
+  },
+  "clients.homePage.loadError": {
+    "defaultMessage": "Não foi possível carregar o panorama do catálogo agora."
+  },
+  "clients.homePage.mechanismsDescription": {
+    "defaultMessage": "Somente iniciativas; estudos não têm mecanismo de atuação."
+  },
+  "clients.homePage.mechanismsTitle": {
+    "defaultMessage": "Mecanismos de atuação"
+  },
+  "clients.homePage.retry": {
+    "defaultMessage": "Tentar de novo"
+  },
+  "clients.homePage.sectorsDescription": {
+    "defaultMessage": "Do interior da baía até a entrada e o mar aberto. Clique em um setor para ver as entradas ao lado."
+  },
+  "clients.homePage.sectorsTitle": {
+    "defaultMessage": "Onde atuam, por setor da baía"
+  },
+  "clients.homePage.title": {
+    "defaultMessage": "<line>Quem <study>estuda</study> e quem <act>atua</act> pela</line> <line>Baía de Guanabara, em um só lugar</line>",
+    "description": "Rich text: <study> is drawn in the research purple, <act> in the action orange; each <line> is one line of the title (break after \"pela\")."
+  },
+  "clients.homePage.tour": {
+    "defaultMessage": "Começar o tour"
+  },
+  "clients.homePage.tour.chartsBody": {
+    "defaultMessage": "Cada gráfico mostra quantas iniciativas e estudos há em cada recorte."
+  },
+  "clients.homePage.tour.chartsTitle": {
+    "defaultMessage": "Temas, mecanismos e academias"
+  },
+  "clients.homePage.tour.detailsBody": {
+    "defaultMessage": "Onde, o quê, quem participa e as fontes: tudo sobre a entrada em uma página."
+  },
+  "clients.homePage.tour.detailsTitle": {
+    "defaultMessage": "A ficha da entrada"
+  },
+  "clients.homePage.tour.drawerBody": {
+    "defaultMessage": "Aqui estão as iniciativas e os estudos da linha; clique em um para ver a ficha."
+  },
+  "clients.homePage.tour.drawerTitle": {
+    "defaultMessage": "As entradas, ao lado"
+  },
+  "clients.homePage.tour.entryBody": {
+    "defaultMessage": "Cada cartão abre a ficha completa da iniciativa ou do estudo."
+  },
+  "clients.homePage.tour.entryTitle": {
+    "defaultMessage": "Clique em uma entrada"
+  },
+  "clients.homePage.tour.exploreBody": {
+    "defaultMessage": "Iniciativas atuam na baía; estudos pesquisam a baía. Clique em um cartão para ver o que ele conta."
+  },
+  "clients.homePage.tour.exploreTitle": {
+    "defaultMessage": "Quatro portas para o catálogo"
+  },
+  "clients.homePage.tour.filterBody": {
+    "defaultMessage": "Crie suas próprias análises utilizando diversos filtros."
+  },
+  "clients.homePage.tour.filterTitle": {
+    "defaultMessage": "Filtre como preferir"
+  },
+  "clients.homePage.tour.goodbyeBody": {
+    "defaultMessage": "Agora é com você. Para rever o caminho, comece o tour de novo por aqui."
+  },
+  "clients.homePage.tour.goodbyeTitle": {
+    "defaultMessage": "Boa pesquisa!"
+  },
+  "clients.homePage.tour.mapBody": {
+    "defaultMessage": "Navegue pelo mapa: passe o mouse ou toque em um município ou setor para ver o resultado compilado."
+  },
+  "clients.homePage.tour.mapTitle": {
+    "defaultMessage": "O mapa da baía"
+  },
+  "clients.homePage.tour.navigationBody": {
+    "defaultMessage": "Início resume, Catálogo lista tudo, Instituições mostra quem faz, Mapa mostra onde e Sobre nós conta quem somos."
+  },
+  "clients.homePage.tour.navigationTitle": {
+    "defaultMessage": "Cinco abas para explorar"
+  },
+  "clients.homePage.tour.optionsBody": {
+    "defaultMessage": "Em Opções, leia o portal em outro idioma ou aumente o zoom."
+  },
+  "clients.homePage.tour.optionsTitle": {
+    "defaultMessage": "Idioma e zoom"
+  },
+  "clients.homePage.tour.rowBody": {
+    "defaultMessage": "A linha abre as entradas dela ao lado, sem sair da página."
+  },
+  "clients.homePage.tour.rowTitle": {
+    "defaultMessage": "Clique em uma linha"
+  },
+  "clients.homePage.tour.sectorsBody": {
+    "defaultMessage": "Clique em um setor para ver as entradas ao lado."
+  },
+  "clients.homePage.tour.sectorsTitle": {
+    "defaultMessage": "Onde atuam na baía"
+  },
+  "clients.homePage.tour.toEntryTitle": {
+    "defaultMessage": "Abrindo a ficha…"
+  },
+  "clients.homePage.tour.toHomeTitle": {
+    "defaultMessage": "Vamos voltar para o Início"
+  },
+  "clients.homePage.tour.toMapTitle": {
+    "defaultMessage": "Abrindo o Mapa…"
+  },
+  "clients.homePage.tourHint": {
+    "defaultMessage": "Novo por aqui? Faça um tour pelas principais funcionalidades."
+  },
+  "clients.homePage.updated": {
+    "defaultMessage": "Dados atualizados em {date}"
+  },
+  "clients.institutionsListPage.clearFilters": {
+    "defaultMessage": "Limpar filtros"
+  },
+  "clients.institutionsListPage.count": {
+    "defaultMessage": "{total, plural, =0 {Nenhuma instituição encontrada} one {# instituição encontrada} other {# instituições encontradas}}"
+  },
+  "clients.institutionsListPage.documentTitle": {
+    "defaultMessage": "Instituições · Portal Guanabara"
+  },
+  "clients.institutionsListPage.emptyDescription": {
+    "defaultMessage": "Tente outro nome ou remova algum filtro."
+  },
+  "clients.institutionsListPage.emptyTitle": {
+    "defaultMessage": "Nenhuma instituição com esses filtros"
+  },
+  "clients.institutionsListPage.introduction": {
+    "defaultMessage": "Quem executa, financia, apoia ou assina os trabalhos do catálogo. Clique numa instituição para ver as entradas ao lado."
+  },
+  "clients.institutionsListPage.loadError": {
+    "defaultMessage": "Não foi possível carregar as instituições agora."
+  },
+  "clients.institutionsListPage.retry": {
+    "defaultMessage": "Tentar de novo"
+  },
+  "clients.institutionsListPage.title": {
+    "defaultMessage": "Instituições do catálogo"
+  },
+  "clients.institutionsListPage.total": {
+    "defaultMessage": "{total, plural, =0 {Nenhuma instituição} one {# instituição} other {# instituições}}"
+  },
+  "clients.loginPage.description": {
+    "defaultMessage": "Acesse sua conta para continuar."
+  },
+  "clients.loginPage.genericError": {
+    "defaultMessage": "Não foi possível entrar agora. Tente novamente em instantes."
+  },
+  "clients.loginPage.invalidCredentials": {
+    "defaultMessage": "E-mail ou senha inválidos."
+  },
+  "clients.loginPage.registered": {
+    "defaultMessage": "Conta criada com sucesso! Entre com seu e-mail e senha."
+  },
+  "clients.loginPage.title": {
+    "defaultMessage": "Entre na sua conta"
+  },
+  "clients.mapExplorePage.documentTitle": {
+    "defaultMessage": "Mapa · Portal Guanabara"
+  },
+  "clients.mapExplorePage.loadError": {
+    "defaultMessage": "Não foi possível carregar o mapa agora."
+  },
+  "clients.mapExplorePage.retry": {
+    "defaultMessage": "Tentar de novo"
+  },
+  "clients.mapExplorePage.source": {
+    "defaultMessage": "Limites municipais provisórios e simplificados, derivados da malha do IBGE; setores da baía aproximados."
+  },
+  "clients.mapExplorePage.sourceLink": {
+    "defaultMessage": "Malhas territoriais do IBGE"
+  },
+  "clients.mapExplorePage.title": {
+    "defaultMessage": "Mapa do catálogo"
+  },
+  "clients.mapExplorePage.unknown": {
+    "defaultMessage": "{count, plural, one {# entrada sem município confirmado não aparece no mapa} other {# entradas sem município confirmado não aparecem no mapa}}."
+  },
+  "clients.mapExplorePage.unknownSectors": {
+    "defaultMessage": "{count, plural, one {# entrada sem setor confirmado não aparece nos setores} other {# entradas sem setor confirmado não aparecem nos setores}}."
+  },
+  "clients.registrationPage.alreadyHaveAccount": {
+    "defaultMessage": "Já tenho conta"
+  },
+  "clients.registrationPage.emailAlreadyRegistered": {
+    "defaultMessage": "Já existe uma conta com este e-mail."
+  },
+  "clients.registrationPage.genericError": {
+    "defaultMessage": "Não foi possível criar sua conta agora. Tente novamente."
+  },
+  "clients.registrationPage.passwordMismatch": {
+    "defaultMessage": "A confirmação não confere com a senha."
+  },
+  "clients.registrationPage.passwordTooShort": {
+    "defaultMessage": "A senha precisa ter pelo menos 8 caracteres."
+  },
+  "clients.registrationPage.title": {
+    "defaultMessage": "Crie sua conta"
+  },
+  "clients.registrationPage.validationError": {
+    "defaultMessage": "Preencha todos os campos obrigatórios."
+  },
+  "clients.resetPasswordPage.backToLogin": {
+    "defaultMessage": "Voltar para o login"
+  },
+  "clients.resetPasswordPage.description": {
+    "defaultMessage": "Informe seu e-mail e enviaremos um link para redefinir sua senha."
+  },
+  "clients.resetPasswordPage.genericError": {
+    "defaultMessage": "Não foi possível enviar o link agora. Tente novamente."
+  },
+  "clients.resetPasswordPage.requested": {
+    "defaultMessage": "Se o e-mail estiver cadastrado, você receberá um link em instantes."
+  },
+  "clients.resetPasswordPage.title": {
+    "defaultMessage": "Recupere sua senha"
+  },
+  "clients.userDetailsPage.backToOverview": {
+    "defaultMessage": "Voltar para minha conta"
+  },
+  "clients.userDetailsPage.loadError": {
+    "defaultMessage": "Não foi possível carregar seus dados."
+  },
+  "clients.userDetailsPage.manage": {
+    "defaultMessage": "Editar meus dados"
+  },
+  "clients.userDetailsPage.title": {
+    "defaultMessage": "Meus dados"
+  },
+  "clients.userManagementPage.backToOverview": {
+    "defaultMessage": "Voltar para minha conta"
+  },
+  "clients.userManagementPage.emailAlreadyRegistered": {
+    "defaultMessage": "Este e-mail já está em uso por outra conta."
+  },
+  "clients.userManagementPage.genericError": {
+    "defaultMessage": "Não foi possível salvar agora. Tente novamente."
+  },
+  "clients.userManagementPage.invalidCurrentPassword": {
+    "defaultMessage": "A senha atual está incorreta."
+  },
+  "clients.userManagementPage.loadError": {
+    "defaultMessage": "Não foi possível carregar seus dados."
+  },
+  "clients.userManagementPage.passwordChanged": {
+    "defaultMessage": "Sua senha foi alterada."
+  },
+  "clients.userManagementPage.passwordHint": {
+    "defaultMessage": "Use pelo menos 8 caracteres."
+  },
+  "clients.userManagementPage.passwordMismatch": {
+    "defaultMessage": "A confirmação não confere com a nova senha."
+  },
+  "clients.userManagementPage.passwordTitle": {
+    "defaultMessage": "Senha"
+  },
+  "clients.userManagementPage.passwordTooShort": {
+    "defaultMessage": "A nova senha precisa ter pelo menos 8 caracteres."
+  },
+  "clients.userManagementPage.preferencesSaved": {
+    "defaultMessage": "Suas preferências foram salvas."
+  },
+  "clients.userManagementPage.preferencesTitle": {
+    "defaultMessage": "Preferências de comunicação"
+  },
+  "clients.userManagementPage.profileSaved": {
+    "defaultMessage": "Seus dados foram atualizados."
+  },
+  "clients.userManagementPage.profileTitle": {
+    "defaultMessage": "Dados pessoais"
+  },
+  "clients.userManagementPage.title": {
+    "defaultMessage": "Gerenciar conta"
+  },
+  "clients.userManagementPage.validationError": {
+    "defaultMessage": "Preencha todos os campos obrigatórios."
+  },
+  "clients.userOverviewPage.loadError": {
+    "defaultMessage": "Não foi possível carregar seus dados."
+  },
+  "presentationLake.about.workInProgress.label": {
+    "defaultMessage": "Em construção"
+  },
+  "presentationLake.authentication.loginConfirmation.forgotPassword": {
+    "defaultMessage": "Esqueceu a senha?"
+  },
+  "presentationLake.authentication.loginConfirmation.register": {
+    "defaultMessage": "Cadastre-se"
+  },
+  "presentationLake.authentication.loginConfirmation.title": {
+    "defaultMessage": "Confirme seu login"
+  },
+  "presentationLake.authentication.loginForm.emailLabel": {
+    "defaultMessage": "E-mail"
+  },
+  "presentationLake.authentication.loginForm.passwordLabel": {
+    "defaultMessage": "Senha"
+  },
+  "presentationLake.authentication.loginForm.resetPasswordSubmit": {
+    "defaultMessage": "Enviar link"
+  },
+  "presentationLake.authentication.loginForm.submit": {
+    "defaultMessage": "Entrar"
+  },
+  "presentationLake.button.loading": {
+    "defaultMessage": "Carregando"
+  },
+  "presentationLake.catalog.contribution.audience": {
+    "defaultMessage": "Quem envia"
+  },
+  "presentationLake.catalog.contribution.audiencePublic": {
+    "defaultMessage": "Sugestão pública"
+  },
+  "presentationLake.catalog.contribution.audienceTeam": {
+    "defaultMessage": "Equipe interna"
+  },
+  "presentationLake.catalog.contribution.consent": {
+    "defaultMessage": "Autorizo o uso do meu e-mail só para tratar desta sugestão."
+  },
+  "presentationLake.catalog.contribution.consentRequired": {
+    "defaultMessage": "Para usar o e-mail precisamos da sua autorização."
+  },
+  "presentationLake.catalog.contribution.contactEmail": {
+    "defaultMessage": "Seu e-mail (opcional, para respondermos)"
+  },
+  "presentationLake.catalog.contribution.contactName": {
+    "defaultMessage": "Seu nome"
+  },
+  "presentationLake.catalog.contribution.detailsFix": {
+    "defaultMessage": "O que corrigir"
+  },
+  "presentationLake.catalog.contribution.detailsNew": {
+    "defaultMessage": "O que é e o que faz"
+  },
+  "presentationLake.catalog.contribution.entryTarget": {
+    "defaultMessage": "ID da entrada (está no topo da página dela)"
+  },
+  "presentationLake.catalog.contribution.fixEntry": {
+    "defaultMessage": "Corrigir uma entrada"
+  },
+  "presentationLake.catalog.contribution.fixInstitution": {
+    "defaultMessage": "Corrigir uma instituição"
+  },
+  "presentationLake.catalog.contribution.institutionTarget": {
+    "defaultMessage": "Instituição"
+  },
+  "presentationLake.catalog.contribution.institutions": {
+    "defaultMessage": "Instituições envolvidas"
+  },
+  "presentationLake.catalog.contribution.kind": {
+    "defaultMessage": "Tipo"
+  },
+  "presentationLake.catalog.contribution.name": {
+    "defaultMessage": "Nome"
+  },
+  "presentationLake.catalog.contribution.newEntry": {
+    "defaultMessage": "Nova iniciativa ou estudo"
+  },
+  "presentationLake.catalog.contribution.newInstitution": {
+    "defaultMessage": "Nova instituição"
+  },
+  "presentationLake.catalog.contribution.places": {
+    "defaultMessage": "Municípios ou setores da baía"
+  },
+  "presentationLake.catalog.contribution.project": {
+    "defaultMessage": "Iniciativa"
+  },
+  "presentationLake.catalog.contribution.required": {
+    "defaultMessage": "Preencha este campo."
+  },
+  "presentationLake.catalog.contribution.source": {
+    "defaultMessage": "Fonte (link ou referência)"
+  },
+  "presentationLake.catalog.contribution.study": {
+    "defaultMessage": "Estudo"
+  },
+  "presentationLake.catalog.contribution.subject": {
+    "defaultMessage": "O que você quer fazer"
+  },
+  "presentationLake.catalog.contribution.submitPublic": {
+    "defaultMessage": "Enviar sugestão"
+  },
+  "presentationLake.catalog.contribution.submitTeam": {
+    "defaultMessage": "Registrar alteração"
+  },
+  "presentationLake.catalog.contribution.teamNote": {
+    "defaultMessage": "Para o time da BVRio e do mapeamento: a alteração fica registrada em seu nome para entrar no catálogo."
+  },
+  "presentationLake.catalog.distribution.empty": {
+    "defaultMessage": "Nenhuma entrada com esta informação."
+  },
+  "presentationLake.catalog.distribution.more": {
+    "defaultMessage": "{count, plural, one {Mais # categoria} other {Mais # categorias}} com menos entradas"
+  },
+  "presentationLake.catalog.distribution.projects": {
+    "defaultMessage": "{count, plural, one {# iniciativa} other {# iniciativas}}"
+  },
+  "presentationLake.catalog.distribution.studies": {
+    "defaultMessage": "{count, plural, one {# estudo} other {# estudos}}"
+  },
+  "presentationLake.catalog.distribution.unknown": {
+    "defaultMessage": "{count, plural, one {# entrada sem informação confirmada} other {# entradas sem informação confirmada}}"
+  },
+  "presentationLake.catalog.entryCard.moreTopics": {
+    "defaultMessage": "+{count}"
+  },
+  "presentationLake.catalog.entryCard.notGiven": {
+    "defaultMessage": "Não informado"
+  },
+  "presentationLake.catalog.entryCard.period": {
+    "defaultMessage": "Período"
+  },
+  "presentationLake.catalog.entryCard.place": {
+    "defaultMessage": "Local"
+  },
+  "presentationLake.catalog.entryCard.publication": {
+    "defaultMessage": "Publicação"
+  },
+  "presentationLake.catalog.entryCard.topics": {
+    "defaultMessage": "Temas"
+  },
+  "presentationLake.catalog.entryFacts.indicators": {
+    "defaultMessage": "Variáveis medidas"
+  },
+  "presentationLake.catalog.entryFacts.keywords": {
+    "defaultMessage": "Palavras-chave"
+  },
+  "presentationLake.catalog.entryFacts.mechanisms": {
+    "defaultMessage": "Mecanismos de atuação"
+  },
+  "presentationLake.catalog.entryFacts.period": {
+    "defaultMessage": "Período"
+  },
+  "presentationLake.catalog.entryFacts.periodicity": {
+    "defaultMessage": "Periodicidade"
+  },
+  "presentationLake.catalog.entryFacts.siteTypes": {
+    "defaultMessage": "Tipos de local"
+  },
+  "presentationLake.catalog.entryHeader.photoPending": {
+    "defaultMessage": "Foto em breve"
+  },
+  "presentationLake.catalog.entryHeader.publishedIn": {
+    "defaultMessage": "Publicado em {years}"
+  },
+  "presentationLake.catalog.entryHeader.reference": {
+    "defaultMessage": "ID {ref}"
+  },
+  "presentationLake.catalog.entryKeyFacts.more": {
+    "defaultMessage": "e mais {count}"
+  },
+  "presentationLake.catalog.entryKeyFacts.municipalities": {
+    "defaultMessage": "Municípios"
+  },
+  "presentationLake.catalog.entryKeyFacts.period": {
+    "defaultMessage": "Período"
+  },
+  "presentationLake.catalog.entryKeyFacts.published": {
+    "defaultMessage": "Publicação"
+  },
+  "presentationLake.catalog.entryKeyFacts.publishedIn": {
+    "defaultMessage": "Publicado em {years}"
+  },
+  "presentationLake.catalog.entryKeyFacts.reference": {
+    "defaultMessage": "ID {ref}"
+  },
+  "presentationLake.catalog.entryKeyFacts.referenceTerm": {
+    "defaultMessage": "Referência"
+  },
+  "presentationLake.catalog.entryKeyFacts.sectors": {
+    "defaultMessage": "Setores da baía"
+  },
+  "presentationLake.catalog.entryNarrative.data": {
+    "defaultMessage": "Dados disponíveis"
+  },
+  "presentationLake.catalog.entryNarrative.details": {
+    "defaultMessage": "Detalhes"
+  },
+  "presentationLake.catalog.entryNarrative.moreDetails": {
+    "defaultMessage": "Ver detalhes do mapeamento"
+  },
+  "presentationLake.catalog.entryNarrative.results": {
+    "defaultMessage": "Resultados relatados"
+  },
+  "presentationLake.catalog.entryParties.empty": {
+    "defaultMessage": "Nenhuma instituição informada para esta entrada."
+  },
+  "presentationLake.catalog.entryParties.personsHidden": {
+    "defaultMessage": "Nomes de pessoas (coordenação e autoria) não são exibidos nesta versão do portal."
+  },
+  "presentationLake.catalog.entrySources.empty": {
+    "defaultMessage": "Nenhuma fonte informada."
+  },
+  "presentationLake.catalog.entrySources.newTab": {
+    "defaultMessage": "(abre em nova aba)"
+  },
+  "presentationLake.catalog.entrySources.sourceTypes": {
+    "defaultMessage": "Tipos de fonte"
+  },
+  "presentationLake.catalog.entrySources.venues": {
+    "defaultMessage": "Veículos ou periódicos"
+  },
+  "presentationLake.catalog.entrySources.years": {
+    "defaultMessage": "Anos de publicação"
+  },
+  "presentationLake.catalog.filters.active": {
+    "defaultMessage": "Filtros ativos"
+  },
+  "presentationLake.catalog.filters.all": {
+    "defaultMessage": "Todos"
+  },
+  "presentationLake.catalog.filters.allInstitutions": {
+    "defaultMessage": "Todas as instituições"
+  },
+  "presentationLake.catalog.filters.allKeywords": {
+    "defaultMessage": "Todas as palavras-chave"
+  },
+  "presentationLake.catalog.filters.allMechanisms": {
+    "defaultMessage": "Todos os mecanismos"
+  },
+  "presentationLake.catalog.filters.allMunicipalities": {
+    "defaultMessage": "Todos os municípios"
+  },
+  "presentationLake.catalog.filters.allSectors": {
+    "defaultMessage": "Todos os setores"
+  },
+  "presentationLake.catalog.filters.allStatuses": {
+    "defaultMessage": "Todas as situações"
+  },
+  "presentationLake.catalog.filters.clear": {
+    "defaultMessage": "Limpar filtros"
+  },
+  "presentationLake.catalog.filters.institution": {
+    "defaultMessage": "Instituição"
+  },
+  "presentationLake.catalog.filters.keyword": {
+    "defaultMessage": "Palavra-chave"
+  },
+  "presentationLake.catalog.filters.kind": {
+    "defaultMessage": "Tipo"
+  },
+  "presentationLake.catalog.filters.mechanism": {
+    "defaultMessage": "Mecanismo de atuação"
+  },
+  "presentationLake.catalog.filters.mechanismShort": {
+    "defaultMessage": "Mecanismo"
+  },
+  "presentationLake.catalog.filters.municipality": {
+    "defaultMessage": "Município"
+  },
+  "presentationLake.catalog.filters.period": {
+    "defaultMessage": "Período"
+  },
+  "presentationLake.catalog.filters.periodApply": {
+    "defaultMessage": "Aplicar"
+  },
+  "presentationLake.catalog.filters.periodClear": {
+    "defaultMessage": "Limpar"
+  },
+  "presentationLake.catalog.filters.periodFrom": {
+    "defaultMessage": "Desde {from}"
+  },
+  "presentationLake.catalog.filters.periodLast12Months": {
+    "defaultMessage": "Últimos 12 meses"
+  },
+  "presentationLake.catalog.filters.periodLast5Years": {
+    "defaultMessage": "Últimos 5 anos"
+  },
+  "presentationLake.catalog.filters.periodNextYear": {
+    "defaultMessage": "Próximo ano"
+  },
+  "presentationLake.catalog.filters.periodNote": {
+    "defaultMessage": "Vale o tempo de atuação de cada entrada. Entradas sem data informada ficam de fora enquanto um período estiver escolhido."
+  },
+  "presentationLake.catalog.filters.periodPickEnd": {
+    "defaultMessage": "Desde {from}. Escolha o mês final ou aplique assim."
+  },
+  "presentationLake.catalog.filters.periodPickStart": {
+    "defaultMessage": "Escolha o mês inicial."
+  },
+  "presentationLake.catalog.filters.periodPreviousYear": {
+    "defaultMessage": "Ano anterior"
+  },
+  "presentationLake.catalog.filters.periodRange": {
+    "defaultMessage": "{from} – {to}"
+  },
+  "presentationLake.catalog.filters.periodThisYear": {
+    "defaultMessage": "Este ano"
+  },
+  "presentationLake.catalog.filters.periodTo": {
+    "defaultMessage": "Até {to}"
+  },
+  "presentationLake.catalog.filters.remove": {
+    "defaultMessage": "Remover filtro: {label}"
+  },
+  "presentationLake.catalog.filters.searchLabel": {
+    "defaultMessage": "Buscar no catálogo"
+  },
+  "presentationLake.catalog.filters.searchPlaceholder": {
+    "defaultMessage": "Nome, objetivo, instituição ou local"
+  },
+  "presentationLake.catalog.filters.searchTerm": {
+    "defaultMessage": "“{term}”"
+  },
+  "presentationLake.catalog.filters.sector": {
+    "defaultMessage": "Setor da baía"
+  },
+  "presentationLake.catalog.filters.sectorShort": {
+    "defaultMessage": "Setor"
+  },
+  "presentationLake.catalog.filters.sort": {
+    "defaultMessage": "Ordenar por"
+  },
+  "presentationLake.catalog.filters.sortName": {
+    "defaultMessage": "Nome (A–Z)"
+  },
+  "presentationLake.catalog.filters.sortRecent": {
+    "defaultMessage": "Mais recentes"
+  },
+  "presentationLake.catalog.filters.status": {
+    "defaultMessage": "Situação"
+  },
+  "presentationLake.catalog.filters.submit": {
+    "defaultMessage": "Buscar"
+  },
+  "presentationLake.catalog.highlights.ongoingTitle": {
+    "defaultMessage": "Iniciativas em andamento"
+  },
+  "presentationLake.catalog.highlights.recentTitle": {
+    "defaultMessage": "Estudos mais recentes"
+  },
+  "presentationLake.catalog.keyNumbers.activeProjects": {
+    "defaultMessage": "Iniciativas ativas"
+  },
+  "presentationLake.catalog.keyNumbers.activeProjectsAction": {
+    "defaultMessage": "Ver as ativas"
+  },
+  "presentationLake.catalog.keyNumbers.activeProjectsHint": {
+    "defaultMessage": "de {projects, plural, one {# iniciativa mapeada} other {# iniciativas mapeadas}}"
+  },
+  "presentationLake.catalog.keyNumbers.institutions": {
+    "defaultMessage": "Instituições envolvidas"
+  },
+  "presentationLake.catalog.keyNumbers.institutionsAction": {
+    "defaultMessage": "Ver as instituições"
+  },
+  "presentationLake.catalog.keyNumbers.institutionsHint": {
+    "defaultMessage": "executam, financiam, apoiam ou assinam"
+  },
+  "presentationLake.catalog.keyNumbers.municipalities": {
+    "defaultMessage": "Municípios com atuação"
+  },
+  "presentationLake.catalog.keyNumbers.municipalitiesAction": {
+    "defaultMessage": "Ver no mapa"
+  },
+  "presentationLake.catalog.keyNumbers.municipalitiesHint": {
+    "defaultMessage": "em volta da Baía de Guanabara"
+  },
+  "presentationLake.catalog.keyNumbers.title": {
+    "defaultMessage": "O catálogo em números"
+  },
+  "presentationLake.catalog.kind.project": {
+    "defaultMessage": "Iniciativa"
+  },
+  "presentationLake.catalog.kind.study": {
+    "defaultMessage": "Estudo"
+  },
+  "presentationLake.catalog.kindDuo.projectsLine": {
+    "defaultMessage": "Ação em campo · {active, plural, one {# ativa} other {# ativas}}"
+  },
+  "presentationLake.catalog.kindDuo.studiesLine": {
+    "defaultMessage": "Pesquisa publicada e em andamento"
+  },
+  "presentationLake.catalog.kindPlural.project": {
+    "defaultMessage": "Iniciativas"
+  },
+  "presentationLake.catalog.kindPlural.study": {
+    "defaultMessage": "Estudos"
+  },
+  "presentationLake.catalog.period.ongoing": {
+    "defaultMessage": "Em curso"
+  },
+  "presentationLake.catalog.period.ongoingSince": {
+    "defaultMessage": "{start} – em curso"
+  },
+  "presentationLake.catalog.period.range": {
+    "defaultMessage": "{start} – {end}"
+  },
+  "presentationLake.catalog.period.since": {
+    "defaultMessage": "Desde {start}"
+  },
+  "presentationLake.catalog.period.unknown": {
+    "defaultMessage": "Período não informado"
+  },
+  "presentationLake.catalog.period.until": {
+    "defaultMessage": "Até {end}"
+  },
+  "presentationLake.catalog.periodicity.continuous": {
+    "defaultMessage": "Contínua"
+  },
+  "presentationLake.catalog.periodicity.oneOff": {
+    "defaultMessage": "Pontual"
+  },
+  "presentationLake.catalog.periodicity.periodic": {
+    "defaultMessage": "Periódica"
+  },
+  "presentationLake.catalog.placeType.conservationUnit": {
+    "defaultMessage": "Unidades de conservação"
+  },
+  "presentationLake.catalog.placeType.fishingColony": {
+    "defaultMessage": "Colônias de pesca"
+  },
+  "presentationLake.catalog.placeType.locality": {
+    "defaultMessage": "Bairros e localidades"
+  },
+  "presentationLake.catalog.placeType.municipality": {
+    "defaultMessage": "Municípios"
+  },
+  "presentationLake.catalog.placeType.river": {
+    "defaultMessage": "Rios"
+  },
+  "presentationLake.catalog.placeType.sector": {
+    "defaultMessage": "Setor da baía"
+  },
+  "presentationLake.catalog.resultsDrawer.addFilter": {
+    "defaultMessage": "+ Filtro"
+  },
+  "presentationLake.catalog.resultsDrawer.addFilterTitle": {
+    "defaultMessage": "Adicionar filtro"
+  },
+  "presentationLake.catalog.resultsDrawer.allEntries": {
+    "defaultMessage": "Todas as entradas"
+  },
+  "presentationLake.catalog.resultsDrawer.clear": {
+    "defaultMessage": "Limpar"
+  },
+  "presentationLake.catalog.resultsDrawer.count": {
+    "defaultMessage": "{count, plural, =0 {Nenhuma entrada} one {# entrada} other {# entradas}}"
+  },
+  "presentationLake.catalog.resultsDrawer.error": {
+    "defaultMessage": "Não foi possível carregar as entradas agora."
+  },
+  "presentationLake.catalog.resultsDrawer.everything": {
+    "defaultMessage": "Catálogo"
+  },
+  "presentationLake.catalog.resultsDrawer.inUse": {
+    "defaultMessage": "em uso"
+  },
+  "presentationLake.catalog.resultsDrawer.institution": {
+    "defaultMessage": "Instituição"
+  },
+  "presentationLake.catalog.resultsDrawer.keyword": {
+    "defaultMessage": "Palavra-chave"
+  },
+  "presentationLake.catalog.resultsDrawer.kind": {
+    "defaultMessage": "Tipo"
+  },
+  "presentationLake.catalog.resultsDrawer.loading": {
+    "defaultMessage": "Carregando entradas…"
+  },
+  "presentationLake.catalog.resultsDrawer.mechanism": {
+    "defaultMessage": "Mecanismo de atuação"
+  },
+  "presentationLake.catalog.resultsDrawer.municipality": {
+    "defaultMessage": "Município"
+  },
+  "presentationLake.catalog.resultsDrawer.noMatch": {
+    "defaultMessage": "Nada encontrado"
+  },
+  "presentationLake.catalog.resultsDrawer.nothingToAdd": {
+    "defaultMessage": "Nenhum filtro novo muda estes resultados — mas você pode trocar um filtro em uso."
+  },
+  "presentationLake.catalog.resultsDrawer.remove": {
+    "defaultMessage": "Remover filtro: {label}"
+  },
+  "presentationLake.catalog.resultsDrawer.retry": {
+    "defaultMessage": "Tentar de novo"
+  },
+  "presentationLake.catalog.resultsDrawer.searchLabel": {
+    "defaultMessage": "Buscar em {dimension}"
+  },
+  "presentationLake.catalog.resultsDrawer.searchPlaceholder": {
+    "defaultMessage": "Digite para buscar…"
+  },
+  "presentationLake.catalog.resultsDrawer.sector": {
+    "defaultMessage": "Setor da baía"
+  },
+  "presentationLake.catalog.resultsDrawer.seeAll": {
+    "defaultMessage": "Abrir no Catálogo"
+  },
+  "presentationLake.catalog.resultsDrawer.showing": {
+    "defaultMessage": "Mostrando {shown} de {total}"
+  },
+  "presentationLake.catalog.resultsDrawer.stackLabel": {
+    "defaultMessage": "Filtros"
+  },
+  "presentationLake.catalog.resultsDrawer.status": {
+    "defaultMessage": "Situação"
+  },
+  "presentationLake.catalog.role.author": {
+    "defaultMessage": "Autoria"
+  },
+  "presentationLake.catalog.role.coordinator": {
+    "defaultMessage": "Coordenação"
+  },
+  "presentationLake.catalog.role.executor": {
+    "defaultMessage": "Execução"
+  },
+  "presentationLake.catalog.role.funder": {
+    "defaultMessage": "Financiamento"
+  },
+  "presentationLake.catalog.role.partner": {
+    "defaultMessage": "Parcerias"
+  },
+  "presentationLake.catalog.sectorGrid.count": {
+    "defaultMessage": "{count, plural, one {# entrada} other {# entradas}}"
+  },
+  "presentationLake.catalog.sectorGrid.unknown": {
+    "defaultMessage": "{count, plural, one {# entrada sem setor confirmado} other {# entradas sem setor confirmado}}"
+  },
+  "presentationLake.catalog.status.active": {
+    "defaultMessage": "Ativa"
+  },
+  "presentationLake.catalog.status.ended": {
+    "defaultMessage": "Encerrada"
+  },
+  "presentationLake.catalog.status.inImplementation": {
+    "defaultMessage": "Em implantação"
+  },
+  "presentationLake.catalog.status.inProgress": {
+    "defaultMessage": "Em andamento"
+  },
+  "presentationLake.catalog.status.published": {
+    "defaultMessage": "Publicado"
+  },
+  "presentationLake.catalog.topic.biota": {
+    "defaultMessage": "Biota"
+  },
+  "presentationLake.catalog.topic.environment": {
+    "defaultMessage": "Ambiente"
+  },
+  "presentationLake.catalog.topic.other": {
+    "defaultMessage": "Outras"
+  },
+  "presentationLake.catalog.topic.physical": {
+    "defaultMessage": "Processos físicos"
+  },
+  "presentationLake.catalog.topic.social": {
+    "defaultMessage": "Dimensão socioambiental"
+  },
+  "presentationLake.catalog.topic.waste": {
+    "defaultMessage": "Tipo de resíduo"
+  },
+  "presentationLake.components.pagination.label": {
+    "defaultMessage": "Páginas"
+  },
+  "presentationLake.components.pagination.next": {
+    "defaultMessage": "Próxima"
+  },
+  "presentationLake.components.pagination.previous": {
+    "defaultMessage": "Anterior"
+  },
+  "presentationLake.components.pagination.status": {
+    "defaultMessage": "Página {page} de {pageCount}"
+  },
+  "presentationLake.drawer.close": {
+    "defaultMessage": "Fechar"
+  },
+  "presentationLake.features.basicData.cpf": {
+    "defaultMessage": "CPF"
+  },
+  "presentationLake.features.basicData.email": {
+    "defaultMessage": "E-mail"
+  },
+  "presentationLake.features.basicData.fullName": {
+    "defaultMessage": "Nome completo"
+  },
+  "presentationLake.features.basicData.password": {
+    "defaultMessage": "Senha"
+  },
+  "presentationLake.features.basicData.passwordConfirmation": {
+    "defaultMessage": "Confirme sua senha"
+  },
+  "presentationLake.features.basicData.phone": {
+    "defaultMessage": "Celular"
+  },
+  "presentationLake.features.basicData.register": {
+    "defaultMessage": "Cadastrar"
+  },
+  "presentationLake.features.basicData.save": {
+    "defaultMessage": "Salvar"
+  },
+  "presentationLake.filterMenu.noMatch": {
+    "defaultMessage": "Nada encontrado"
+  },
+  "presentationLake.filterMenu.optionWithCount": {
+    "defaultMessage": "{label} ({count})"
+  },
+  "presentationLake.filterMenu.searchLabel": {
+    "defaultMessage": "Buscar opções de {label}"
+  },
+  "presentationLake.filterMenu.searchPlaceholder": {
+    "defaultMessage": "Digite para buscar…"
+  },
+  "presentationLake.guidedTour.done": {
+    "defaultMessage": "Concluir"
+  },
+  "presentationLake.guidedTour.next": {
+    "defaultMessage": "Próximo"
+  },
+  "presentationLake.guidedTour.previous": {
+    "defaultMessage": "Anterior"
+  },
+  "presentationLake.guidedTour.progress": {
+    "defaultMessage": "Passo {current} de {total}"
+  },
+  "presentationLake.guidedTour.skip": {
+    "defaultMessage": "Sair do tour"
+  },
+  "presentationLake.institutions.card.projects": {
+    "defaultMessage": "{count, plural, one {# iniciativa} other {# iniciativas}}"
+  },
+  "presentationLake.institutions.card.studies": {
+    "defaultMessage": "{count, plural, one {# estudo} other {# estudos}}"
+  },
+  "presentationLake.institutions.card.unknownType": {
+    "defaultMessage": "Tipo não informado"
+  },
+  "presentationLake.institutions.filters.active": {
+    "defaultMessage": "Filtros ativos"
+  },
+  "presentationLake.institutions.filters.all": {
+    "defaultMessage": "Todos"
+  },
+  "presentationLake.institutions.filters.allRoles": {
+    "defaultMessage": "Todos os papéis"
+  },
+  "presentationLake.institutions.filters.allTypes": {
+    "defaultMessage": "Todos os tipos"
+  },
+  "presentationLake.institutions.filters.clear": {
+    "defaultMessage": "Limpar filtros"
+  },
+  "presentationLake.institutions.filters.kind": {
+    "defaultMessage": "Atua em"
+  },
+  "presentationLake.institutions.filters.project": {
+    "defaultMessage": "Iniciativas"
+  },
+  "presentationLake.institutions.filters.remove": {
+    "defaultMessage": "Remover filtro: {label}"
+  },
+  "presentationLake.institutions.filters.role": {
+    "defaultMessage": "Papel"
+  },
+  "presentationLake.institutions.filters.searchLabel": {
+    "defaultMessage": "Buscar instituição pelo nome"
+  },
+  "presentationLake.institutions.filters.searchPlaceholder": {
+    "defaultMessage": "Nome da instituição"
+  },
+  "presentationLake.institutions.filters.sort": {
+    "defaultMessage": "Ordenar"
+  },
+  "presentationLake.institutions.filters.sortEntries": {
+    "defaultMessage": "Mais entradas"
+  },
+  "presentationLake.institutions.filters.sortName": {
+    "defaultMessage": "Nome (A–Z)"
+  },
+  "presentationLake.institutions.filters.study": {
+    "defaultMessage": "Estudos"
+  },
+  "presentationLake.institutions.filters.submit": {
+    "defaultMessage": "Buscar"
+  },
+  "presentationLake.institutions.filters.type": {
+    "defaultMessage": "Tipo"
+  },
+  "presentationLake.institutions.role.author": {
+    "defaultMessage": "Autora (estudos)"
+  },
+  "presentationLake.institutions.role.executor": {
+    "defaultMessage": "Executora"
+  },
+  "presentationLake.institutions.role.funder": {
+    "defaultMessage": "Financiadora"
+  },
+  "presentationLake.institutions.role.partner": {
+    "defaultMessage": "Parceira"
+  },
+  "presentationLake.map.baySectorList.open": {
+    "defaultMessage": "Ver as entradas do setor {name}"
+  },
+  "presentationLake.map.entries": {
+    "defaultMessage": "{count, plural, one {# entrada} other {# entradas}}"
+  },
+  "presentationLake.map.kinds": {
+    "defaultMessage": "{projects, plural, =0 {nenhuma iniciativa} one {# iniciativa} other {# iniciativas}} · {studies, plural, =0 {nenhum estudo} one {# estudo} other {# estudos}}"
+  },
+  "presentationLake.map.municipalityList.open": {
+    "defaultMessage": "Ver as entradas de {name}"
+  },
+  "presentationLake.map.municipalityMap.hint": {
+    "defaultMessage": "Passe o mouse ou toque em um município colorido ou em um setor da baía."
+  },
+  "presentationLake.map.municipalityMap.label": {
+    "defaultMessage": "Mapa dos municípios e dos setores da Baía de Guanabara"
+  },
+  "presentationLake.map.municipalityMap.legendEntries": {
+    "defaultMessage": "Entradas"
+  },
+  "presentationLake.map.municipalityMap.legendNone": {
+    "defaultMessage": "Sem entradas"
+  },
+  "presentationLake.map.municipalityMap.legendProjects": {
+    "defaultMessage": "Iniciativas"
+  },
+  "presentationLake.map.municipalityMap.legendRange": {
+    "defaultMessage": "{from, number}–{to, number}"
+  },
+  "presentationLake.map.municipalityMap.legendSectors": {
+    "defaultMessage": "Setores da baía"
+  },
+  "presentationLake.map.municipalityMap.legendSingle": {
+    "defaultMessage": "{from, number}"
+  },
+  "presentationLake.map.municipalityMap.legendStudies": {
+    "defaultMessage": "Estudos"
+  },
+  "presentationLake.map.municipalityMap.legendWater": {
+    "defaultMessage": "Baía e mar"
+  },
+  "presentationLake.map.municipalityMap.municipality": {
+    "defaultMessage": "{name}: {count, plural, one {# entrada} other {# entradas}}"
+  },
+  "presentationLake.map.municipalityMap.sector": {
+    "defaultMessage": "Setor {name}: {count, plural, one {# entrada} other {# entradas}}"
+  },
+  "presentationLake.map.projects": {
+    "defaultMessage": "{count, plural, =0 {0 iniciativas} one {# iniciativa} other {# iniciativas}}"
+  },
+  "presentationLake.map.projectsLabel": {
+    "defaultMessage": "{count, plural, =0 {iniciativas} one {iniciativa} other {iniciativas}}"
+  },
+  "presentationLake.map.studies": {
+    "defaultMessage": "{count, plural, =0 {0 estudos} one {# estudo} other {# estudos}}"
+  },
+  "presentationLake.map.studiesLabel": {
+    "defaultMessage": "{count, plural, =0 {estudos} one {estudo} other {estudos}}"
+  },
+  "presentationLake.siteHeader.account": {
+    "defaultMessage": "Minha conta"
+  },
+  "presentationLake.siteHeader.accountOf": {
+    "defaultMessage": "Minha conta: {name}"
+  },
+  "presentationLake.siteHeader.brand": {
+    "defaultMessage": "Portal Guanabara"
+  },
+  "presentationLake.siteHeader.language": {
+    "defaultMessage": "Idioma"
+  },
+  "presentationLake.siteHeader.menu": {
+    "defaultMessage": "Menu"
+  },
+  "presentationLake.siteHeader.navigation": {
+    "defaultMessage": "Navegação principal"
+  },
+  "presentationLake.siteHeader.openMenu": {
+    "defaultMessage": "Abrir o menu"
+  },
+  "presentationLake.siteHeader.options": {
+    "defaultMessage": "Opções"
+  },
+  "presentationLake.siteHeader.signIn": {
+    "defaultMessage": "Entrar"
+  },
+  "presentationLake.siteHeader.zoom": {
+    "defaultMessage": "Zoom"
+  },
+  "presentationLake.siteHeader.zoomLevel": {
+    "defaultMessage": "{level}%"
+  },
+  "presentationLake.user.communicationPreferences.description": {
+    "defaultMessage": "Escolha por quais canais o Portal Guanabara pode falar com você."
+  },
+  "presentationLake.user.communicationPreferences.email": {
+    "defaultMessage": "E-mail"
+  },
+  "presentationLake.user.communicationPreferences.sms": {
+    "defaultMessage": "SMS"
+  },
+  "presentationLake.user.communicationPreferences.submit": {
+    "defaultMessage": "Salvar preferências"
+  },
+  "presentationLake.user.communicationPreferences.whatsapp": {
+    "defaultMessage": "WhatsApp"
+  },
+  "presentationLake.user.overview.detailsDescription": {
+    "defaultMessage": "Consulte as informações cadastradas na sua conta."
+  },
+  "presentationLake.user.overview.detailsTitle": {
+    "defaultMessage": "Meus dados"
+  },
+  "presentationLake.user.overview.greeting": {
+    "defaultMessage": "Olá, {firstName}!"
+  },
+  "presentationLake.user.overview.logout": {
+    "defaultMessage": "Sair"
+  },
+  "presentationLake.user.overview.managementDescription": {
+    "defaultMessage": "Atualize seus dados, altere sua senha e escolha suas preferências."
+  },
+  "presentationLake.user.overview.managementTitle": {
+    "defaultMessage": "Gerenciar conta"
+  },
+  "presentationLake.user.overview.premiumDescription": {
+    "defaultMessage": "Você tem atendimento prioritário e acesso antecipado às novidades do portal."
+  },
+  "presentationLake.user.overview.premiumTitle": {
+    "defaultMessage": "Benefícios Premium"
+  },
+  "presentationLake.user.overview.subtitle": {
+    "defaultMessage": "O que você deseja fazer na sua conta?"
+  },
+  "presentationLake.user.passwordChange.currentPassword": {
+    "defaultMessage": "Senha atual"
+  },
+  "presentationLake.user.passwordChange.newPassword": {
+    "defaultMessage": "Nova senha"
+  },
+  "presentationLake.user.passwordChange.newPasswordConfirmation": {
+    "defaultMessage": "Confirme a nova senha"
+  },
+  "presentationLake.user.passwordChange.submit": {
+    "defaultMessage": "Alterar senha"
+  }
+}

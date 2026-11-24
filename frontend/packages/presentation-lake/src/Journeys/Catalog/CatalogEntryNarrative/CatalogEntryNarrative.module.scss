@@ -1,0 +1,101 @@
+.root {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+.section {
+  display: grid;
+  gap: var(--spacing-2);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-size);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Reported results (v0.9): the one paragraph most readers come for, highlighted. */
+.callout {
+  --callout-accent: var(--color-kind-project);
+  --callout-tint: var(--color-kind-project-tint);
+  --callout-line: var(--color-kind-project-chip);
+  --callout-ink: var(--color-kind-project-ink);
+
+  padding: var(--spacing-5) var(--spacing-6);
+  border: 1px solid var(--callout-line);
+  border-left: 4px solid var(--callout-accent);
+  border-radius: var(--radius-card);
+  background: var(--callout-tint);
+}
+
+.callout[data-kind='study'] {
+  --callout-accent: var(--color-kind-study);
+  --callout-tint: var(--color-kind-study-tint);
+  --callout-line: var(--color-kind-study-chip);
+  --callout-ink: var(--color-kind-study-ink);
+}
+
+.callout .text {
+  color: var(--color-text-primary);
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.titleIcon {
+  color: var(--callout-ink, var(--color-kind-project-ink));
+}
+
+/* Mapping notes: closed by default, one click away. */
+.disclosure {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4) var(--spacing-5);
+  color: var(--color-text-heading);
+  font-weight: var(--font-weight-semibold);
+  list-style: none;
+  cursor: pointer;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-card);
+}
+
+.summaryIcon {
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.disclosure[open] .summaryIcon {
+  transform: rotate(90deg);
+}
+
+.notes {
+  display: grid;
+  gap: var(--spacing-6);
+  padding: 0 var(--spacing-5) var(--spacing-5);
+}

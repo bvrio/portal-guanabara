@@ -1,0 +1,378 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  font-family: var(--font-family-sans);
+}
+
+/* Catches clicks on the page while the tour runs. */
+.blocker {
+  position: absolute;
+  inset: 0;
+}
+
+.spotlight {
+  position: fixed;
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0 0 3px var(--color-action-primary),
+    0 0 0 9999px rgb(7 42 52 / 62%);
+  pointer-events: none;
+  transition:
+    top var(--duration-slow) var(--easing-standard),
+    left var(--duration-slow) var(--easing-standard),
+    width var(--duration-slow) var(--easing-standard),
+    height var(--duration-slow) var(--easing-standard);
+}
+
+.card {
+  position: fixed;
+  display: grid;
+  gap: var(--spacing-3);
+  width: min(21rem, calc(100vw - 32px));
+  padding: var(--spacing-3) var(--spacing-4) var(--spacing-4);
+
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-text-primary);
+  outline: none;
+
+  transition:
+    top var(--duration-slow) var(--easing-standard),
+    left var(--duration-slow) var(--easing-standard);
+}
+
+/* Points from the card to the spotlight. */
+.arrow {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  background: var(--color-surface);
+  transform: rotate(45deg);
+  transition: left var(--duration-slow) var(--easing-standard);
+}
+
+.below .arrow {
+  top: -7px;
+}
+
+.above .arrow {
+  bottom: -7px;
+}
+
+/* Beside a tall target on its right (a drawer): the arrow on the card's right edge. */
+.beside .arrow {
+  right: -7px;
+  margin-top: -7px;
+  margin-left: 0;
+  transition: top var(--duration-slow) var(--easing-standard);
+}
+
+@media (max-width: 559px) {
+  .card {
+    inset: auto 16px 16px;
+    width: auto;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress {
+  color: var(--color-accent-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: calc(-1 * var(--spacing-2));
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--color-bg-muted);
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.icon {
+  display: inline-grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-tint);
+  color: var(--color-kind-project-ink);
+
+  --icon-tint: var(--color-accent);
+  --icon-tint-opacity: 0.35;
+  --icon-accent: var(--color-accent);
+}
+
+.text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Title and description at the same size: the weight tells them apart. */
+.title,
+.body {
+  margin: 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-snug);
+}
+
+.title {
+  color: var(--color-text-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.body {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.dots {
+  display: flex;
+  flex: 1;
+  gap: 5px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+  transition:
+    width var(--duration-normal) var(--easing-standard),
+    background-color var(--duration-normal) var(--easing-standard);
+}
+
+.dotDone {
+  background: var(--color-accent);
+}
+
+.dotActive {
+  width: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-action-primary);
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+  min-height: 36px;
+  border-radius: var(--radius-control);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.primary {
+  padding: 0 var(--spacing-4);
+  border: 0;
+  background: var(--color-action-primary);
+  color: var(--color-action-primary-contrast);
+}
+
+.primary:hover {
+  background: var(--color-action-primary-hover);
+}
+
+.secondary {
+  width: 36px;
+  padding: 0;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.secondary:hover {
+  border-color: var(--color-border-interactive);
+}
+
+.close:focus-visible,
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* A passing balloon is compact: the close button in its corner, no step count. */
+.passing {
+  padding-top: var(--spacing-4);
+}
+
+.passing .header {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+}
+
+.passing .content {
+  align-items: center;
+  padding-right: var(--spacing-8);
+}
+
+/*
+ * Passing steps (v0.9.32): a countdown bar instead of the buttons — the
+ * balloon moves on by itself when it runs out.
+ */
+.countdown {
+  display: block;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--color-action-primary);
+  transform-origin: left center;
+  animation: tour-countdown var(--tour-auto, 2000ms) linear forwards;
+}
+
+@keyframes tour-countdown {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+/*
+ * The pointer of a passing step: it leaves the balloon, travels to the
+ * target, presses it (a short squeeze) and a ring spreads from its tip.
+ */
+.pointer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(var(--to-x), var(--to-y));
+  animation: tour-pointer var(--tour-auto, 2000ms) var(--easing-standard) forwards;
+}
+
+.cursor {
+  position: absolute;
+  /* The arrow's tip (4, 2.5 of 24) on the point. */
+  top: -3px;
+  left: -5px;
+  fill: var(--color-nevoa-0);
+  stroke: var(--color-nevoa-950);
+  stroke-width: 1.6px;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 35%));
+}
+
+.tap {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-action-primary);
+  border-radius: 50%;
+  opacity: 0;
+  animation: tour-tap var(--tour-auto, 2000ms) ease-out forwards;
+}
+
+@keyframes tour-pointer {
+  0% {
+    opacity: 0;
+    transform: translate(var(--from-x), var(--from-y)) scale(1);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(var(--from-x), var(--from-y)) scale(1);
+  }
+
+  55% {
+    transform: translate(var(--to-x), var(--to-y)) scale(1);
+  }
+
+  62% {
+    transform: translate(var(--to-x), var(--to-y)) scale(0.8);
+  }
+
+  70%,
+  100% {
+    opacity: 1;
+    transform: translate(var(--to-x), var(--to-y)) scale(1);
+  }
+}
+
+@keyframes tour-tap {
+  0%,
+  58% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  64% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+/* The tour fades out when it ends (v0.9.29), instead of vanishing at once. */
+.leaving {
+  transition: opacity var(--duration-slow) var(--easing-standard);
+  pointer-events: none;
+}
+
+.left {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pointer,
+  .tap,
+  .countdown {
+    animation: none;
+  }
+
+  .leaving,
+  .spotlight,
+  .card,
+  .arrow,
+  .dot {
+    transition: none;
+  }
+}

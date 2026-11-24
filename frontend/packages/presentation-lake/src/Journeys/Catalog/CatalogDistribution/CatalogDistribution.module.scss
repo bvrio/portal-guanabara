@@ -1,0 +1,127 @@
+.root {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-4);
+  min-width: 0;
+  padding: var(--spacing-5) var(--spacing-4);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.header {
+  display: grid;
+  gap: var(--spacing-1);
+  padding: 0 var(--spacing-2);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+/* Início (v0.9.18): icon and title, description and legend centred over the bars. */
+.headerCenter {
+  justify-items: center;
+  text-align: center;
+}
+
+.headerCenter .title,
+.headerCenter .legend {
+  justify-content: center;
+}
+
+.titleIcon {
+  color: var(--color-structure-bg);
+}
+
+.itemIcon {
+  --frame-padding: 2px;
+  border-radius: var(--radius-full);
+}
+
+.description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* Legend of the split bars (v0.8): the colours always say their kind in words. */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1) var(--spacing-4);
+  margin: var(--spacing-1) 0 0;
+  padding: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  list-style: none;
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.swatchProject {
+  background: var(--color-kind-project);
+}
+
+.swatchStudy {
+  background: var(--color-kind-study);
+}
+
+.footer {
+  display: grid;
+  gap: var(--spacing-1);
+  padding: 0 var(--spacing-2);
+}
+
+.note {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-snug);
+}
+
+/*
+ * Kind stripe (v0.9): a 4px band along the top, inside the rounded corners —
+ * orange for initiatives, purple for studies, half and half for both.
+ */
+.stripeProject,
+.stripeStudy,
+.stripeBoth {
+  background:
+    linear-gradient(90deg, var(--stripe-start) 0 50%, var(--stripe-end) 50% 100%) top / 100% 4px no-repeat,
+    var(--color-surface);
+}
+
+.stripeProject {
+  --stripe-start: var(--color-kind-project);
+  --stripe-end: var(--color-kind-project);
+}
+
+.stripeStudy {
+  --stripe-start: var(--color-kind-study);
+  --stripe-end: var(--color-kind-study);
+}
+
+.stripeBoth {
+  --stripe-start: var(--color-kind-project);
+  --stripe-end: var(--color-kind-study);
+}

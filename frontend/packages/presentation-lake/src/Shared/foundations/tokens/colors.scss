@@ -1,0 +1,310 @@
+/*
+ * Portal Guanabara colour system — "Bay + Comlurb".
+ *
+ * Three layers:
+ *   1. Ramps     — raw palette values. Never used directly by Shared units.
+ *   2. Semantics — intent tokens (canvas, structure, action, text…).
+ *   3. Meanings  — catalogue concepts (kind, keyword category, sector, status).
+ *
+ * 60/30/10 — how much of a screen each role covers:
+ *   60%  névoa      misty off-white canvas and white surfaces  (--color-bg-*, --color-surface*)
+ *   30%  baía       deep bay blue structure: shell, hero bands,
+ *                   headings, secondary actions                 (--color-structure-*, --color-text-heading)
+ *   10%  comlurb    soft orange with black text: primary actions,
+ *                   active indicators — the "do something" colour (--color-action-primary*, --color-accent*)
+ * Meaning colours (água, mangue, pesquisa, resíduo…) appear only as small
+ * marks — icons, chips, stripes — and always next to a text label.
+ *
+ * Contrast (WCAG 2.x) is measured, not guessed; ratios are noted where a pair
+ * is part of the contract. The action orange is the soft comlurb-300 and
+ * always carries black ink text (8.83:1); stronger oranges are kept for focus
+ * rings and orange text on light tints.
+ *
+ * Comlurb colours are an homage to Rio's urban-cleaning orange and blue:
+ * colours only, no logos or brand marks.
+ */
+:root {
+  /* ── 1. Ramps ─────────────────────────────────────────────────────────── */
+
+  /* Névoa — misty, slightly green-grey neutrals (the 60%). */
+  --color-nevoa-0: #ffffff;
+  --color-nevoa-25: #fafbfb;
+  --color-nevoa-50: #f3f6f5;
+  --color-nevoa-100: #e7eceb;
+  --color-nevoa-200: #d5dddc;
+  --color-nevoa-300: #bac6c5;
+  --color-nevoa-400: #93a3a2;
+  --color-nevoa-500: #6e7f80;
+  --color-nevoa-600: #536466;
+  --color-nevoa-700: #3c4c4f;
+  --color-nevoa-800: #263538;
+  --color-nevoa-900: #152326;
+  --color-nevoa-950: #0b171a;
+
+  /* Baía — deep bay blue (the 30%). */
+  --color-baia-50: #eef5f7;
+  --color-baia-100: #d5e7ec;
+  --color-baia-200: #a9ced8;
+  --color-baia-300: #74aebe;
+  --color-baia-400: #3f8aa0;
+  --color-baia-500: #1f6e85;
+  --color-baia-600: #165a6e;
+  --color-baia-700: #0f4c5c;
+  --color-baia-800: #0b3a47;
+  --color-baia-900: #072a34;
+
+  /* Comlurb — action orange (the 10%). */
+  --color-comlurb-50: #fff3eb;
+  --color-comlurb-100: #ffe1cc;
+  --color-comlurb-200: #ffc199;
+  --color-comlurb-300: #ff9c5e;
+  --color-comlurb-400: #f7812f;
+  --color-comlurb-500: #f26a1b;
+  --color-comlurb-600: #d9560e;
+  --color-comlurb-700: #b4440b;
+  --color-comlurb-800: #8c350c;
+  --color-comlurb-900: #6b290b;
+
+  /* Água — open water; also the environment keyword category and charts. */
+  --color-agua-50: #e6f9fe;
+  --color-agua-100: #c6f0fb;
+  --color-agua-200: #9de1f2;
+  --color-agua-300: #6fcadf;
+  --color-agua-400: #3fabc3;
+  --color-agua-500: #0389a0;
+  --color-agua-600: #066f82;
+  --color-agua-700: #055766;
+  --color-agua-800: #03424e;
+  --color-agua-900: #012c35;
+
+  /* Mangue — mangrove green: nature, restoration, things that are alive. */
+  --color-mangue-50: #edf6f0;
+  --color-mangue-100: #d3eadb;
+  --color-mangue-200: #a8d4b8;
+  --color-mangue-300: #74b890;
+  --color-mangue-400: #4a9a6c;
+  --color-mangue-500: #2e7d52;
+  --color-mangue-600: #256643;
+  --color-mangue-700: #1e5236;
+  --color-mangue-800: #173f2a;
+  --color-mangue-900: #102c1d;
+
+  /* Pesquisa — research indigo: studies, knowledge. */
+  --color-pesquisa-50: #f0f0fa;
+  --color-pesquisa-100: #dcdcf3;
+  --color-pesquisa-200: #babae7;
+  --color-pesquisa-300: #9393d6;
+  --color-pesquisa-400: #6e6ec2;
+  --color-pesquisa-500: #4b4ba8;
+  --color-pesquisa-600: #3e3e92;
+  --color-pesquisa-700: #333378;
+  --color-pesquisa-800: #28285e;
+  --color-pesquisa-900: #1d1d44;
+
+  /*
+   * Keyword-category tones (50 tint · 100 tint · 500 mark · 700 text).
+   * v0.9.29: resíduo is a golden yellow (it was brown), at the others' level —
+   * mark ≥ 3:1 on white, like folha before. To keep yellow and green apart
+   * (validator, all pairs) folha-500 is a deeper leaf green (#6d9d2d before).
+   */
+  --color-residuo-50: #fdf6dc;
+  --color-residuo-100: #f8e8b0;
+  --color-residuo-500: #ad8a00;
+  --color-residuo-700: #6b5400;
+
+  --color-folha-50: #edf8e3;
+  --color-folha-100: #d8edc3;
+  --color-folha-500: #4a7024;
+  --color-folha-700: #385801;
+
+  --color-social-50: #ffeff3;
+  --color-social-100: #ffd9e3;
+  --color-social-500: #c93f76;
+  --color-social-700: #8c0d49;
+
+  --color-corrente-50: #eef4ff;
+  --color-corrente-100: #d8e5ff;
+  --color-corrente-500: #2b4fb0;
+  --color-corrente-700: #25459a;
+
+  /* Alerta — errors and destructive intent only. */
+  --color-alerta-50: #fff2f0;
+  --color-alerta-100: #fee0dc;
+  --color-alerta-500: #cb473f;
+  --color-alerta-600: #ac302b;
+  --color-alerta-700: #8b1f1c;
+
+  /* Legacy neutral ramp: re-pointed to névoa so older units inherit the tint. */
+  --color-neutral-0: var(--color-nevoa-0);
+  --color-neutral-50: var(--color-nevoa-50);
+  --color-neutral-100: var(--color-nevoa-100);
+  --color-neutral-200: var(--color-nevoa-200);
+  --color-neutral-300: var(--color-nevoa-300);
+  --color-neutral-400: var(--color-nevoa-400);
+  --color-neutral-500: var(--color-nevoa-500);
+  --color-neutral-600: var(--color-nevoa-600);
+  --color-neutral-700: var(--color-nevoa-700);
+  --color-neutral-800: var(--color-nevoa-800);
+  --color-neutral-900: var(--color-nevoa-900);
+  --color-neutral-950: var(--color-nevoa-950);
+
+  /* ── 2. Semantics ─────────────────────────────────────────────────────── */
+
+  /* 60% — canvas and surfaces. */
+  --color-bg-canvas: var(--color-nevoa-50);
+  --color-bg-subtle: var(--color-nevoa-50);
+  --color-bg-muted: var(--color-nevoa-100);
+  --color-surface: var(--color-nevoa-0);
+  --color-surface-raised: var(--color-nevoa-0);
+
+  --color-control-bg: var(--color-nevoa-0);
+  --color-control-bg-hover: var(--color-nevoa-25);
+
+  --color-border: var(--color-nevoa-200);
+  --color-border-strong: var(--color-nevoa-300);
+  --color-border-interactive: var(--color-nevoa-500); /* 4.19:1 on white */
+
+  /* Text on light surfaces. */
+  --color-text-primary: var(--color-nevoa-900); /* 14.85:1 on névoa-50 */
+  --color-text-secondary: var(--color-nevoa-700); /* 8.26:1 */
+  --color-text-muted: var(--color-nevoa-600); /* 5.71:1 */
+  --color-text-inverse: var(--color-nevoa-0);
+  --color-text-heading: var(--color-baia-800); /* 11.29:1 — the 30% in type */
+
+  --color-link: var(--color-baia-600); /* 7.10:1 on névoa-50 */
+  --color-link-hover: var(--color-baia-800);
+
+  /* 30% — structure: site shell, hero bands, section bands. */
+  --color-structure-bg: var(--color-baia-700);
+  --color-structure-bg-deep: var(--color-baia-800);
+  --color-structure-bg-hover: var(--color-baia-600);
+  --color-structure-border: var(--color-baia-600);
+  --color-structure-text: var(--color-nevoa-0); /* 9.51:1 on baia-700 */
+  --color-structure-text-secondary: var(--color-baia-100); /* 7.46:1 */
+  --color-structure-text-muted: var(--color-baia-200); /* 5.66:1 */
+  --color-structure-accent: var(--color-comlurb-300); /* 4.60:1 on baia-700 */
+  --color-structure-focus-ring: var(--color-comlurb-300);
+  --color-structure-tint: var(--color-baia-50);
+
+  /* 10% — action. */
+  --color-action-primary: var(--color-comlurb-300);
+  --color-action-primary-hover: var(--color-comlurb-200);
+  --color-action-primary-active: var(--color-comlurb-400);
+  --color-action-primary-contrast: var(--color-nevoa-950); /* black ink: 8.83:1 on 300 · 11.58:1 on 200 · 7.06:1 on 400 */
+
+  --color-action-secondary: var(--color-baia-50);
+  --color-action-secondary-hover: var(--color-baia-100);
+  --color-action-secondary-active: var(--color-baia-200);
+  --color-action-secondary-contrast: var(--color-baia-800); /* 11.13:1 on baia-50 */
+  --color-action-secondary-border: var(--color-baia-300); /* v0.9: outlined, never an empty-looking button */
+  --color-action-secondary-border-hover: var(--color-baia-400);
+
+  --color-accent: var(--color-comlurb-300); /* marks: indicators, stripes, selected states */
+  --color-accent-strong: var(--color-comlurb-500); /* small marks that need 3:1 on white */
+  --color-accent-text: var(--color-comlurb-700); /* orange text: 5.11:1 on comlurb-50 */
+  --color-accent-tint: var(--color-comlurb-50);
+  --color-selected-bg: var(--color-comlurb-100); /* selected chips and segments, black text */
+  --color-selected-border: var(--color-comlurb-300);
+
+  --color-focus-ring: var(--color-comlurb-600); /* ≥3:1 on white and névoa */
+  --color-focus-halo: rgb(217 86 14 / 18%); /* comlurb-600, soft ring around focused fields */
+  --color-disabled-bg: var(--color-nevoa-100);
+  --color-disabled-text: var(--color-nevoa-400);
+
+  /* Feedback. */
+  --color-feedback-info: var(--color-baia-500);
+  --color-feedback-info-tint: var(--color-baia-50);
+  --color-feedback-success: var(--color-mangue-500);
+  --color-feedback-success-tint: var(--color-mangue-50);
+  --color-feedback-warning: var(--color-comlurb-400);
+  --color-feedback-warning-tint: var(--color-comlurb-50);
+  --color-feedback-error: var(--color-alerta-600);
+  --color-feedback-error-tint: var(--color-alerta-50);
+
+  /* ── 3. Meanings ──────────────────────────────────────────────────────── */
+
+  /*
+   * Kind duo: field action (project, soft orange) and research (study, purple).
+   * mark → icon fill and stripes · ink → icon lines · tint → tiles and heroes ·
+   * chip → chip background (black text on it).
+   */
+  --color-kind-project: var(--color-comlurb-300);
+  --color-kind-project-ink: var(--color-comlurb-800); /* icon line, 7.33:1 on tint */
+  --color-kind-project-tint: var(--color-comlurb-50);
+  --color-kind-project-chip: var(--color-comlurb-100);
+  --color-kind-project-text: var(--color-nevoa-950);
+  --color-kind-study: var(--color-pesquisa-300);
+  --color-kind-study-ink: var(--color-pesquisa-700); /* icon line, 9.84:1 on tint */
+  --color-kind-study-tint: var(--color-pesquisa-50);
+  --color-kind-study-chip: var(--color-pesquisa-100);
+  --color-kind-study-text: var(--color-nevoa-950);
+
+  /*
+   * The other two ways into the catalogue (v0.9.20), on the same steps as the
+   * kinds (mark 300 · ink 700–800 · tint 50 · chip 100): Instituições in the
+   * névoa grey, the Mapa (municipalities) in the mangue green of its places.
+   */
+  --color-institution: var(--color-nevoa-300);
+  --color-institution-ink: var(--color-nevoa-700);
+  --color-institution-tint: var(--color-nevoa-50);
+  --color-institution-chip: var(--color-nevoa-100);
+  --color-place: var(--color-mangue-300);
+  --color-place-ink: var(--color-mangue-800);
+  --color-place-tint: var(--color-mangue-50);
+  --color-place-chip: var(--color-mangue-100);
+
+  /*
+   * Keyword categories. Validated as a categorical set (dataviz validator,
+   * light, all pairs: lightness, chroma, CVD ΔE ≥ 8.4, normal-vision ΔE ≥ 15,
+   * ≥ 3:1). Used for icon marks and chips with text, never as the only cue.
+   */
+  --color-topic-waste: var(--color-residuo-500);
+  --color-topic-waste-tint: var(--color-residuo-50);
+  --color-topic-waste-text: var(--color-residuo-700);
+  --color-topic-environment: var(--color-agua-500);
+  --color-topic-environment-tint: var(--color-agua-50);
+  --color-topic-environment-text: var(--color-agua-700);
+  /*
+   * Places on the Mapa (v0.9.5): four steps of the mangue green, lightest =
+   * fewest entries. Green is neither kind, so orange stays "initiatives" and
+   * purple "studies" on the markers drawn over it.
+   */
+  --color-map-place-1: var(--color-mangue-100);
+  --color-map-place-2: var(--color-mangue-200);
+  --color-map-place-3: var(--color-mangue-300);
+  --color-map-place-4: var(--color-mangue-400);
+
+  --color-topic-biota: var(--color-folha-500);
+  --color-topic-biota-tint: var(--color-folha-50);
+  --color-topic-biota-text: var(--color-folha-700);
+  --color-topic-physical: var(--color-corrente-500);
+  --color-topic-physical-tint: var(--color-corrente-50);
+  --color-topic-physical-text: var(--color-corrente-700);
+  --color-topic-social: var(--color-social-500);
+  --color-topic-social-tint: var(--color-social-50);
+  --color-topic-social-text: var(--color-social-700);
+  --color-topic-other: var(--color-nevoa-600);
+  --color-topic-other-tint: var(--color-nevoa-100);
+  --color-topic-other-text: var(--color-nevoa-700);
+
+  /* Bay sectors: shoreline in baía, water in água; the highlighted band paints
+     its water soft orange and its land soft purple. */
+  --color-sector-outline: var(--color-baia-700);
+  --color-sector-water: var(--color-agua-500);
+  --color-sector-zone-water: var(--color-comlurb-300);
+  --color-sector-zone-land: var(--color-pesquisa-200);
+
+  /* Status dots. */
+  --color-status-live: var(--color-mangue-500);
+  --color-status-progress: var(--color-agua-500);
+  --color-status-done: var(--color-nevoa-500);
+
+  /*
+   * Data visualization. One validated series hue (água-500: L 0.58, C 0.102,
+   * 4.13:1 on white — passes the dataviz lightness, chroma and contrast checks).
+   * Text never wears it: values and labels stay in text tokens.
+   */
+  --color-data-series-1: var(--color-agua-500);
+  --color-data-series-1-hover: var(--color-agua-600);
+  --color-data-track: var(--color-nevoa-100);
+}

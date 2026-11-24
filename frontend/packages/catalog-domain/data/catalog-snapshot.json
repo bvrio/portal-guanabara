@@ -1,0 +1,5056 @@
+{
+  "schemaVersion": 1,
+  "importRun": {
+    "importedAt": "2026-11-22T03:26:32.726Z",
+    "workbook": {
+      "fileName": "workbook.xlsx",
+      "sha256": "fbe386b8db92534f92505b17dc7b3d88c6ce579951f9f26e7c855ecde37b558a"
+    },
+    "entryCount": 41,
+    "projectCount": 24,
+    "studyCount": 17,
+    "warningCount": 36,
+    "includesPersons": true
+  },
+  "keywords": [
+    {
+      "code": "macrolixo",
+      "name": "Macrolixo",
+      "category": "Tipo de resíduo"
+    },
+    {
+      "code": "microplastico",
+      "name": "Microplástico",
+      "category": "Tipo de resíduo"
+    },
+    {
+      "code": "contaminantes",
+      "name": "Contaminantes",
+      "category": "Tipo de resíduo"
+    },
+    {
+      "code": "lixo-nautico",
+      "name": "Lixo náutico",
+      "category": "Tipo de resíduo"
+    },
+    {
+      "code": "rio",
+      "name": "Rio",
+      "category": "Ambiente"
+    },
+    {
+      "code": "sedimento-de-rio",
+      "name": "Sedimento de rio",
+      "category": "Ambiente"
+    },
+    {
+      "code": "manguezal",
+      "name": "Manguezal",
+      "category": "Ambiente"
+    },
+    {
+      "code": "sedimento-de-manguezal",
+      "name": "Sedimento de manguezal",
+      "category": "Ambiente"
+    },
+    {
+      "code": "estuario",
+      "name": "Estuário",
+      "category": "Ambiente"
+    },
+    {
+      "code": "sedimento-estuarino",
+      "name": "Sedimento estuarino",
+      "category": "Ambiente"
+    },
+    {
+      "code": "litoral",
+      "name": "Litoral",
+      "category": "Ambiente"
+    },
+    {
+      "code": "plataforma-continental",
+      "name": "Plataforma continental",
+      "category": "Ambiente"
+    },
+    {
+      "code": "sedimento-marinho",
+      "name": "Sedimento marinho",
+      "category": "Ambiente"
+    },
+    {
+      "code": "fauna",
+      "name": "Fauna",
+      "category": "Biota"
+    },
+    {
+      "code": "flora",
+      "name": "Flora",
+      "category": "Biota"
+    },
+    {
+      "code": "hidrodinamica",
+      "name": "Hidrodinâmica",
+      "category": "Processos físicos"
+    },
+    {
+      "code": "pesca-artesanal",
+      "name": "Pesca artesanal",
+      "category": "Dimensão socioambiental"
+    },
+    {
+      "code": "cadeia-da-reciclagem",
+      "name": "Cadeia da reciclagem",
+      "category": "Dimensão socioambiental"
+    },
+    {
+      "code": "saneamento",
+      "name": "Saneamento",
+      "category": "Dimensão socioambiental"
+    },
+    {
+      "code": "restauracao-ecologica",
+      "name": "Restauração ecológica",
+      "category": "Dimensão socioambiental"
+    }
+  ],
+  "mechanisms": [
+    {
+      "code": "contencao",
+      "name": "Contenção"
+    },
+    {
+      "code": "desenvolvimento-tecnologico",
+      "name": "Desenvolvimento tecnológico"
+    },
+    {
+      "code": "educativa",
+      "name": "Educativa"
+    },
+    {
+      "code": "fiscalizacao",
+      "name": "Fiscalização"
+    },
+    {
+      "code": "incidencia-politica",
+      "name": "Incidência política"
+    },
+    {
+      "code": "limpeza",
+      "name": "Limpeza"
+    },
+    {
+      "code": "monitoramento",
+      "name": "Monitoramento"
+    },
+    {
+      "code": "reciclagem-e-destinacao",
+      "name": "Reciclagem e destinação"
+    },
+    {
+      "code": "transacional",
+      "name": "Transacional"
+    },
+    {
+      "code": "voluntaria",
+      "name": "Voluntária"
+    }
+  ],
+  "siteTypes": [
+    {
+      "code": "praia",
+      "name": "Praia"
+    },
+    {
+      "code": "ilha",
+      "name": "Ilha"
+    },
+    {
+      "code": "manguezal",
+      "name": "Manguezal"
+    },
+    {
+      "code": "rio-ou-canal",
+      "name": "Rio ou canal"
+    },
+    {
+      "code": "espelho-d-agua",
+      "name": "Espelho d'água"
+    },
+    {
+      "code": "fundo",
+      "name": "Fundo"
+    }
+  ],
+  "institutionTypes": [
+    {
+      "code": "academica",
+      "name": "Acadêmica"
+    },
+    {
+      "code": "associacao-empresarial",
+      "name": "Associação empresarial"
+    },
+    {
+      "code": "comunitaria",
+      "name": "Comunitária"
+    },
+    {
+      "code": "cooperativa",
+      "name": "Cooperativa"
+    },
+    {
+      "code": "empresa-privada",
+      "name": "Empresa privada"
+    },
+    {
+      "code": "empresa-estatal",
+      "name": "Empresa estatal"
+    },
+    {
+      "code": "pessoa-fisica",
+      "name": "Pessoa física"
+    },
+    {
+      "code": "poder-publico",
+      "name": "Poder público"
+    },
+    {
+      "code": "terceiro-setor",
+      "name": "Terceiro setor"
+    }
+  ],
+  "sourceTypes": [
+    {
+      "code": "artigo-cientifico",
+      "name": "Artigo científico"
+    },
+    {
+      "code": "dissertacao",
+      "name": "Dissertação"
+    },
+    {
+      "code": "anais-de-evento",
+      "name": "Anais de evento"
+    },
+    {
+      "code": "relatorio-tecnico",
+      "name": "Relatório técnico"
+    },
+    {
+      "code": "divulgacao-cientifica",
+      "name": "Divulgação científica"
+    },
+    {
+      "code": "reportagem",
+      "name": "Reportagem"
+    },
+    {
+      "code": "site-institucional",
+      "name": "Site institucional"
+    },
+    {
+      "code": "blog",
+      "name": "Blog"
+    }
+  ],
+  "indicators": [
+    {
+      "code": "massa-t",
+      "name": "Massa (t)"
+    },
+    {
+      "code": "massa-por-tempo-t-dia",
+      "name": "Massa por tempo (t/dia)"
+    },
+    {
+      "code": "volume-m",
+      "name": "Volume (m³)"
+    },
+    {
+      "code": "itens-por-area-itens-m",
+      "name": "Itens por área (itens/m²)"
+    },
+    {
+      "code": "itens-por-volume-itens-m",
+      "name": "Itens por volume (itens/m³)"
+    },
+    {
+      "code": "itens-por-massa-itens-kg-ou-itens-g",
+      "name": "Itens por massa (itens/kg ou itens/g)"
+    }
+  ],
+  "places": [
+    {
+      "id": "conservation_unit:apa-de-guapimirim",
+      "type": "conservation_unit",
+      "slug": "apa-de-guapimirim",
+      "name": "APA de Guapimirim"
+    },
+    {
+      "id": "conservation_unit:parque-natural-municipal-barao-de-maua",
+      "type": "conservation_unit",
+      "slug": "parque-natural-municipal-barao-de-maua",
+      "name": "Parque Natural Municipal Barão de Mauá"
+    },
+    {
+      "id": "fishing_colony:z-10",
+      "type": "fishing_colony",
+      "slug": "z-10",
+      "name": "Z-10"
+    },
+    {
+      "id": "fishing_colony:z-11",
+      "type": "fishing_colony",
+      "slug": "z-11",
+      "name": "Z-11"
+    },
+    {
+      "id": "fishing_colony:z-8",
+      "type": "fishing_colony",
+      "slug": "z-8",
+      "name": "Z-8"
+    },
+    {
+      "id": "fishing_colony:z-9",
+      "type": "fishing_colony",
+      "slug": "z-9",
+      "name": "Z-9"
+    },
+    {
+      "id": "locality:boa-viagem",
+      "type": "locality",
+      "slug": "boa-viagem",
+      "name": "Boa Viagem"
+    },
+    {
+      "id": "locality:botafogo",
+      "type": "locality",
+      "slug": "botafogo",
+      "name": "Botafogo"
+    },
+    {
+      "id": "locality:caju",
+      "type": "locality",
+      "slug": "caju",
+      "name": "Caju"
+    },
+    {
+      "id": "locality:charitas",
+      "type": "locality",
+      "slug": "charitas",
+      "name": "Charitas"
+    },
+    {
+      "id": "locality:flamengo",
+      "type": "locality",
+      "slug": "flamengo",
+      "name": "Flamengo"
+    },
+    {
+      "id": "locality:fundao",
+      "type": "locality",
+      "slug": "fundao",
+      "name": "Fundão"
+    },
+    {
+      "id": "locality:icarai",
+      "type": "locality",
+      "slug": "icarai",
+      "name": "Icaraí"
+    },
+    {
+      "id": "locality:ilha-do-governador",
+      "type": "locality",
+      "slug": "ilha-do-governador",
+      "name": "Ilha do Governador"
+    },
+    {
+      "id": "locality:ilha-do-pontal",
+      "type": "locality",
+      "slug": "ilha-do-pontal",
+      "name": "Ilha do Pontal"
+    },
+    {
+      "id": "locality:ilha-do-raimundo",
+      "type": "locality",
+      "slug": "ilha-do-raimundo",
+      "name": "Ilha do Raimundo"
+    },
+    {
+      "id": "locality:itaipu",
+      "type": "locality",
+      "slug": "itaipu",
+      "name": "Itaipu"
+    },
+    {
+      "id": "locality:jardim-gramacho",
+      "type": "locality",
+      "slug": "jardim-gramacho",
+      "name": "Jardim Gramacho"
+    },
+    {
+      "id": "locality:jurujuba",
+      "type": "locality",
+      "slug": "jurujuba",
+      "name": "Jurujuba"
+    },
+    {
+      "id": "locality:mare",
+      "type": "locality",
+      "slug": "mare",
+      "name": "Maré"
+    },
+    {
+      "id": "locality:paqueta",
+      "type": "locality",
+      "slug": "paqueta",
+      "name": "Paquetá"
+    },
+    {
+      "id": "locality:piedade",
+      "type": "locality",
+      "slug": "piedade",
+      "name": "Piedade"
+    },
+    {
+      "id": "locality:praia-das-pedrinhas",
+      "type": "locality",
+      "slug": "praia-das-pedrinhas",
+      "name": "Praia das Pedrinhas"
+    },
+    {
+      "id": "locality:ramos",
+      "type": "locality",
+      "slug": "ramos",
+      "name": "Ramos"
+    },
+    {
+      "id": "locality:regiao-oceanica-de-niteroi",
+      "type": "locality",
+      "slug": "regiao-oceanica-de-niteroi",
+      "name": "Região Oceânica de Niterói"
+    },
+    {
+      "id": "locality:sao-francisco",
+      "type": "locality",
+      "slug": "sao-francisco",
+      "name": "São Francisco"
+    },
+    {
+      "id": "locality:surui",
+      "type": "locality",
+      "slug": "surui",
+      "name": "Suruí"
+    },
+    {
+      "id": "locality:urca",
+      "type": "locality",
+      "slug": "urca",
+      "name": "Urca"
+    },
+    {
+      "id": "locality:zona-portuaria",
+      "type": "locality",
+      "slug": "zona-portuaria",
+      "name": "Zona Portuária"
+    },
+    {
+      "id": "municipality:duque-de-caxias",
+      "type": "municipality",
+      "slug": "duque-de-caxias",
+      "name": "Duque de Caxias"
+    },
+    {
+      "id": "municipality:guapimirim",
+      "type": "municipality",
+      "slug": "guapimirim",
+      "name": "Guapimirim"
+    },
+    {
+      "id": "municipality:itaborai",
+      "type": "municipality",
+      "slug": "itaborai",
+      "name": "Itaboraí"
+    },
+    {
+      "id": "municipality:mage",
+      "type": "municipality",
+      "slug": "mage",
+      "name": "Magé"
+    },
+    {
+      "id": "municipality:niteroi",
+      "type": "municipality",
+      "slug": "niteroi",
+      "name": "Niterói"
+    },
+    {
+      "id": "municipality:rio-de-janeiro",
+      "type": "municipality",
+      "slug": "rio-de-janeiro",
+      "name": "Rio de Janeiro"
+    },
+    {
+      "id": "municipality:sao-goncalo",
+      "type": "municipality",
+      "slug": "sao-goncalo",
+      "name": "São Gonçalo"
+    },
+    {
+      "id": "municipality:sao-joao-de-meriti",
+      "type": "municipality",
+      "slug": "sao-joao-de-meriti",
+      "name": "São João de Meriti"
+    },
+    {
+      "id": "river:bomba",
+      "type": "river",
+      "slug": "bomba",
+      "name": "Bomba"
+    },
+    {
+      "id": "river:brandoas",
+      "type": "river",
+      "slug": "brandoas",
+      "name": "Brandoas"
+    },
+    {
+      "id": "river:caceribu",
+      "type": "river",
+      "slug": "caceribu",
+      "name": "Caceribu"
+    },
+    {
+      "id": "river:canal-de-sao-francisco",
+      "type": "river",
+      "slug": "canal-de-sao-francisco",
+      "name": "Canal de São Francisco"
+    },
+    {
+      "id": "river:canal-do-cunha",
+      "type": "river",
+      "slug": "canal-do-cunha",
+      "name": "Canal do Cunha"
+    },
+    {
+      "id": "river:canal-jose-pereira",
+      "type": "river",
+      "slug": "canal-jose-pereira",
+      "name": "Canal José Pereira"
+    },
+    {
+      "id": "river:estrela",
+      "type": "river",
+      "slug": "estrela",
+      "name": "Estrela"
+    },
+    {
+      "id": "river:guapimirim",
+      "type": "river",
+      "slug": "guapimirim",
+      "name": "Guapimirim"
+    },
+    {
+      "id": "river:iguacu",
+      "type": "river",
+      "slug": "iguacu",
+      "name": "Iguaçu"
+    },
+    {
+      "id": "river:imboacu",
+      "type": "river",
+      "slug": "imboacu",
+      "name": "Imboaçu"
+    },
+    {
+      "id": "river:iraja",
+      "type": "river",
+      "slug": "iraja",
+      "name": "Irajá"
+    },
+    {
+      "id": "river:joao-mendes",
+      "type": "river",
+      "slug": "joao-mendes",
+      "name": "João Mendes"
+    },
+    {
+      "id": "river:macacu",
+      "type": "river",
+      "slug": "macacu",
+      "name": "Macacu"
+    },
+    {
+      "id": "river:maracana",
+      "type": "river",
+      "slug": "maracana",
+      "name": "Maracanã"
+    },
+    {
+      "id": "river:marimbondo",
+      "type": "river",
+      "slug": "marimbondo",
+      "name": "Marimbondo"
+    },
+    {
+      "id": "river:pavuna-meriti",
+      "type": "river",
+      "slug": "pavuna-meriti",
+      "name": "Pavuna-Meriti"
+    },
+    {
+      "id": "river:sarapui",
+      "type": "river",
+      "slug": "sarapui",
+      "name": "Sarapuí"
+    },
+    {
+      "id": "river:surui",
+      "type": "river",
+      "slug": "surui",
+      "name": "Suruí"
+    },
+    {
+      "id": "sector:baia-inteira",
+      "type": "sector",
+      "slug": "baia-inteira",
+      "name": "Baía inteira"
+    },
+    {
+      "id": "sector:entrada",
+      "type": "sector",
+      "slug": "entrada",
+      "name": "Entrada"
+    },
+    {
+      "id": "sector:fora-da-baia",
+      "type": "sector",
+      "slug": "fora-da-baia",
+      "name": "Fora da Baía"
+    },
+    {
+      "id": "sector:interior",
+      "type": "sector",
+      "slug": "interior",
+      "name": "Interior"
+    },
+    {
+      "id": "sector:transicao",
+      "type": "sector",
+      "slug": "transicao",
+      "name": "Transição"
+    }
+  ],
+  "parties": [
+    {
+      "id": "institution:abrelpe",
+      "kind": "institution",
+      "name": "Abrelpe",
+      "institutionType": "associacao-empresarial"
+    },
+    {
+      "id": "institution:acamjg",
+      "kind": "institution",
+      "name": "ACAMJG",
+      "institutionType": null
+    },
+    {
+      "id": "institution:acamm",
+      "kind": "institution",
+      "name": "ACAMM",
+      "institutionType": null
+    },
+    {
+      "id": "institution:aguas-de-niteroi",
+      "kind": "institution",
+      "name": "Águas de Niterói",
+      "institutionType": null
+    },
+    {
+      "id": "person:alves-v-e-n",
+      "kind": "person",
+      "name": "Alves, V. E. N."
+    },
+    {
+      "id": "person:andrade-r-c",
+      "kind": "person",
+      "name": "Andrade, R. C."
+    },
+    {
+      "id": "person:baptista-neto-j-a",
+      "kind": "person",
+      "name": "Baptista Neto, J. A."
+    },
+    {
+      "id": "person:barros-barreto-m-b-b",
+      "kind": "person",
+      "name": "Barros-Barreto, M. B. B."
+    },
+    {
+      "id": "person:bernardino-d",
+      "kind": "person",
+      "name": "Bernardino, D."
+    },
+    {
+      "id": "person:bila-d-m",
+      "kind": "person",
+      "name": "Bila, D. M."
+    },
+    {
+      "id": "institution:blue-keepers",
+      "kind": "institution",
+      "name": "Blue Keepers",
+      "institutionType": null
+    },
+    {
+      "id": "institution:brissoneau",
+      "kind": "institution",
+      "name": "Brissoneau",
+      "institutionType": null
+    },
+    {
+      "id": "institution:capes",
+      "kind": "institution",
+      "name": "CAPES",
+      "institutionType": null
+    },
+    {
+      "id": "person:carreira-r-s",
+      "kind": "person",
+      "name": "Carreira, R. S."
+    },
+    {
+      "id": "person:carvalho-d-g",
+      "kind": "person",
+      "name": "Carvalho, D. G."
+    },
+    {
+      "id": "person:castro-i-b",
+      "kind": "person",
+      "name": "Castro, Í. B."
+    },
+    {
+      "id": "institution:clin",
+      "kind": "institution",
+      "name": "Clin",
+      "institutionType": null
+    },
+    {
+      "id": "institution:cnpq",
+      "kind": "institution",
+      "name": "CNPq",
+      "institutionType": null
+    },
+    {
+      "id": "institution:colonias-de-pescadores",
+      "kind": "institution",
+      "name": "Colônias de pescadores",
+      "institutionType": null
+    },
+    {
+      "id": "institution:comlurb",
+      "kind": "institution",
+      "name": "Comlurb",
+      "institutionType": "poder-publico"
+    },
+    {
+      "id": "institution:comunidade-local",
+      "kind": "institution",
+      "name": "Comunidade local",
+      "institutionType": null
+    },
+    {
+      "id": "institution:coop-promar",
+      "kind": "institution",
+      "name": "COOP PROMAR",
+      "institutionType": null
+    },
+    {
+      "id": "institution:coopama",
+      "kind": "institution",
+      "name": "COOPAMA",
+      "institutionType": null
+    },
+    {
+      "id": "institution:cooperativas-de-catadores",
+      "kind": "institution",
+      "name": "Cooperativas de catadores",
+      "institutionType": null
+    },
+    {
+      "id": "person:cunha-d-l",
+      "kind": "person",
+      "name": "Cunha, D. L."
+    },
+    {
+      "id": "person:dirlane-carmo",
+      "kind": "person",
+      "name": "Dirlane Carmo"
+    },
+    {
+      "id": "person:drabinski-t-l",
+      "kind": "person",
+      "name": "Drabinski, T. L."
+    },
+    {
+      "id": "institution:ecoboat",
+      "kind": "institution",
+      "name": "Ecoboat",
+      "institutionType": null
+    },
+    {
+      "id": "institution:escoteiros",
+      "kind": "institution",
+      "name": "Escoteiros",
+      "institutionType": null
+    },
+    {
+      "id": "institution:faperj",
+      "kind": "institution",
+      "name": "FAPERJ",
+      "institutionType": null
+    },
+    {
+      "id": "institution:fapesp",
+      "kind": "institution",
+      "name": "FAPESP",
+      "institutionType": null
+    },
+    {
+      "id": "institution:fecam",
+      "kind": "institution",
+      "name": "Fecam",
+      "institutionType": null
+    },
+    {
+      "id": "institution:feperj",
+      "kind": "institution",
+      "name": "FEPERJ",
+      "institutionType": null
+    },
+    {
+      "id": "person:fernandes-a-n",
+      "kind": "person",
+      "name": "Fernandes, A. N."
+    },
+    {
+      "id": "person:figueiredo-g-m",
+      "kind": "person",
+      "name": "Figueiredo, G. M."
+    },
+    {
+      "id": "institution:fiocruz",
+      "kind": "institution",
+      "name": "Fiocruz",
+      "institutionType": null
+    },
+    {
+      "id": "person:fonseca-e-m",
+      "kind": "person",
+      "name": "Fonseca, E. M."
+    },
+    {
+      "id": "person:franz-b",
+      "kind": "person",
+      "name": "Franz, B."
+    },
+    {
+      "id": "person:freitas-a-s",
+      "kind": "person",
+      "name": "Freitas, A. S."
+    },
+    {
+      "id": "person:furtado-c-r-g",
+      "kind": "person",
+      "name": "Furtado, C. R. G."
+    },
+    {
+      "id": "person:garcia-y",
+      "kind": "person",
+      "name": "Garcia, Y."
+    },
+    {
+      "id": "person:gaylarde-c-c",
+      "kind": "person",
+      "name": "Gaylarde, C. C."
+    },
+    {
+      "id": "institution:gbiotra",
+      "kind": "institution",
+      "name": "Gbiotra",
+      "institutionType": null
+    },
+    {
+      "id": "person:glaucia-souza",
+      "kind": "person",
+      "name": "Glaucia Souza"
+    },
+    {
+      "id": "person:gomes-r-s",
+      "kind": "person",
+      "name": "Gomes, R. S."
+    },
+    {
+      "id": "person:goncalves-j-r-m-r",
+      "kind": "person",
+      "name": "Gonçalves, J. R. M. R."
+    },
+    {
+      "id": "institution:governo-do-estado-do-rj",
+      "kind": "institution",
+      "name": "Governo do Estado do RJ",
+      "institutionType": null
+    },
+    {
+      "id": "institution:guardioes-do-mar",
+      "kind": "institution",
+      "name": "Guardiões do Mar",
+      "institutionType": "terceiro-setor"
+    },
+    {
+      "id": "person:hauser-davis-r-a",
+      "kind": "person",
+      "name": "Hauser-Davis, R. A."
+    },
+    {
+      "id": "person:henry-t-b",
+      "kind": "person",
+      "name": "Henry, T. B."
+    },
+    {
+      "id": "institution:heriot-watt-university",
+      "kind": "institution",
+      "name": "Heriot-Watt University",
+      "institutionType": null
+    },
+    {
+      "id": "institution:huesker",
+      "kind": "institution",
+      "name": "Huesker",
+      "institutionType": null
+    },
+    {
+      "id": "institution:inea",
+      "kind": "institution",
+      "name": "INEA",
+      "institutionType": null
+    },
+    {
+      "id": "institution:instituto-bvrio",
+      "kind": "institution",
+      "name": "Instituto BVRio",
+      "institutionType": null
+    },
+    {
+      "id": "institution:instituto-mar-urbano",
+      "kind": "institution",
+      "name": "Instituto Mar Urbano",
+      "institutionType": "terceiro-setor"
+    },
+    {
+      "id": "person:lima-l-v-s",
+      "kind": "person",
+      "name": "Lima, L. V. S."
+    },
+    {
+      "id": "person:lourenco-m-f-p",
+      "kind": "person",
+      "name": "Lourenço, M. F. P."
+    },
+    {
+      "id": "person:luiz-carlos",
+      "kind": "person",
+      "name": "Luiz Carlos"
+    },
+    {
+      "id": "person:luiz-carlos-furtado",
+      "kind": "person",
+      "name": "Luiz Carlos Furtado"
+    },
+    {
+      "id": "person:machado-w-t-v",
+      "kind": "person",
+      "name": "Machado, W. T. V."
+    },
+    {
+      "id": "person:mario-moscatelli",
+      "kind": "person",
+      "name": "Mário Moscatelli"
+    },
+    {
+      "id": "person:marques-l",
+      "kind": "person",
+      "name": "Marques, L."
+    },
+    {
+      "id": "person:martins-m-c-t",
+      "kind": "person",
+      "name": "Martins, M. C. T."
+    },
+    {
+      "id": "person:monalisa-oliveira",
+      "kind": "person",
+      "name": "Monalisa Oliveira"
+    },
+    {
+      "id": "person:montagner-c-c",
+      "kind": "person",
+      "name": "Montagner, C. C."
+    },
+    {
+      "id": "institution:movimento-baia-viva",
+      "kind": "institution",
+      "name": "Movimento Baía Viva",
+      "institutionType": "terceiro-setor"
+    },
+    {
+      "id": "institution:mprj",
+      "kind": "institution",
+      "name": "MPRJ",
+      "institutionType": null
+    },
+    {
+      "id": "person:nascimento-m-t-l",
+      "kind": "person",
+      "name": "Nascimento, M. T. L."
+    },
+    {
+      "id": "person:nascimento-r-f",
+      "kind": "person",
+      "name": "Nascimento, R. F."
+    },
+    {
+      "id": "institution:oceanpact",
+      "kind": "institution",
+      "name": "OceanPact",
+      "institutionType": "empresa-privada"
+    },
+    {
+      "id": "institution:ocyan",
+      "kind": "institution",
+      "name": "Ocyan",
+      "institutionType": null
+    },
+    {
+      "id": "institution:ogyre",
+      "kind": "institution",
+      "name": "Ogyre",
+      "institutionType": null
+    },
+    {
+      "id": "person:olivatto-g-p",
+      "kind": "person",
+      "name": "Olivatto, G. P."
+    },
+    {
+      "id": "institution:one-earth-one-ocean",
+      "kind": "institution",
+      "name": "One Earth One Ocean",
+      "institutionType": null
+    },
+    {
+      "id": "institution:orla-sem-lixo",
+      "kind": "institution",
+      "name": "Orla Sem Lixo",
+      "institutionType": null
+    },
+    {
+      "id": "person:paiva-p-c",
+      "kind": "person",
+      "name": "Paiva, P. C."
+    },
+    {
+      "id": "institution:parque-tecnologico-da-ufrj",
+      "kind": "institution",
+      "name": "Parque Tecnológico da UFRJ",
+      "institutionType": null
+    },
+    {
+      "id": "person:pedro-belga",
+      "kind": "person",
+      "name": "Pedro Belga"
+    },
+    {
+      "id": "institution:pescadores-artesanais",
+      "kind": "institution",
+      "name": "Pescadores artesanais",
+      "institutionType": null
+    },
+    {
+      "id": "institution:petrobras",
+      "kind": "institution",
+      "name": "Petrobras",
+      "institutionType": null
+    },
+    {
+      "id": "person:pierobon-c",
+      "kind": "person",
+      "name": "Pierobon, C."
+    },
+    {
+      "id": "institution:pmerj",
+      "kind": "institution",
+      "name": "PMERJ",
+      "institutionType": null
+    },
+    {
+      "id": "institution:poder-publico",
+      "kind": "institution",
+      "name": "Poder público",
+      "institutionType": null
+    },
+    {
+      "id": "person:prado-c-c-a",
+      "kind": "person",
+      "name": "Prado, C. C. A."
+    },
+    {
+      "id": "institution:prefeitura-de-duque-de-caxias",
+      "kind": "institution",
+      "name": "Prefeitura de Duque de Caxias",
+      "institutionType": null
+    },
+    {
+      "id": "institution:prefeitura-de-niteroi",
+      "kind": "institution",
+      "name": "Prefeitura de Niterói",
+      "institutionType": null
+    },
+    {
+      "id": "institution:prefeitura-de-sao-goncalo",
+      "kind": "institution",
+      "name": "Prefeitura de São Gonçalo",
+      "institutionType": null
+    },
+    {
+      "id": "institution:project-aware",
+      "kind": "institution",
+      "name": "Project AWARE",
+      "institutionType": null
+    },
+    {
+      "id": "institution:projeto-grael",
+      "kind": "institution",
+      "name": "Projeto Grael",
+      "institutionType": "terceiro-setor"
+    },
+    {
+      "id": "institution:projeto-olho-verde",
+      "kind": "institution",
+      "name": "Projeto Olho Verde",
+      "institutionType": null
+    },
+    {
+      "id": "institution:projeto-verde-mar",
+      "kind": "institution",
+      "name": "Projeto Verde Mar",
+      "institutionType": "terceiro-setor"
+    },
+    {
+      "id": "institution:puc-rio",
+      "kind": "institution",
+      "name": "PUC-Rio",
+      "institutionType": null
+    },
+    {
+      "id": "institution:redagua",
+      "kind": "institution",
+      "name": "REDAGUA",
+      "institutionType": "terceiro-setor"
+    },
+    {
+      "id": "person:ribeiro-v-v",
+      "kind": "person",
+      "name": "Ribeiro, V. V."
+    },
+    {
+      "id": "person:ricardo-gomes",
+      "kind": "person",
+      "name": "Ricardo Gomes"
+    },
+    {
+      "id": "person:rodrigo-gaiao",
+      "kind": "person",
+      "name": "Rodrigo Gaião"
+    },
+    {
+      "id": "person:rodrigues-m-f",
+      "kind": "person",
+      "name": "Rodrigues, M. F."
+    },
+    {
+      "id": "person:rosman-p-c-c",
+      "kind": "person",
+      "name": "Rosman, P. C. C."
+    },
+    {
+      "id": "institution:san-diego-university",
+      "kind": "institution",
+      "name": "San Diego University",
+      "institutionType": "academica"
+    },
+    {
+      "id": "person:santos-a-d-o",
+      "kind": "person",
+      "name": "Santos, A. D. O."
+    },
+    {
+      "id": "person:santos-a-p",
+      "kind": "person",
+      "name": "Santos, A. P."
+    },
+    {
+      "id": "institution:seas",
+      "kind": "institution",
+      "name": "SEAS",
+      "institutionType": null
+    },
+    {
+      "id": "person:sergio-ricardo-potiguara",
+      "kind": "person",
+      "name": "Sérgio Ricardo Potiguara"
+    },
+    {
+      "id": "person:silva-a-a",
+      "kind": "person",
+      "name": "Silva, A. A."
+    },
+    {
+      "id": "person:silva-a-l-c",
+      "kind": "person",
+      "name": "Silva, A. L. C."
+    },
+    {
+      "id": "person:silva-p",
+      "kind": "person",
+      "name": "Silva, P."
+    },
+    {
+      "id": "person:silva-r-a-g",
+      "kind": "person",
+      "name": "Silva, R. A. G."
+    },
+    {
+      "id": "person:silva-v-c-c",
+      "kind": "person",
+      "name": "Silva, V. C. C."
+    },
+    {
+      "id": "person:susana-vinzon",
+      "kind": "person",
+      "name": "Susana Vinzon"
+    },
+    {
+      "id": "person:torres-netto-a",
+      "kind": "person",
+      "name": "Torres Netto, A."
+    },
+    {
+      "id": "institution:transpetro",
+      "kind": "institution",
+      "name": "Transpetro",
+      "institutionType": null
+    },
+    {
+      "id": "institution:uerj",
+      "kind": "institution",
+      "name": "UERJ",
+      "institutionType": "academica"
+    },
+    {
+      "id": "institution:uff",
+      "kind": "institution",
+      "name": "UFF",
+      "institutionType": "academica"
+    },
+    {
+      "id": "institution:ufrgs",
+      "kind": "institution",
+      "name": "UFRGS",
+      "institutionType": null
+    },
+    {
+      "id": "institution:ufrj",
+      "kind": "institution",
+      "name": "UFRJ",
+      "institutionType": "academica"
+    },
+    {
+      "id": "institution:ufrrj",
+      "kind": "institution",
+      "name": "UFRRJ",
+      "institutionType": null
+    },
+    {
+      "id": "institution:unicamp",
+      "kind": "institution",
+      "name": "Unicamp",
+      "institutionType": null
+    },
+    {
+      "id": "institution:unifesp",
+      "kind": "institution",
+      "name": "UNIFESP",
+      "institutionType": null
+    },
+    {
+      "id": "institution:unisuam",
+      "kind": "institution",
+      "name": "UNISUAM",
+      "institutionType": null
+    },
+    {
+      "id": "institution:university-of-oklahoma",
+      "kind": "institution",
+      "name": "University of Oklahoma",
+      "institutionType": null
+    },
+    {
+      "id": "person:vernin-n-s",
+      "kind": "person",
+      "name": "Vernin, N. S."
+    },
+    {
+      "id": "person:vianna-t-m-p",
+      "kind": "person",
+      "name": "Vianna, T. M. P."
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:1",
+      "url": "https://doi.org/10.1016/j.marpolbul.2019.06.042",
+      "doi": "10.1016/j.marpolbul.2019.06.042",
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "Marine Pollution Bulletin",
+      "publishedYear": 2019
+    },
+    {
+      "id": "source:2",
+      "url": "https://doi.org/10.1016/j.marpolbul.2024.116772",
+      "doi": "10.1016/j.marpolbul.2024.116772",
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "Marine Pollution Bulletin",
+      "publishedYear": 2024
+    },
+    {
+      "id": "source:3",
+      "url": "https://www.bvrio.org/pt-br/pescandoresiduos/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:4",
+      "url": "https://www.ocyan-sa.com/pt-br/ocyan-retira-50-toneladas-de-residuos-da-baia-de-guanabara",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:5",
+      "url": "https://www.bvrio.org/pt-br/pescadores-da-baia-de-guanabara-criam-primeira-cooperativa-de-catadores-de-residuos-em-mares-e-oceanos/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:6",
+      "url": "https://bvrio.org/pt-br/bvrio-and-inea-sign-new-technical-cooperation-agreement-to-install-the-first-river-barrier-managed-by-the-fishing-for-litter-programme-in-guanabara-bay/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:7",
+      "url": "https://bvrio.org/pt-br/iniciativa-da-bvrio-remove-53-toneladas-de-residuos-da-ilha-do-raimundo-na-baia-de-guanabara/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:8",
+      "url": "https://bvrio.org/pt-br/bvrio-lidera-duas-acoes-de-limpeza-de-praia-removendo-quase-2-toneladas-de-residuos-pelo-dia-mundial-dos-oceanos/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:9",
+      "url": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-07/pescadores-tiram-46-toneladas-de-lixo-em-baias-de-guanabara-e-sepetiba",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:10",
+      "url": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-03/comunidade-transforma-cenario-ambiental-da-baia-de-guanabara",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:11",
+      "url": "https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-03/voluntarios-retiram-meia-tonelada-de-residuos-da-baia-de-guanabara",
+      "doi": null,
+      "note": null,
+      "sourceType": "reportagem",
+      "venue": "Agência Brasil",
+      "publishedYear": 2025
+    },
+    {
+      "id": "source:12",
+      "url": "https://doi.org/10.1016/j.ocecoaman.2016.04.009",
+      "doi": "10.1016/j.ocecoaman.2016.04.009",
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "Ocean & Coastal Management",
+      "publishedYear": 2016
+    },
+    {
+      "id": "source:13",
+      "url": "https://doi.org/10.1016/j.marpolbul.2018.12.042",
+      "doi": "10.1016/j.marpolbul.2018.12.042",
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:14",
+      "url": "https://www.maxwell.vrac.puc-rio.br/29926/29926.PDF",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:15",
+      "url": "https://doi.org/10.1016/j.marpolbul.2018.07.020",
+      "doi": "10.1016/j.marpolbul.2018.07.020",
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "Marine Pollution Bulletin",
+      "publishedYear": 2018
+    },
+    {
+      "id": "source:16",
+      "url": "https://guardioesdomar.org.br/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:17",
+      "url": "https://guardioesdomar.org.br/baia-de-guanabara-resiliente-projeto-uca-monitora-fauna-em-area-de-manguezal-restaurada-da-apa-de-guapi-mirim/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:18",
+      "url": "https://www.aprh.pt/rgci/rgci202.html",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:19",
+      "url": "https://www.redalyc.org/pdf/3883/388340132012.pdf",
+      "doi": null,
+      "note": "PDF do artigo",
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:20",
+      "url": "https://doi.org/10.1016/j.envres.2026.124688",
+      "doi": "10.1016/j.envres.2026.124688",
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "Environmental Research",
+      "publishedYear": 2026
+    },
+    {
+      "id": "source:21",
+      "url": "https://doi.org/10.5380/dma.v38i0.47024",
+      "doi": "10.5380/dma.v38i0.47024",
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:22",
+      "url": "https://revistas.ufpr.br/made/article/view/47024",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:23",
+      "url": "https://niteroi.rj.gov.br/parceria-da-prefeitura-com-aguas-de-niteroi-ministerio-publico-e-projeto-grael-vai-ajudar-a-recolher-lixo-flutuante-de-praia-da-baia/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": 2025
+    },
+    {
+      "id": "source:24",
+      "url": "https://www.inea.rj.gov.br/governo-do-estado-instala-ecobarreiras-em-rios-que-desaguam-na-baia-de-guanabara/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:25",
+      "url": "https://www.diariodorio.com/programa-estadual-de-despoluicao-evita-o-despejo-de-quase-12-mil-toneladas-de-lixo-na-baia-de-guanabara",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:26",
+      "url": "https://www.diariodorio.com/apesar-da-poluicao-baia-de-guanabara-registra-aumento-de-especies-marinhas/",
+      "doi": null,
+      "note": null,
+      "sourceType": "reportagem",
+      "venue": "Diário do Rio",
+      "publishedYear": 2023
+    },
+    {
+      "id": "source:27",
+      "url": "https://oceanpact.com/oceanpact-realiza-mutirao-de-limpeza-na-baia-de-guanabara/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": 2025
+    },
+    {
+      "id": "source:28",
+      "url": "https://coopamarecicla.com.br/blog/mutirao-de-limpeza-de-praia-resulta-na-retirada-de-quase-2-toneladas-de-residuos-da-baia-de-guanabara-no-dia-mundial-dos-oceanos/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:29",
+      "url": "https://maretorios.org/maretorios/pescando-plasticos-efeitos-socioambientais-dos-residuos-na-vida-dos-pescadores-artesanais-da-baia-de-guanabara/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:30",
+      "url": "https://maretorios.org/wp-content/uploads/tainacan-items/24/179/2023_pierobon_camila_pescando_plastico_efeitos_socioambientais_guanabara.pdf",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:31",
+      "url": "https://www.abrh.org.br/OJS/index.php/REGA/article/view/766",
+      "doi": null,
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "REGA (Revista de Gestão de Água da América Latina)",
+      "publishedYear": 2023
+    },
+    {
+      "id": "source:32",
+      "url": "https://doi.org/10.5894/rgci189",
+      "doi": "10.5894/rgci189",
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:33",
+      "url": "https://www.redalyc.org/pdf/3883/388340132004.pdf",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:34",
+      "url": "https://doi.org/10.21715/GB2358-2812.202337001",
+      "doi": "10.21715/GB2358-2812.202337001",
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:35",
+      "url": "https://geobrasiliensis.emnuvens.com.br/geobrasiliensis/article/view/710",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:36",
+      "url": "https://vermelho.org.br/?p=299560",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:37",
+      "url": "http://axelgrael.blogspot.com/2015/08/ecobarcos-voltam-operar-na-baia-de.html",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:38",
+      "url": "https://prefeitura.rio/comlurb/comlurb-promove-campanha-de-conscientizacao-no-piscinao-de-ramos-e-praias-da-ilha-nesta-semana/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:39",
+      "url": "https://enfoco.com.br/noticias/cidades/niteroi/cinco-toneladas-de-lixo-sao-coletadas-de-ecobarreiras-em-niteroi-130448",
+      "doi": null,
+      "note": null,
+      "sourceType": "reportagem",
+      "venue": "Enfoco",
+      "publishedYear": 2025
+    },
+    {
+      "id": "source:40",
+      "url": "https://baiaviva.org.br/cemiterio-sem-fim/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": 2026
+    },
+    {
+      "id": "source:41",
+      "url": "https://portal.amelica.org/ameli/journal/353/3531777006/html/",
+      "doi": null,
+      "note": null,
+      "sourceType": "artigo-cientifico",
+      "venue": "Revista Augustus",
+      "publishedYear": 2020
+    },
+    {
+      "id": "source:42",
+      "url": "https://emrevista.forum.ufrj.br/baia-da-guanabara-a-ciencia-por-baixo-de-suas-aguas/",
+      "doi": null,
+      "note": null,
+      "sourceType": "divulgacao-cientifica",
+      "venue": "Fórum UFRJ em revista",
+      "publishedYear": 2023
+    },
+    {
+      "id": "source:43",
+      "url": "https://redemrio.com.br/baia-de-guanabara-tem-57-toneladas-de-peixes-mortos-retiradas-em-24-horas/",
+      "doi": null,
+      "note": "imprensa secundária",
+      "sourceType": "reportagem",
+      "venue": "Rede M Rio",
+      "publishedYear": 2026
+    },
+    {
+      "id": "source:44",
+      "url": "https://projetograel.org.br/projeto-grael-recolhe-cerca-de-200kg-de-lixo-em-niteroi/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:45",
+      "url": "https://www.projetoverdemar.com/limpezasub",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:46",
+      "url": "https://anais.abrhidro.org.br/job.php?Job=18968",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:47",
+      "url": "https://anais.abrhidro.org.br/job.php?Job=18969",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:48",
+      "url": "https://files.abrhidro.org.br/Eventos/Trabalhos/295/III-FLUHIDROS0081-2-0-20260602-125711.pdf",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:49",
+      "url": "https://files.abrhidro.org.br/Eventos/Trabalhos/295/III-FLUHIDROS0082-1-20260504-135954.pdf",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:50",
+      "url": "https://parque.ufrj.br/programas_especiais/orla-sem-lixo/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:51",
+      "url": "https://doi.org/10.3390/micro3010015",
+      "doi": "10.3390/micro3010015",
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:52",
+      "url": "https://www.mdpi.com/2673-8023/3/1/15",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:53",
+      "url": "https://www.atribunarj.com.br/materia/ecobarreira-impede-que-toneladas-de-lixo-cheguem-ao-mar",
+      "doi": null,
+      "note": "secundária",
+      "sourceType": "reportagem",
+      "venue": "A Tribuna",
+      "publishedYear": 2021
+    },
+    {
+      "id": "source:54",
+      "url": "https://www.cnnbrasil.com.br/nacional/quase-100-toneladas-de-lixo-sao-despejadas-por-dia-na-baia-de-guanabara-diz-abrelpe/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:55",
+      "url": "https://www.pmsg.rj.gov.br/projeto-realiza-limpeza-da-praia-das-pedrinhas-em-sao-goncalo/",
+      "doi": null,
+      "note": null,
+      "sourceType": null,
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:56",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2949864326000068",
+      "doi": null,
+      "note": "versão 1; página não pôde ser aberta, não verificado",
+      "sourceType": "artigo-cientifico",
+      "venue": null,
+      "publishedYear": 2026
+    },
+    {
+      "id": "source:57",
+      "url": "https://duquedecaxias.rj.gov.br/noticia/funcionando-24h,-comeca-a-operacao-barreira-sanitaria,-que-busca-o-fim-do-descarte-clandestino-de-lixo-em-jardim-gramacho/5079",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:58",
+      "url": "https://www.saogoncalo.rj.gov.br/limpa-rio-realiza-trabalho-essencial-em-rios-de-sao-goncalo-que-desaguam-na-baia-de-guanabara/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": null
+    },
+    {
+      "id": "source:59",
+      "url": "https://oneearth-oneocean.com/en/uncategorized-es/2020/pescadores-da-baia-de-guanabara-pescam-lixo-para-voltar-a-pescar-peixes/",
+      "doi": null,
+      "note": null,
+      "sourceType": "site-institucional",
+      "venue": null,
+      "publishedYear": 2020
+    }
+  ],
+  "entries": [
+    {
+      "ref": 1,
+      "kind": "project",
+      "name": "Pescando Resíduos (Fishing for Litter)",
+      "objective": "Remover resíduos sólidos de manguezais, ilhas, margens e águas rasas do interior da Baía de Guanabara por meio da remuneração de pescadores artesanais, estruturando uma cadeia de recuperação e reciclagem e transformando a limpeza em serviço ambiental verificável, com linhas financiadas por empresas, mutirões, uma cooperativa de pescadores (COOP PROMAR) e a instalação de uma ecobarreira com o INEA.",
+      "start": {
+        "date": "2021-12-01",
+        "precision": "month"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous",
+        "one_off"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "transacional",
+        "reciclagem-e-destinacao",
+        "contencao",
+        "voluntaria"
+      ],
+      "keywords": [
+        "macrolixo",
+        "pesca-artesanal",
+        "manguezal"
+      ],
+      "siteTypes": [
+        "ilha",
+        "manguezal",
+        "rio-ou-canal",
+        "praia"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador",
+        "locality:fundao",
+        "locality:caju",
+        "locality:mare",
+        "locality:ilha-do-raimundo"
+      ],
+      "parties": [
+        {
+          "party": "institution:instituto-bvrio",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:ocyan",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:colonias-de-pescadores",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:pescadores-artesanais",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:coop-promar",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:inea",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:coopama",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:acamjg",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:escoteiros",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:ogyre",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:ocyan",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:instituto-bvrio",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:petrobras",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:cooperativas-de-catadores",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "person:glaucia-souza",
+          "role": "coordinator",
+          "note": "presidente da COOP PROMAR"
+        }
+      ],
+      "sources": [
+        "source:3",
+        "source:4",
+        "source:5",
+        "source:6",
+        "source:7",
+        "source:8"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor",
+        "comunitaria",
+        "empresa-privada",
+        "cooperativa",
+        "poder-publico"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "resultsSummary": "Foram coletadas mais de 600 t de resíduos até 2026, com cerca de 100 pescadores, e mais de 10% do material foi destinado à reciclagem (dado de 2024). Na linha Ogyre, foram mais de 440 t até 2026 e, na linha Ocyan, 82,6 t entre 2023 e 2024.",
+      "dataAvailability": "Peso, foto e geolocalização por coleta no app KOLEKT; composição por material. Painel aberto: não encontrado; composição da linha Ocyan divulgada em notícias. A página do programa cita um painel de controle online para rastrear as transações (KOLEKT), sem acesso público",
+      "details": "Local: Ilha Seca, Praia da Amendoeira (Fundão), ilhas e manguezais do interior da baía\nMecanismo de atuação: pagamento por serviço ambiental a pescadores artesanais; mutirões com pescadores remunerados e voluntários\nExecutores: pescadores das colônias do Caju e da Ilha do Governador, organizados na COOP PROMAR desde novembro de 2024; COOPAMA, ACAMJG e escoteiros nos mutirões; INEA na ecobarreira (escolha do canal, dados hidrológicos e apoio técnico)\nFinanciadoras: nos mutirões, Petrobras (patrocínio da COOPAMA e da ACAMJG), Ocyan e Ogyre\nParceiras: cooperativas de catadores na retirada e destinação dos resíduos; aterro municipal na destinação (Ilha do Raimundo)\nPeríodo: A BVRio cita apoio a comunidades desde 2020. Linhas de financiamento: Ogyre (abril de 2022 até hoje), Ocyan (outubro de 2023 a junho de 2024), BVRio (junho de 2024 até hoje) e AMOR, em Moçambique (setembro de 2022 a maio de 2023, fora da baía). Mutirões: Dia Mundial dos Oceanos (08/06/2024), Ilha do Raimundo (julho de 2024, cinco dias de coleta) e Dia Mundial da Limpeza (21 de setembro, provavelmente de 2024). Acordo com o INEA para a primeira ecobarreira do programa anunciado em junho de 2026, com canal a definir\nMeta: 100 t na linha Ocyan\nResultados: 500 t até outubro de 2025, segundo notícias; mais de 730 t até junho de 2026, segundo a página do programa"
+    },
+    {
+      "ref": 7,
+      "kind": "project",
+      "name": "Programa de Ecobarreiras nos rios que deságuam na Baía de Guanabara",
+      "objective": "Reter resíduos flutuantes em rios e canais que deságuam na Baía de Guanabara por meio de ecobarreiras, com meta anunciada de mais de 1.200 t/mês.",
+      "start": {
+        "date": "2023-03-17",
+        "precision": "day"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "contencao"
+      ],
+      "keywords": [
+        "macrolixo",
+        "rio"
+      ],
+      "siteTypes": [
+        "rio-ou-canal"
+      ],
+      "places": [
+        "sector:interior",
+        "municipality:rio-de-janeiro",
+        "municipality:sao-joao-de-meriti",
+        "municipality:duque-de-caxias",
+        "municipality:mage",
+        "municipality:sao-goncalo",
+        "municipality:niteroi",
+        "river:pavuna-meriti",
+        "river:canal-do-cunha",
+        "river:sarapui",
+        "river:iguacu",
+        "river:estrela",
+        "river:iraja",
+        "river:imboacu",
+        "river:bomba",
+        "river:marimbondo"
+      ],
+      "parties": [
+        {
+          "party": "institution:inea",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:coopama",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:uff",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:governo-do-estado-do-rj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:seas",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:coopama",
+          "role": "partner",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:24",
+        "source:25"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional",
+        "reportagem"
+      ],
+      "venues": [
+        "Diário do Rio"
+      ],
+      "publicationYears": [
+        2016,
+        2025
+      ],
+      "resultsSummary": "Foram retidas 11.679 t de resíduos entre 2023 e 2024 (cerca de 600 t/mês), com os maiores volumes no Iguaçu (5.311,06 t), Meriti (2.569,01 t), Estrela (1.470,20 t) e Canal do Cunha (1.458,21 t). Até 2025, o total ultrapassou 15.600 t, e em 2026 foram retidas mais de 2 mil t.",
+      "dataAvailability": "Totais por rio divulgados em notícias; série mensal aberta não encontrada. Segundo Mário Moscatelli à CNN Brasil (05/06/2022), o serviço de manutenção estava interrompido havia quatro meses; relatório original do levantamento de desempenho não encontrado",
+      "details": "Local: 17 barreiras flutuantes\nMecanismo de atuação: serviço contratado\nExecutores: operação por empresa contratada, não identificada\nParceiras: a participação da COOPAMA é informada pela própria cooperativa\nPeríodo: Programa estadual lançado em 2003 ou 2004 (as fontes divergem), suspenso em março de 2015 e retomado em julho de 2015, com 17 ecobarreiras previstas para os Jogos de 2016. Fase atual, por contratação emergencial, desde março de 2023\nResultados: o total de mais de 15.600 t vai de março de 2023 a abril de 2025"
+    },
+    {
+      "ref": 8,
+      "kind": "project",
+      "name": "Programa Limpa Rio (São Gonçalo)",
+      "objective": "Desassorear rios tributários da Baía de Guanabara em São Gonçalo (Marimbondo, Brandoas, Canal José Pereira e Bomba) e retirar sedimentos e resíduos.",
+      "start": {
+        "date": "2024-10-01",
+        "precision": "month"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "limpeza"
+      ],
+      "keywords": [
+        "macrolixo",
+        "rio",
+        "sedimento-de-rio"
+      ],
+      "siteTypes": [
+        "rio-ou-canal"
+      ],
+      "places": [
+        "municipality:sao-goncalo",
+        "river:marimbondo",
+        "river:brandoas",
+        "river:canal-jose-pereira",
+        "river:bomba"
+      ],
+      "parties": [
+        {
+          "party": "institution:prefeitura-de-sao-goncalo",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:inea",
+          "role": "executor",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:58"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [],
+      "resultsSummary": "Foram retirados mais de 15 mil m³ de sedimentos e resíduos, sem separação entre as duas frações.",
+      "dataAvailability": null,
+      "details": "Executores: Secretaria de Desenvolvimento Urbano de São Gonçalo; papéis não confirmados\nPeríodo: A data de início é a da escavadeira anfíbia; o início do programa não foi encontrado"
+    },
+    {
+      "ref": 9,
+      "kind": "project",
+      "name": "Operação Barreira Sanitária da Baía de Guanabara",
+      "objective": "Fiscalizar, 24 horas por dia, o descarte clandestino de lixo em Jardim Gramacho (Duque de Caxias).",
+      "start": {
+        "date": "2023-09-12",
+        "precision": "day"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "fiscalizacao"
+      ],
+      "keywords": [
+        "macrolixo",
+        "saneamento"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:interior",
+        "municipality:duque-de-caxias",
+        "locality:jardim-gramacho"
+      ],
+      "parties": [
+        {
+          "party": "institution:prefeitura-de-duque-de-caxias",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:inea",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:pmerj",
+          "role": "executor",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:57"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [],
+      "resultsSummary": "A operação mobilizou seis viaturas, um caminhão e 24 policiais militares em dois turnos, monitorando as cinco entradas do bairro.",
+      "dataAvailability": null,
+      "details": "Executores: papéis de cada executor não confirmados\nPeríodo: Funcionamento 24 horas por dia"
+    },
+    {
+      "ref": 10,
+      "kind": "project",
+      "name": "Operação Praia Limpa e limpeza das praias da baía",
+      "objective": "Limpar as praias da Baía de Guanabara no município do Rio de Janeiro (Flamengo, Ramos, Ilha do Governador e Paquetá) e conscientizar banhistas.",
+      "start": null,
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "periodic"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "limpeza"
+      ],
+      "keywords": [
+        "macrolixo",
+        "litoral"
+      ],
+      "siteTypes": [
+        "praia",
+        "ilha"
+      ],
+      "places": [
+        "sector:entrada",
+        "municipality:rio-de-janeiro",
+        "locality:flamengo",
+        "locality:ramos",
+        "locality:ilha-do-governador",
+        "locality:paqueta"
+      ],
+      "parties": [
+        {
+          "party": "institution:comlurb",
+          "role": "executor",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:38"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [],
+      "resultsSummary": "No Réveillon de 2025, foram retiradas 60 t de resíduos no Flamengo, 32 t na Praia da Bica, 14 t no Piscinão de Ramos e 8 t em Paquetá. Em um fim de semana, foram retiradas 84,1 t na Ilha do Governador, 32,1 t em Ramos e 5,3 t em Paquetá.",
+      "dataAvailability": "Lixo de areia deixado por banhistas, não lixo flutuante",
+      "details": "Período: No verão"
+    },
+    {
+      "ref": 11,
+      "kind": "project",
+      "name": "Limpeza do espelho d'água no entorno do Museu do Amanhã (embarcação)",
+      "objective": "Limpar diariamente o espelho d'água no entorno do Museu do Amanhã (Zona Portuária do Rio de Janeiro), com uso de embarcação.",
+      "start": null,
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "limpeza"
+      ],
+      "keywords": [
+        "macrolixo",
+        "estuario"
+      ],
+      "siteTypes": [
+        "espelho-d-agua"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:zona-portuaria"
+      ],
+      "parties": [
+        {
+          "party": "institution:comlurb",
+          "role": "executor",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:43"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "Rede M Rio"
+      ],
+      "publicationYears": [
+        2026
+      ],
+      "resultsSummary": "Em um episódio de mortandade (2026), foram retiradas 5,7 t de peixes mortos em 24 h, junto com garrafas, latas e isopor.",
+      "dataAvailability": null,
+      "details": "Período: Limpeza diária"
+    },
+    {
+      "ref": 12,
+      "kind": "project",
+      "name": "Ecobarcos de coleta de lixo flutuante",
+      "objective": "Recolher lixo flutuante no espelho d'água da Baía de Guanabara com ecobarcos.",
+      "start": {
+        "date": "2014-01-03",
+        "precision": "day"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "limpeza"
+      ],
+      "keywords": [
+        "macrolixo",
+        "estuario"
+      ],
+      "siteTypes": [
+        "espelho-d-agua"
+      ],
+      "places": [
+        "sector:baia-inteira"
+      ],
+      "parties": [
+        {
+          "party": "institution:brissoneau",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:ecoboat",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:projeto-grael",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:governo-do-estado-do-rj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:fecam",
+          "role": "funder",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:36",
+        "source:37"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico",
+        "empresa-privada"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "reportagem",
+        "blog"
+      ],
+      "venues": [
+        "Blog de Axel Grael",
+        "Vermelho"
+      ],
+      "publicationYears": [
+        2014,
+        2015
+      ],
+      "resultsSummary": "Em 2015, as cinco ecobarreiras então em operação capturavam cerca de 5 t/dia.",
+      "dataAvailability": null,
+      "details": "Mecanismo de atuação: dez ecobarcos contratados\nExecutores: operação com jovens formados pelo Projeto Grael; programa da Secretaria Estadual do Ambiente\nFinanciadoras: R$ 3 milhões em 2014; cerca de R$ 300 mil por mês em 2015\nPeríodo: Três embarcações no início; interrupção em 23 de fevereiro e retomada em 1º de julho de 2015"
+    },
+    {
+      "ref": 13,
+      "kind": "project",
+      "name": "Projeto Águas Limpas (ecobarco) e Cavalos da Enseada",
+      "objective": "Retirar lixo flutuante, monitorar resíduos e proteger a colônia de cavalos-marinhos da Enseada de Jurujuba (Niterói), Baía de Guanabara.",
+      "start": {
+        "date": "2025-03-27",
+        "precision": "day"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "limpeza",
+        "monitoramento"
+      ],
+      "keywords": [
+        "macrolixo",
+        "estuario",
+        "fauna"
+      ],
+      "siteTypes": [
+        "espelho-d-agua",
+        "praia"
+      ],
+      "places": [
+        "sector:entrada",
+        "municipality:niteroi",
+        "locality:jurujuba"
+      ],
+      "parties": [
+        {
+          "party": "institution:prefeitura-de-niteroi",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:projeto-grael",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:clin",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:aguas-de-niteroi",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:prefeitura-de-niteroi",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:mprj",
+          "role": "partner",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:23"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico",
+        "empresa-privada",
+        "terceiro-setor"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2025
+      ],
+      "resultsSummary": "O ecobarco tem capacidade de meia tonelada.",
+      "dataAvailability": null,
+      "details": "Local: Enseada de Jurujuba e orla da cidade\nExecutores: o Projeto Grael opera o ecobarco e monitora os cavalos-marinhos; a Clin faz a coleta na areia\nFinanciadoras: créditos de ação declaratória acordados entre a Águas de Niterói e o MPRJ; ecobarco adquirido por TAC de 2009 entre as duas partes\nPeríodo: Ecobarco em operação desde 2010 e de 2018 a 2020, segundo blogs locais; a data de início é a do relançamento da parceria, com um primeiro mês de testes"
+    },
+    {
+      "ref": 14,
+      "kind": "project",
+      "name": "Ecobarreira do Canal de São Francisco (Programa Enseada Limpa)",
+      "objective": "Impedir que o lixo do Canal de São Francisco (Niterói) chegue às praias da enseada, por meio de ecobarreira.",
+      "start": {
+        "date": "2013-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "contencao"
+      ],
+      "keywords": [
+        "macrolixo",
+        "rio"
+      ],
+      "siteTypes": [
+        "rio-ou-canal"
+      ],
+      "places": [
+        "sector:entrada",
+        "municipality:niteroi",
+        "locality:sao-francisco",
+        "river:canal-de-sao-francisco"
+      ],
+      "parties": [
+        {
+          "party": "institution:aguas-de-niteroi",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:clin",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:prefeitura-de-niteroi",
+          "role": "partner",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:53"
+      ],
+      "executorInstitutionTypes": [
+        "poder-publico",
+        "empresa-privada"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "A Tribuna"
+      ],
+      "publicationYears": [
+        2021
+      ],
+      "resultsSummary": null,
+      "dataAvailability": null,
+      "details": "Executores: a Águas de Niterói faz a instalação e a manutenção; a Clin retira o lixo\nParceiras: Programa Enseada Limpa\nPeríodo: Instalada em 2013 e substituída por modelo mais resistente em 2016; em operação em outubro de 2021"
+    },
+    {
+      "ref": 15,
+      "kind": "project",
+      "name": "Regatas ecológicas e mutirões do Clean Up Day",
+      "objective": "Remover lixo flutuante e educar alunos em Jurujuba (Niterói), por meio de regatas ecológicas e mutirões.",
+      "start": {
+        "date": "2023-09-16",
+        "precision": "day"
+      },
+      "end": {
+        "date": "2023-09-19",
+        "precision": "day"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [
+        "voluntaria",
+        "educativa"
+      ],
+      "keywords": [
+        "macrolixo",
+        "litoral",
+        "estuario"
+      ],
+      "siteTypes": [
+        "praia"
+      ],
+      "places": [
+        "sector:entrada",
+        "municipality:niteroi",
+        "locality:jurujuba"
+      ],
+      "parties": [
+        {
+          "party": "institution:projeto-grael",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "person:monalisa-oliveira",
+          "role": "coordinator",
+          "note": "coordenadora de Meio Ambiente do Projeto Grael"
+        }
+      ],
+      "sources": [
+        "source:44"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [],
+      "resultsSummary": "Foram retirados cerca de 200 kg de resíduos: 32 kg nas regatas e cerca de 120 kg na praia do Cais (Jurujuba).",
+      "dataAvailability": null,
+      "details": "Executores: equipe de meio ambiente do Projeto Grael, alunos, moradores e voluntários\nPeríodo: Mutirão num sábado (16), regata de alunos no dia 18 e regatas principais na terça (19); mês e ano não informados, inferidos pelos dias da semana"
+    },
+    {
+      "ref": 16,
+      "kind": "project",
+      "name": "Projeto Ressignifica (ecobarreiras)",
+      "objective": "Reter lixo em rios da Região Oceânica de Niterói por meio de ecobarreiras, mobilizar moradores e pescadores e criar um aplicativo de denúncia.",
+      "start": {
+        "date": "2024-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "contencao",
+        "educativa"
+      ],
+      "keywords": [
+        "macrolixo",
+        "rio"
+      ],
+      "siteTypes": [
+        "rio-ou-canal"
+      ],
+      "places": [
+        "sector:fora-da-baia",
+        "municipality:niteroi",
+        "locality:regiao-oceanica-de-niteroi",
+        "river:joao-mendes"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:uff",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:comunidade-local",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "person:dirlane-carmo",
+          "role": "coordinator",
+          "note": "professora da UFF, gestão do projeto"
+        }
+      ],
+      "sources": [
+        "source:39"
+      ],
+      "executorInstitutionTypes": [
+        "academica",
+        "comunitaria"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "Enfoco"
+      ],
+      "publicationYears": [
+        2025
+      ],
+      "resultsSummary": "Foram coletadas cerca de 5 t de resíduos no Rio João Mendes.",
+      "dataAvailability": "Totais divulgados em notícia (cerca de 5 t nas ecobarreiras; mais de 2 t no Rio João Mendes em 2025); sem dados abertos",
+      "details": "Local: Os rios da Região Oceânica de Niterói drenam para o sistema lagunar Itaipu-Piratininga, fora da Baía de Guanabara (interpretação geográfica)\nExecutores: Departamento de Engenharia Agrícola e Meio Ambiente da UFF\nParceiras: Instituto de Computação da UFF (aplicativo de denúncia); moradores, pescadores e escolas"
+    },
+    {
+      "ref": 17,
+      "kind": "project",
+      "name": "Operação LimpaOca (Projeto Do Mangue ao Mar e extensão Andadas Ecológicas)",
+      "objective": "Limpar manguezais da Baía de Guanabara durante o defeso do caranguejo-uçá, garantindo renda a pescadores e catadores de caranguejo por meio de bolsa-auxílio e pagamento por serviço ambiental, e realizar limpeza comunitária nas margens do Rio Suruí (Magé), com uso da moeda social Mangal (extensão Andadas Ecológicas).",
+      "start": {
+        "date": "2024-06-01",
+        "precision": "month"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "transacional"
+      ],
+      "keywords": [
+        "macrolixo",
+        "manguezal",
+        "pesca-artesanal"
+      ],
+      "siteTypes": [
+        "manguezal",
+        "rio-ou-canal",
+        "praia"
+      ],
+      "places": [
+        "sector:interior",
+        "municipality:duque-de-caxias",
+        "municipality:mage",
+        "locality:surui",
+        "river:surui",
+        "conservation_unit:apa-de-guapimirim"
+      ],
+      "parties": [
+        {
+          "party": "institution:guardioes-do-mar",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:transpetro",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:acamm",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "person:rodrigo-gaiao",
+          "role": "coordinator",
+          "note": "coordenação das Andadas Ecológicas"
+        },
+        {
+          "party": "person:pedro-belga",
+          "role": "coordinator",
+          "note": "biólogo que conduz as Andadas Ecológicas"
+        }
+      ],
+      "sources": [
+        "source:9",
+        "source:10"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor",
+        "comunitaria"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "reportagem",
+        "site-institucional"
+      ],
+      "venues": [
+        "Agência Brasil"
+      ],
+      "publicationYears": [
+        2025,
+        2026
+      ],
+      "resultsSummary": "Na Baía de Guanabara, foram coletados 42.886 kg de resíduos em 4 ha entre 2024 e 2025, com 84 participantes; o plástico somou 38.347 kg. Nas Andadas Ecológicas, foram coletadas 4,5 t nas margens do Rio Suruí em janeiro e fevereiro de 2026.",
+      "dataAvailability": "Composição por peso e unidades, área em hectares",
+      "details": "Local: \"Ilha de Lixo\" próxima à APA de Guapimirim\nMecanismo de atuação: bolsa-auxílio e pagamento por serviço ambiental (PSA); nas Andadas Ecológicas, moeda social Mangal, ligada ao mecanismo Moeda Azul\nExecutores: Andadas Ecológicas realizadas como extensão da Operação LimpaOca\nFinanciadoras: a Transpetro paga a bolsa-auxílio dos participantes, por convênio. As Andadas Ecológicas são realizadas para cumprir a licença de instalação do sistema de dutos do Polo GasLub; o financiador não é nomeado\nParceiras: apoio comunitário às Andadas Ecológicas\nPeríodo: A limpeza do manguezal foi concebida pelo catador de caranguejo Adílio Campos em 2001, quando começou o pagamento por serviço ambiental da Guardiões do Mar, na Ilha de Itaoca; a primeira limpeza de manguezal da Operação LimpaOca foi em 2012, na APA de Guapimirim. Edição com a Transpetro: coleta de junho de 2024 a julho de 2025, com previsão de continuidade até setembro de 2025. Andadas Ecológicas: ações em janeiro e fevereiro de 2026, com duração prevista de dois anos e dois meses\nOutras edições: LimpaOca SBM Offshore, LimpaOca Vale e Boti Recicla"
+    },
+    {
+      "ref": 18,
+      "kind": "project",
+      "name": "Projeto UÇÁ (fases I a V)",
+      "objective": "Conservar e restaurar manguezais da APA de Guapimirim, promover educação ambiental e realizar a Operação LimpaOca, e investigar microplásticos no trato digestivo do caranguejo-uçá e no sedimento de manguezais.",
+      "start": {
+        "date": "2012-07-01",
+        "precision": "month"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "transacional",
+        "educativa"
+      ],
+      "keywords": [
+        "manguezal",
+        "restauracao-ecologica",
+        "macrolixo"
+      ],
+      "siteTypes": [
+        "manguezal"
+      ],
+      "places": [
+        "sector:interior",
+        "municipality:sao-goncalo",
+        "municipality:itaborai",
+        "municipality:guapimirim",
+        "municipality:mage",
+        "conservation_unit:apa-de-guapimirim"
+      ],
+      "parties": [
+        {
+          "party": "institution:guardioes-do-mar",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:petrobras",
+          "role": "funder",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:16",
+        "source:17"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2024
+      ],
+      "resultsSummary": "Foram restaurados 182 mil m² de manguezal, com mais de 64 mil mudas. Pela Operação LimpaOca, foram retiradas 55 t de resíduos em 47 ha, por meio de pagamento por serviço ambiental. Estão em andamento estudos sobre microplásticos no caranguejo-uçá e no sedimento de manguezais.",
+      "dataAvailability": null,
+      "details": "Financiadoras: Programa Petrobras Socioambiental\nPeríodo: 13 anos de atuação em julho de 2025 (início inferido); fase atual: V. Monitoramento da área de manguezal restaurada desde 2022; período das coletas de microplásticos não informado\nMeta: restaurar mais 20 ha entre 2025 e 2028"
+    },
+    {
+      "ref": 20,
+      "kind": "project",
+      "name": "Clean Up Bay (Dia de Limpeza da Baía de Guanabara)",
+      "objective": "Realizar mutirão anual de limpeza no Dia Mundial da Água em pontos da Baía de Guanabara, com triagem, pesagem e categorização dos resíduos.",
+      "start": {
+        "date": "2022-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "periodic"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "voluntaria"
+      ],
+      "keywords": [
+        "macrolixo",
+        "litoral"
+      ],
+      "siteTypes": [
+        "praia",
+        "rio-ou-canal"
+      ],
+      "places": [
+        "sector:entrada",
+        "sector:interior",
+        "sector:fora-da-baia",
+        "municipality:rio-de-janeiro",
+        "municipality:niteroi",
+        "municipality:sao-goncalo",
+        "municipality:mage",
+        "municipality:itaborai",
+        "locality:flamengo",
+        "locality:praia-das-pedrinhas",
+        "locality:charitas",
+        "locality:itaipu",
+        "locality:boa-viagem",
+        "locality:piedade",
+        "river:macacu",
+        "river:caceribu"
+      ],
+      "parties": [
+        {
+          "party": "institution:redagua",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:petrobras",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:poder-publico",
+          "role": "partner",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:11"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "Agência Brasil"
+      ],
+      "publicationYears": [
+        2025
+      ],
+      "resultsSummary": "Em 2022, foram coletados 530 kg de resíduos em 1 h (39% de plástico). Em 2025 (4ª edição), foram coletados mais de 600 kg, com cerca de mil voluntários em seis pontos. Em 2026 (5ª edição), foram coletados mais de 482 kg, com 394 voluntários em cinco municípios.",
+      "dataAvailability": "Composição do resíduo: categorização por tipo",
+      "details": "Executores: a REDAGUA reúne 11 projetos, entre eles Coral Vivo, Guapiaçu, Meros do Brasil, UÇÁ e Orla Sem Lixo Transforma\nFinanciadoras: Programa Petrobras Socioambiental\nPeríodo: Edições anuais no Dia Mundial da Água; a 4ª edição foi em 22/03/2025\nResultados: a fonte informa acumulado de 916 voluntários e quase 3 t até 2025 e cerca de mil voluntários só em 2025"
+    },
+    {
+      "ref": 21,
+      "kind": "project",
+      "name": "Orla Sem Lixo (e Orla Sem Lixo Transforma)",
+      "objective": "Interceptar lixo flutuante com barreira de baixo custo, medir o volume e a massa dos resíduos, fazer reciclagem química por pirólise e incluir pescadores em um modelo de renda, na Ilha do Fundão.",
+      "start": {
+        "date": "2021-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "desenvolvimento-tecnologico"
+      ],
+      "keywords": [
+        "macrolixo",
+        "litoral",
+        "cadeia-da-reciclagem"
+      ],
+      "siteTypes": [
+        "espelho-d-agua"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:fundao"
+      ],
+      "parties": [
+        {
+          "party": "institution:parque-tecnologico-da-ufrj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:ufrj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:huesker",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "person:susana-vinzon",
+          "role": "coordinator",
+          "note": "coordenação, Escola Politécnica da UFRJ"
+        }
+      ],
+      "sources": [
+        "source:50"
+      ],
+      "executorInstitutionTypes": [
+        "academica",
+        "empresa-privada"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional",
+        "reportagem"
+      ],
+      "venues": [
+        "Agência Brasil"
+      ],
+      "publicationYears": [
+        2025
+      ],
+      "resultsSummary": "Na primeira ação, foram retirados mais de 300 kg de resíduos na Prainha. O projeto instalou barreiras experimentais na Prainha e na Enseada do Bom Jesus e uma planta piloto de pirólise.",
+      "dataAvailability": "Medição de volume e massa prevista; publicação não encontrada",
+      "details": "Executores: Escola Politécnica da UFRJ; papéis do Parque Tecnológico da UFRJ e da Huesker não confirmados\nFinanciadoras: apoio do edital FAPERJ Cientista do Nosso Estado\nPeríodo: Cerca de 2021 e 2022 (aproximado); primeira ação em 30 de abril, provavelmente de 2022; participou do Clean Up Bay de 22/03/2025"
+    },
+    {
+      "ref": 22,
+      "kind": "project",
+      "name": "Águas Urbanas (registro subaquático) e parcerias de destinação de resíduos",
+      "objective": "Documentar a vida marinha da Baía de Guanabara por registro subaquático e promover educação ambiental.",
+      "start": {
+        "date": "2023-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "voluntaria",
+        "educativa"
+      ],
+      "keywords": [
+        "macrolixo",
+        "sedimento-estuarino",
+        "fauna"
+      ],
+      "siteTypes": [
+        "fundo"
+      ],
+      "places": [
+        "sector:entrada",
+        "municipality:rio-de-janeiro",
+        "locality:flamengo",
+        "locality:botafogo"
+      ],
+      "parties": [
+        {
+          "party": "institution:instituto-mar-urbano",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "person:ricardo-gomes",
+          "role": "coordinator",
+          "note": "diretor do Instituto Mar Urbano"
+        }
+      ],
+      "sources": [
+        "source:26"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "Diário do Rio"
+      ],
+      "publicationYears": [
+        2023
+      ],
+      "resultsSummary": "O instituto recebeu os resíduos do mutirão da OceanPact (2025) e cita relatórios de atividades (2023).",
+      "dataAvailability": "Fotos e vídeos dos mergulhos semanais; sem dados abertos encontrados",
+      "details": "Período: Mergulhos semanais"
+    },
+    {
+      "ref": 23,
+      "kind": "project",
+      "name": "Mutirão OceanPact no mangue do Fundão",
+      "objective": "Limpar o manguezal da orla do Parque do Fundão, com uso de embarcação autônoma.",
+      "start": {
+        "date": "2025-10-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2025-10-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": "ended",
+      "mechanisms": [
+        "voluntaria"
+      ],
+      "keywords": [
+        "macrolixo",
+        "manguezal"
+      ],
+      "siteTypes": [
+        "manguezal"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:fundao"
+      ],
+      "parties": [
+        {
+          "party": "institution:oceanpact",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:blue-keepers",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:instituto-mar-urbano",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:gbiotra",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:orla-sem-lixo",
+          "role": "partner",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:27"
+      ],
+      "executorInstitutionTypes": [
+        "empresa-privada"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2025
+      ],
+      "resultsSummary": "Foram retirados mais de 375 kg de resíduos, entre pneus, cabos, mangueiras e um sofá (2025).",
+      "dataAvailability": "Sem dados ou relatório publicado; a página cita o apoio da embarcação autônoma ao processamento de dados",
+      "details": "Local: Orla do Parque do Fundão\nExecutores: com embarcação autônoma da OceanPact Tech\nParceiras: Instituto Mar Urbano, Gbiotra e Orla Sem Lixo na destinação dos resíduos"
+    },
+    {
+      "ref": 24,
+      "kind": "project",
+      "name": "Projeto piloto de coleta com pescadores e barco SeeKuh",
+      "objective": "Coletar lixo flutuante e costeiro com pescadores da Colônia Z-10 (Ilha do Governador), analisar a composição dos resíduos e desenvolver um conceito de reciclagem.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [
+        "transacional"
+      ],
+      "keywords": [
+        "macrolixo",
+        "pesca-artesanal",
+        "estuario"
+      ],
+      "siteTypes": [],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador",
+        "fishing_colony:z-10"
+      ],
+      "parties": [
+        {
+          "party": "institution:one-earth-one-ocean",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:colonias-de-pescadores",
+          "role": "executor",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:59"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor",
+        "comunitaria"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2020
+      ],
+      "resultsSummary": "Foram coletadas mais de 2 t de resíduos em sete dias, com 10 pescadores, num raio de cerca de 5 km. Em uma mega-ação, com cerca de 160 pescadores, foram pesadas cerca de 20 t em um dia.",
+      "dataAvailability": null,
+      "details": "Local: Praia de São Bento\nExecutores: a One Earth One Ocean é uma organização alemã\nPeríodo: Coleta de uma semana, divulgada em 13/10/2020"
+    },
+    {
+      "ref": 25,
+      "kind": "project",
+      "name": "Projeto Baía Limpa: vivências para cidadania, trabalho, educação e desenvolvimento sustentável",
+      "objective": "Monitorar de forma contínua a quantidade de resíduos sólidos que chegam à Baía de Guanabara, por meio de coleta manual nas margens, arrastos de fundo e redes em rios, para subsidiar políticas públicas e educar pescadores e moradores.",
+      "start": {
+        "date": "2009-01-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2010-02-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "ended",
+      "mechanisms": [
+        "transacional"
+      ],
+      "keywords": [
+        "macrolixo",
+        "pesca-artesanal",
+        "estuario"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:interior",
+        "municipality:sao-goncalo",
+        "municipality:mage",
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador",
+        "locality:ramos",
+        "fishing_colony:z-8",
+        "fishing_colony:z-9",
+        "fishing_colony:z-10",
+        "fishing_colony:z-11"
+      ],
+      "parties": [
+        {
+          "party": "institution:uerj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:feperj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:colonias-de-pescadores",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:petrobras",
+          "role": "funder",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:18",
+        "source:19"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor",
+        "comunitaria",
+        "academica"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Revista de Gestão Costeira Integrada"
+      ],
+      "publicationYears": [
+        2011
+      ],
+      "resultsSummary": "Foram coletados 734.208 kg de resíduos sólidos em 90.540 sacos de 200 L, entre 2009 e 2010, com 1.080 pescadores. Os autores apontam benefícios para os pescadores, melhora da qualidade do pescado e maior visibilidade da pesca artesanal.",
+      "dataAvailability": "Totais na Tabela 1 do artigo. Não confundir com o Baía Limpa da Ocyan (2023 e 2024)",
+      "details": "Mecanismo de atuação: contrato de três meses, pagamento semanal\nExecutores: a FEPERJ iniciou o projeto, com pescadores das colônias associadas\nInstituição: PPGHS-FFP (UERJ), artigo na Revista de Gestão Costeira Integrada (Ferreira, Silva e Resende, 2011; primeira autora Jamylle de Almeida Ferreira)\nPeríodo: Os pescadores trabalhavam três vezes por semana"
+    },
+    {
+      "ref": 26,
+      "kind": "project",
+      "name": "Projeto Águas da Guanabara",
+      "objective": "Limpar rios, ilha e praia em São Gonçalo, Magé e Itaboraí com pescadores, três vezes por semana.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [
+        "transacional"
+      ],
+      "keywords": [
+        "macrolixo",
+        "pesca-artesanal",
+        "manguezal"
+      ],
+      "siteTypes": [
+        "rio-ou-canal",
+        "praia",
+        "ilha"
+      ],
+      "places": [
+        "sector:interior",
+        "municipality:sao-goncalo",
+        "municipality:mage",
+        "municipality:itaborai",
+        "locality:ilha-do-pontal",
+        "locality:praia-das-pedrinhas",
+        "river:imboacu",
+        "river:marimbondo"
+      ],
+      "parties": [
+        {
+          "party": "institution:prefeitura-de-sao-goncalo",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:feperj",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:colonias-de-pescadores",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "person:luiz-carlos-furtado",
+          "role": "coordinator",
+          "note": "presidente da FEPERJ"
+        }
+      ],
+      "sources": [
+        "source:55"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor",
+        "comunitaria"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "reportagem",
+        "site-institucional"
+      ],
+      "venues": [
+        "Folha do Leste"
+      ],
+      "publicationYears": [
+        2024
+      ],
+      "resultsSummary": "Foram coletadas, em média, 1,5 t de resíduos por dia de ação, com 44 pescadores.",
+      "dataAvailability": null,
+      "details": "Mecanismo de atuação: remuneração, cartão-alimentação e suporte médico\nExecutores: Federação Estadual dos Pescadores do Rio de Janeiro (FEPERJ), com pescadores das colônias Z-8 e Z-9, entre outras\nStatus: ativo em 17/11/2024"
+    },
+    {
+      "ref": 27,
+      "kind": "project",
+      "name": "Participação em ecobarreiras, mutirões e projeto Cooperar para Reciclar",
+      "objective": "Reciclar resíduos, capacitar cooperados e dar destinação aos resíduos de mutirões; a COOPAMA declara ter atuado na instalação de ecobarreiras com SEAS e INEA.",
+      "start": {
+        "date": "2004-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "reciclagem-e-destinacao",
+        "transacional"
+      ],
+      "keywords": [
+        "cadeia-da-reciclagem",
+        "macrolixo",
+        "rio"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:entrada",
+        "sector:interior",
+        "municipality:rio-de-janeiro",
+        "municipality:duque-de-caxias",
+        "locality:fundao",
+        "locality:urca",
+        "locality:jardim-gramacho"
+      ],
+      "parties": [
+        {
+          "party": "institution:coopama",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:acamjg",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:petrobras",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:seas",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:inea",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "institution:instituto-bvrio",
+          "role": "partner",
+          "note": null
+        },
+        {
+          "party": "person:luiz-carlos",
+          "role": "coordinator",
+          "note": "presidente da COOPAMA"
+        }
+      ],
+      "sources": [
+        "source:28"
+      ],
+      "executorInstitutionTypes": [
+        "cooperativa"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [],
+      "resultsSummary": "A cooperativa participou do mutirão do Dia Mundial dos Oceanos (2024) e deu destinação aos resíduos do Clean Up Bay 2026.",
+      "dataAvailability": "Resíduos registrados no aplicativo KOLEKT; dados não publicados",
+      "details": "Financiadoras: patrocínio às cooperativas\nParceiras: projeto Ecobarreiras (SEAS e INEA); aplicativo KOLEKT (Instituto BVRio)\nPeríodo: Projeto Cooperar para Reciclar desde outubro de 2023\nResultados: no mutirão do Dia Mundial dos Oceanos (08/06/2024), com o Pescando Resíduos, foram retiradas quase 2 t"
+    },
+    {
+      "ref": 28,
+      "kind": "project",
+      "name": "Advocacy sobre lixo náutico, cemitério de embarcações, chorume e canal de denúncias",
+      "objective": "Pressionar o poder público e obter reparação para comunidades pesqueiras em relação ao lixo náutico, ao cemitério de embarcações e ao chorume.",
+      "start": {
+        "date": "1984-01-01",
+        "precision": "year"
+      },
+      "end": null,
+      "ongoing": true,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": "active",
+      "mechanisms": [
+        "incidencia-politica"
+      ],
+      "keywords": [
+        "lixo-nautico",
+        "pesca-artesanal",
+        "estuario"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:baia-inteira",
+        "municipality:niteroi",
+        "municipality:sao-goncalo"
+      ],
+      "parties": [
+        {
+          "party": "institution:movimento-baia-viva",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "person:sergio-ricardo-potiguara",
+          "role": "coordinator",
+          "note": "coordenação"
+        }
+      ],
+      "sources": [
+        "source:40"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2026
+      ],
+      "resultsSummary": "A representação do movimento gerou Ação Civil Pública do MPF sobre embarcações abandonadas. A proposta de canal de denúncia de \"ondas de lixo marinho\" foi aceita em princípio pelo INEA e pela Capitania (2025).",
+      "dataAvailability": null,
+      "details": "Local: Cemitérios de embarcações na Ilha da Conceição e no Canal de São Lourenço (Niterói) e na orla de São Gonçalo\nMecanismo de atuação: controle social\nPeríodo: Proposta sobre embarcações abandonadas em dezembro de 2022; canal de denúncia via WhatsApp em 2025; reuniões do Comitê Científico em dezembro de 2025 e janeiro de 2026"
+    },
+    {
+      "ref": 29,
+      "kind": "project",
+      "name": "Eu Cato Lixo / Dive Against Debris (Project AWARE)",
+      "objective": "Realizar limpezas submarinas mensais na Praia Vermelha (Urca), com relatórios por tipo de lixo.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "periodic"
+      ],
+      "status": null,
+      "mechanisms": [
+        "voluntaria"
+      ],
+      "keywords": [
+        "macrolixo",
+        "sedimento-estuarino"
+      ],
+      "siteTypes": [
+        "fundo"
+      ],
+      "places": [
+        "sector:entrada",
+        "municipality:rio-de-janeiro",
+        "locality:urca"
+      ],
+      "parties": [
+        {
+          "party": "institution:projeto-verde-mar",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "institution:project-aware",
+          "role": "partner",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:45"
+      ],
+      "executorInstitutionTypes": [
+        "terceiro-setor"
+      ],
+      "indicators": [
+        "massa-t"
+      ],
+      "sourceTypes": [
+        "site-institucional"
+      ],
+      "venues": [],
+      "publicationYears": [],
+      "resultsSummary": "Foram retirados mais de 100 kg de resíduos em 15 ações (2016 e 2017).",
+      "dataAvailability": "Relatórios enviados à base global do Project AWARE",
+      "details": "Local: Praia Vermelha\nParceiras: Dive Against Debris e programa Adopt a Dive Site\nPeríodo: Ações mensais; 15 ações em 2016 e 2017"
+    },
+    {
+      "ref": 30,
+      "kind": "project",
+      "name": "Monitoramento aéreo da poluição da baía",
+      "objective": "Documentar a poluição da Baía de Guanabara por meio de sobrevoos e cobrar o poder público.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [
+        "continuous"
+      ],
+      "status": null,
+      "mechanisms": [
+        "monitoramento"
+      ],
+      "keywords": [
+        "macrolixo",
+        "estuario"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:baia-inteira"
+      ],
+      "parties": [
+        {
+          "party": "institution:projeto-olho-verde",
+          "role": "executor",
+          "note": null
+        },
+        {
+          "party": "person:mario-moscatelli",
+          "role": "coordinator",
+          "note": "biólogo, Projeto Olho Verde"
+        }
+      ],
+      "sources": [
+        "source:54"
+      ],
+      "executorInstitutionTypes": [
+        "pessoa-fisica",
+        "terceiro-setor"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "CNN Brasil"
+      ],
+      "publicationYears": [
+        2022
+      ],
+      "resultsSummary": "Foi estimado que as 17 ecobarreiras retinham cerca de 500 t/mês (2022).",
+      "dataAvailability": null,
+      "details": "Período: Sobrevoos constantes da região, segundo a CNN Brasil (05/06/2022)"
+    },
+    {
+      "ref": 32,
+      "kind": "study",
+      "name": "Microplastic pollution of the beaches of Guanabara Bay, Southeast Brazil (Ocean & Coastal Management, 128, 10-17)",
+      "objective": "Investigar, por meio de levantamentos de campo, a abundância, a composição e a distribuição de microplásticos e pequenos fragmentos plásticos nas praias da Baía de Guanabara.",
+      "start": {
+        "date": "2015-01-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2015-07-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "litoral"
+      ],
+      "siteTypes": [
+        "praia"
+      ],
+      "places": [
+        "sector:entrada",
+        "sector:interior",
+        "municipality:rio-de-janeiro",
+        "municipality:niteroi",
+        "municipality:sao-goncalo",
+        "municipality:mage"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:carvalho-d-g",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:baptista-neto-j-a",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:12"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-area-itens-m"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Ocean & Coastal Management"
+      ],
+      "publicationYears": [
+        2016
+      ],
+      "resultsSummary": "As concentrações de microplásticos nas praias variaram de 12 a 1.300 partículas/m² no verão e de 3 a 743 partículas/m² no inverno. Das 8.766 partículas registradas, 56% eram fragmentos de microplástico, 26,7% isopor, 9,9% pellets e 7,2% fibras.",
+      "dataAvailability": "Partículas/m²; sazonalidade",
+      "details": "Local: 17 praias e 35 pontos: Paquetá, Copacabana, Botafogo, Flamengo, Bica, Galeão, Mauá, Piedade, Pedrinhas, Barreto, Gragoatá, Boa Viagem, Icaraí, São Francisco, Charitas, Piratininga e Camboinhas\nInstituição: LAGEMAR (UFF)\nPeríodo: Duas campanhas: verão (janeiro e fevereiro) e inverno (junho e julho); algumas praias não foram amostradas no verão\nDissertação: mestrado do mesmo autor (Carvalho, 2016, UFF, PPG Dinâmica dos Oceanos e da Terra), não localizada"
+    },
+    {
+      "ref": 35,
+      "kind": "study",
+      "name": "Microplastic contamination in surface waters in Guanabara Bay (Marine Pollution Bulletin)",
+      "objective": "Relatar a abundância e as características de microplásticos coletados nas águas superficiais da Baía de Guanabara.",
+      "start": {
+        "date": "2016-01-21",
+        "precision": "day"
+      },
+      "end": {
+        "date": "2016-02-25",
+        "precision": "day"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "estuario"
+      ],
+      "siteTypes": [
+        "espelho-d-agua"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro"
+      ],
+      "parties": [
+        {
+          "party": "institution:puc-rio",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:unicamp",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:heriot-watt-university",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:olivatto-g-p",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:martins-m-c-t",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:montagner-c-c",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:henry-t-b",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:carreira-r-s",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:13",
+        "source:14"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-volume-itens-m"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico",
+        "dissertacao"
+      ],
+      "venues": [
+        "Marine Pollution Bulletin"
+      ],
+      "publicationYears": [
+        2017,
+        2019
+      ],
+      "resultsSummary": "O total de microplásticos variou de 1,40 a 21,3 partículas/m³, o que coloca a baía entre os sistemas costeiros mais contaminados do mundo. Predominaram polietileno e polipropileno de até 1 mm.",
+      "dataAvailability": "Partículas/m³; polímero",
+      "details": "Local: Três estações (A, B e C) na porção oeste da baía; na Figura 1 do artigo, A e C ficam junto aos aeroportos e B junto ao porto do Rio\nFinanciadoras: bolsa de mestrado do CNPq; apoio da empresa Prooceano nas campanhas de coleta\nInstituição: PPG Química (PUC-Rio), onde foi feita a dissertação de origem\nPeríodo: O artigo cita duas ocasiões no verão de 2016; a dissertação de origem traz as campanhas de 21/01, 27/01 e 25/02/2016"
+    },
+    {
+      "ref": 36,
+      "kind": "study",
+      "name": "Microplastic in the sediments of a highly eutrophic tropical estuary (Marine Pollution Bulletin)",
+      "objective": "Quantificar e descrever os microplásticos nos sedimentos sublitorais da Baía de Guanabara.",
+      "start": {
+        "date": "2017-03-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2017-12-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "sedimento-estuarino"
+      ],
+      "siteTypes": [
+        "fundo"
+      ],
+      "places": [
+        "sector:transicao",
+        "sector:interior",
+        "municipality:sao-goncalo",
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador",
+        "conservation_unit:apa-de-guapimirim"
+      ],
+      "parties": [
+        {
+          "party": "institution:ufrj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:faperj",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:alves-v-e-n",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:figueiredo-g-m",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:1"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-massa-itens-kg-ou-itens-g",
+        "itens-por-area-itens-m"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Marine Pollution Bulletin"
+      ],
+      "publicationYears": [
+        2019
+      ],
+      "resultsSummary": "Foram registrados de 160 a 1.000 itens/kg (4.367 a 25.794 itens/m²) em todas as áreas e períodos, com predomínio de microfibras de poliéster translúcidas menores que 1 mm. Os valores, muito altos em comparação com a maioria dos estudos no mundo, sugerem alto risco para organismos bentônicos e peixes demersais.",
+      "dataAvailability": "Itens/kg e itens/m²",
+      "details": "Local: Quatro pontos sublitorais, incluindo o Canal Central; o ponto da APA de Guapimirim fica em área interna cercada por manguezal\nFinanciadoras: PELD Baía de Guanabara, financiado por CNPq (403809/2012-6) e FAPERJ (E-26/110.114/2013); bolsa de mestrado da CAPES\nInstituição: Instituto de Biologia (UFRJ); PPG Biologia Marinha e Ambientes Costeiros (UFF)\nPeríodo: Coletas em março, agosto e dezembro\nAmostragem: 36 amostras de sedimento (4 pontos, 3 réplicas, 3 meses), com draga Van Veen"
+    },
+    {
+      "ref": 37,
+      "kind": "study",
+      "name": "Suspended microplastics in a highly polluted bay: abundance, size, and availability for mesozooplankton (Marine Pollution Bulletin)",
+      "objective": "Determinar a abundância de microplásticos na Baía de Guanabara e sua disponibilidade para o mesozooplâncton.",
+      "start": {
+        "date": "2016-03-21",
+        "precision": "day"
+      },
+      "end": {
+        "date": "2016-09-02",
+        "precision": "day"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "estuario",
+        "fauna"
+      ],
+      "siteTypes": [
+        "espelho-d-agua"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador",
+        "locality:fundao"
+      ],
+      "parties": [
+        {
+          "party": "institution:ufrj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:faperj",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:figueiredo-g-m",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:vianna-t-m-p",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:15"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-volume-itens-m"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Marine Pollution Bulletin"
+      ],
+      "publicationYears": [
+        2018
+      ],
+      "resultsSummary": "A abundância média foi de 4,8 microplásticos/m³ (máximo de 11/m³) nas redes finas, maior que em outros ecossistemas marinhos. Os microplásticos estavam disponíveis, mas diluídos demais para serem ingeridos com frequência por larvas de peixe e quetognatos.",
+      "dataAvailability": "Redes de 64 e 200 µm",
+      "details": "Local: Três pontos, o terceiro no canal\nFinanciadoras: PELD Baía de Guanabara, financiado por CNPq (403809/2012-6) e FAPERJ (E-26/110.114/2013); bolsa de mestrado da CAPES\nAmostragem: marés vazante e enchente, com redes de 64 µm e 200 µm"
+    },
+    {
+      "ref": 38,
+      "kind": "study",
+      "name": "Microplastic in bivalves from the heavily contaminated Guanabara Bay (Environmental Research, v. 302, 124688)",
+      "objective": "Avaliar a contaminação por microplásticos em bivalves da Baía de Guanabara, com abordagem multiespécie e multiponto, para determinar padrões espaciais e contextualizar os níveis com estudos anteriores em outras matrizes na baía.",
+      "start": {
+        "date": "2024-06-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2024-08-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "fauna",
+        "pesca-artesanal"
+      ],
+      "siteTypes": [],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "municipality:niteroi"
+      ],
+      "parties": [
+        {
+          "party": "institution:unifesp",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:ufrgs",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:fapesp",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:ribeiro-v-v",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:garcia-y",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:prado-c-c-a",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:santos-a-p",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:gomes-r-s",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:fernandes-a-n",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:castro-i-b",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:20"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-massa-itens-kg-ou-itens-g"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Environmental Research"
+      ],
+      "publicationYears": [
+        2026
+      ],
+      "resultsSummary": "Foram detectados 678 microplásticos em 280 bivalves, com média de 2,4 e máximo de 45,0 partículas/g, entre os valores mais altos registrados para bivalves no Brasil. Os níveis foram mais altos no sul da baía, perto de áreas urbanas e portuárias, e predominaram fibras pequenas e transparentes, principalmente de celulose.",
+      "dataAvailability": "Partículas/g",
+      "details": "Local: 15 pontos (S1 a S15); na Figura 1 do artigo, os pontos S9 (ilha no centro da baía) e S10 (margem leste) não têm município legível\nFinanciadoras: FAPESP (2022/14011-3 e bolsas); bolsa de produtividade do CNPq; bolsa CAPES\nInstituição: Instituto do Mar (UNIFESP); Instituto de Química (UFRGS)\nPeríodo: Fora da principal estação chuvosa\nAmostragem: 280 bivalves coletados em substratos rochosos naturais e artificiais"
+    },
+    {
+      "ref": 39,
+      "kind": "study",
+      "name": "Microplastics associated with stranded macroalgae on an impacted estuarine beach, Rio de Janeiro",
+      "objective": "Determinar as densidades e os tipos de microplásticos associados a macroalgas arribadas em uma praia eutrófica da Baía de Guanabara.",
+      "start": {
+        "date": "2022-04-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2022-12-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "periodic"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "litoral",
+        "flora"
+      ],
+      "siteTypes": [
+        "praia"
+      ],
+      "places": [
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:ufrj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:uerj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:lima-l-v-s",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:nascimento-r-f",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:barros-barreto-m-b-b",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:silva-a-a",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:furtado-c-r-g",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:figueiredo-g-m",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:2"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-massa-itens-kg-ou-itens-g"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Marine Pollution Bulletin"
+      ],
+      "publicationYears": [
+        2024
+      ],
+      "resultsSummary": "Foram encontrados 2.389 microplásticos em 2,33 kg de macroalgas, com densidade maior nas algas vermelhas (1,48 partículas/g) que nas verdes (0,27 partículas/g). Predominaram fragmentos menores que 3 mm, de polietileno e PVC, e fibras de polipropileno.",
+      "dataAvailability": "Partículas/g de alga (peso úmido); dados disponíveis mediante pedido aos autores",
+      "details": "Local: Praia da Engenhoca\nFinanciadoras: CNPq (PELD Baía de Guanabara, proc. 441373/2016-0; Projeto Universal, proc. 404154-2021-2); bolsa CAPES do primeiro autor\nInstituição: PPG Biologia Marinha e Ambientes Costeiros (UFF); Departamento de Biologia Marinha, Laboratório de Ficologia (UFRJ); Instituto de Química (UERJ)\nPeríodo: Estação seca (abril a julho) e chuvosa (setembro a dezembro)\nAmostragem: macroalgas arribadas, coletadas na maré baixa de sizígia"
+    },
+    {
+      "ref": 40,
+      "kind": "study",
+      "name": "Microplastics in freshwater river in Rio de Janeiro and its role as a source of microplastic pollution in Guanabara Bay",
+      "objective": "Investigar a ocorrência de contaminação por microplásticos na coluna d'água em 15 pontos dos rios Guapimirim, Macacu e Maracanã, que deságuam na Baía de Guanabara.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "rio"
+      ],
+      "siteTypes": [
+        "rio-ou-canal"
+      ],
+      "places": [
+        "sector:interior",
+        "municipality:rio-de-janeiro",
+        "municipality:guapimirim",
+        "river:guapimirim",
+        "river:macacu",
+        "river:maracana"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:uerj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:university-of-oklahoma",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:drabinski-t-l",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:carvalho-d-g",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:gaylarde-c-c",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:lourenco-m-f-p",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:machado-w-t-v",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:fonseca-e-m",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:silva-a-l-c",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:baptista-neto-j-a",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:51",
+        "source:52"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-volume-itens-m"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Micro (MDPI)"
+      ],
+      "publicationYears": [
+        2023
+      ],
+      "resultsSummary": "A abundância média foi de 3.651,5 itens/m³ (3,6 a 51.166,5 itens/m³), com predomínio de fibras (67,3%). As maiores quantidades ocorreram no Rio Maracanã, e as concentrações se correlacionaram com o grau de urbanização.",
+      "dataAvailability": "Sem dados abertos: a declaração de disponibilidade de dados do artigo diz \"Not applicable\" (não se aplica)",
+      "details": "Financiadoras: o artigo declara não ter financiamento externo; agradece CNPq, FAPERJ, CAPES e LAGEMAR/UFF pelo apoio de infraestrutura\nInstituição: LAGEMAR e Instituto de Química (UFF); Departamento de Geografia (UERJ, São Gonçalo)\nAmostragem: 15 estações (MA-01 a MA-04, GM-01 a GM-06 e MN-01 a MN-05), com coordenadas na Tabela 1 do artigo; 10 a 15 min por amostragem, com rede de nêuston de 300 µm"
+    },
+    {
+      "ref": 41,
+      "kind": "study",
+      "name": "Avaliação do transporte e da dispersão de microplásticos provenientes de fontes na Baía de Guanabara, RJ, e na região costeira adjacente (partes 1 e 2)",
+      "objective": "Analisar o transporte, a dispersão e a probabilidade de passagem de plumas de microplásticos na Baía de Guanabara e na costa adjacente, com modelos hidrodinâmico e lagrangeano (SisBaHiA).",
+      "start": {
+        "date": "2008-04-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2008-04-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "hidrodinamica",
+        "estuario"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:baia-inteira",
+        "sector:fora-da-baia"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:ufrj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:rodrigues-m-f",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:rosman-p-c-c",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:silva-r-a-g",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:46",
+        "source:47",
+        "source:48",
+        "source:49"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "anais-de-evento"
+      ],
+      "venues": [
+        "Anais do III Fluhidros (ABRHidro)"
+      ],
+      "publicationYears": [
+        2026
+      ],
+      "resultsSummary": "Os resultados preliminares indicaram que a dispersão depende da hidrodinâmica local e da flutuabilidade das partículas. Microplásticos leves e neutros se dispersaram mais, e os densos ficaram retidos perto das fontes.",
+      "dataAvailability": "Sem declaração de dados abertos nos dois trabalhos dos anais",
+      "details": "Local: Baía de Guanabara e costa adjacente, com fontes costeiras em Icaraí, Ipanema, Barra da Tijuca e outros pontos\nFinanciadoras: apoio do PPG Dinâmica dos Oceanos e da Terra da UFF\nInstituição: PPG Dinâmica dos Oceanos e da Terra (UFF)\nPeríodo: Abril de 2008 foi simulado por ter dados medidos de nível e corrente perto do emissário de Ipanema\nMétodo: modelagem com o SisBaHiA (hidrodinâmica e transporte lagrangeano); fontes: 12 rios afluentes da baía, emissários de Icaraí, Ipanema e Barra da Tijuca e cinco canais costeiros; as cargas de microplásticos usadas não são informadas\nTrabalho relacionado: Rodrigues, Rosman e Silva (2026), RBRH v. 31, DOI 10.1590/2318-0331.312620250197, sobre a zona costeira adjacente (cenários de janeiro e julho de 2017)\nPublicação: trabalho completo em anais, em duas partes; parte de pesquisa de doutorado em andamento"
+    },
+    {
+      "ref": 42,
+      "kind": "study",
+      "name": "Estudo das fontes de poluição por microplásticos recorrentes na Baía de Guanabara",
+      "objective": "Avaliar as principais fontes de poluição por microplásticos na Baía de Guanabara, a partir de revisão bibliográfica.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico"
+      ],
+      "siteTypes": [],
+      "places": [],
+      "parties": [
+        {
+          "party": "institution:uerj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:faperj",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:silva-v-c-c",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:andrade-r-c",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:vernin-n-s",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:torres-netto-a",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:31"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "REGA (Revista de Gestão de Água da América Latina)"
+      ],
+      "publicationYears": [
+        2023
+      ],
+      "resultsSummary": "Os microplásticos mais comuns foram fibras, fragmentos e filmes. As fontes apontadas são o saneamento precário e atividades como indústria, portos, navegação, pesca e aquicultura.",
+      "dataAvailability": "Sem declaração de dados abertos (revisão bibliográfica)",
+      "details": "Local: Baía de Guanabara e sua Região Hidrográfica\nFinanciadoras: processo FAPERJ E26/010.002251/2019\nPeríodo: Revisão bibliográfica, sem coleta própria"
+    },
+    {
+      "ref": 43,
+      "kind": "study",
+      "name": "Lixo flutuante na Baía de Guanabara: passado, presente e perspectivas para o futuro (Desenvolvimento e Meio Ambiente, v. 38, p. 231-252)",
+      "objective": "Analisar o problema do lixo flutuante na Baía de Guanabara sob uma retrospectiva histórica e perspectivas para o futuro.",
+      "start": {
+        "date": "2013-09-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2015-06-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "macrolixo",
+        "estuario"
+      ],
+      "siteTypes": [
+        "espelho-d-agua",
+        "manguezal"
+      ],
+      "places": [
+        "sector:entrada",
+        "sector:interior",
+        "municipality:niteroi",
+        "municipality:rio-de-janeiro",
+        "municipality:mage",
+        "locality:icarai",
+        "locality:charitas",
+        "locality:sao-francisco",
+        "locality:flamengo",
+        "conservation_unit:parque-natural-municipal-barao-de-maua"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:bernardino-d",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:franz-b",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:21",
+        "source:22"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Desenvolvimento e Meio Ambiente"
+      ],
+      "publicationYears": [
+        2016
+      ],
+      "resultsSummary": "Apesar dos esforços dos órgãos públicos, os resíduos dos municípios do entorno continuam chegando ao estuário. Ainda é cedo para avaliar a eficácia dos programas de limpeza, pois muito resta a fazer, inclusive conscientizar a população e envolver todos os atores sociais.",
+      "dataAvailability": "Composição do resíduo informada na fonte; unidade de medida não registrada",
+      "details": "Instituição: PPG Biologia Marinha (UFF)\nPeríodo: O artigo reúne dados de trabalhos anteriores: praias de Niterói, setembro a dezembro de 2013, cinco campanhas (Paiva e Franz, 2014); Praia do Flamengo, janeiro a maio de 2014, seis campanhas (Hartz, 2014; Franz e Hartz, 2014); manguezal, 2015 (Bernardino, 2015), entre março e junho segundo a metodologia, que também cita cinco campanhas de março a abril\nResultados: o plástico foi de 71% a 83% do total de itens amostrados"
+    },
+    {
+      "ref": 45,
+      "kind": "study",
+      "name": "Variação sazonal, espacial e composicional de lixo ao longo das praias da margem oriental da Baía de Guanabara no período de 1999-2008 (RGCI)",
+      "objective": "Quantificar e caracterizar o lixo depositado em seis praias da margem oriental da Baía de Guanabara entre 1999 e 2008.",
+      "start": {
+        "date": "1999-01-01",
+        "precision": "year"
+      },
+      "end": {
+        "date": "2008-01-01",
+        "precision": "year"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "periodic"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "macrolixo",
+        "litoral"
+      ],
+      "siteTypes": [
+        "praia"
+      ],
+      "places": [
+        "municipality:niteroi",
+        "municipality:sao-goncalo"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:baptista-neto-j-a",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:fonseca-e-m",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:32",
+        "source:33"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Revista de Gestão Costeira Integrada"
+      ],
+      "publicationYears": [
+        2011
+      ],
+      "resultsSummary": "Foram catalogados 21.841 itens em dez anos (14.505 no verão e 7.336 no inverno), com 70,6% de plástico. Cerca de 77% dos itens estavam em São Gonçalo, sobretudo na Praia do Brandoas (52%), e a origem foi atribuída principalmente aos rios.",
+      "dataAvailability": "Composição do resíduo; série temporal mais longa encontrada",
+      "details": "Local: Margem oriental: seis praias, três em Niterói e três em São Gonçalo\nFinanciadoras: bolsa de fixação de doutor da CAPES (E. M. da Fonseca) e bolsa de produtividade do CNPq (J. A. Baptista Neto); apoio logístico do Departamento de Geologia da UFF\nInstituição: LAGEMAR (UFF)\nPeríodo: Duas campanhas por ano: verão chuvoso e inverno seco"
+    },
+    {
+      "ref": 46,
+      "kind": "study",
+      "name": "Pescando Plásticos: efeitos socioambientais dos resíduos na vida dos pescadores artesanais da Baía de Guanabara (relatório técnico)",
+      "objective": "Compreender os impactos socioambientais provocados pelos resíduos plásticos na vida diária de pescadores artesanais de Magé e da Ilha do Governador, Baía de Guanabara.",
+      "start": {
+        "date": "2023-02-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2023-08-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "pesca-artesanal",
+        "macrolixo"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:interior",
+        "municipality:mage",
+        "municipality:rio-de-janeiro",
+        "locality:ilha-do-governador"
+      ],
+      "parties": [
+        {
+          "party": "institution:san-diego-university",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:pierobon-c",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:29",
+        "source:30"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "relatorio-tecnico"
+      ],
+      "venues": [
+        "Maretórios"
+      ],
+      "publicationYears": [
+        2023
+      ],
+      "resultsSummary": "Os resíduos plásticos afetam não apenas o meio ambiente, mas também a economia e o bem-estar social das comunidades pesqueiras.",
+      "dataAvailability": "Sem dados abertos indicados no relatório (entrevistas gravadas e caderno de campo)",
+      "details": "Instituição: Behner Stiefel Center for Brazilian Studies (San Diego University)\nMétodo: entrevistas, observação participante e acompanhamento de famílias"
+    },
+    {
+      "ref": 47,
+      "kind": "study",
+      "name": "Embarcação verde, sistema flutuante de limpeza da água da Baía de Guanabara",
+      "objective": "Propor a Embarcação Verde para remover e reciclar resíduos sólidos flutuantes na foz dos rios que deságuam na Baía de Guanabara, reduzindo a quantidade diária de lixo que chega à baía.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "macrolixo",
+        "estuario"
+      ],
+      "siteTypes": [
+        "rio-ou-canal"
+      ],
+      "places": [
+        "sector:baia-inteira"
+      ],
+      "parties": [
+        {
+          "party": "institution:unisuam",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:ufrrj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:marques-l",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:silva-p",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:goncalves-j-r-m-r",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:41"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Revista Augustus"
+      ],
+      "publicationYears": [
+        2020
+      ],
+      "resultsSummary": "Os autores estimam que a embarcação retiraria, em média, 88,2 t de lixo por mês, com ganho médio de 1.008 t/ano em relação ao ecobarco atual.",
+      "dataAvailability": "Sem dados (proposta técnica, sem declaração de disponibilidade de dados)",
+      "details": "Local: Foz dos rios que deságuam na baía\nPeríodo: Proposta técnica, sem coleta própria\nResultados: os valores são projeção, não resultado medido; o artigo cita cerca de 345 t/mês retiradas (Alencar e Grillo, 2015)"
+    },
+    {
+      "ref": 48,
+      "kind": "study",
+      "name": "Presence and quantification of the microplastics and bisphenol-A in sediments along the Guanabara Bay",
+      "objective": "Avaliar a ocorrência de microplásticos e bisfenol-A (BPA) nos sedimentos da Baía de Guanabara.",
+      "start": {
+        "date": "2014-12-01",
+        "precision": "month"
+      },
+      "end": {
+        "date": "2014-12-01",
+        "precision": "month"
+      },
+      "ongoing": false,
+      "periodicity": [
+        "one_off"
+      ],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "contaminantes",
+        "sedimento-estuarino"
+      ],
+      "siteTypes": [
+        "fundo"
+      ],
+      "places": [
+        "sector:baia-inteira",
+        "municipality:rio-de-janeiro",
+        "municipality:sao-goncalo"
+      ],
+      "parties": [
+        {
+          "party": "institution:uff",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:fiocruz",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:uerj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "institution:capes",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:faperj",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "institution:cnpq",
+          "role": "funder",
+          "note": null
+        },
+        {
+          "party": "person:santos-a-d-o",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:carvalho-d-g",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:nascimento-m-t-l",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:freitas-a-s",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:hauser-davis-r-a",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:cunha-d-l",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:fonseca-e-m",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:bila-d-m",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:baptista-neto-j-a",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:34",
+        "source:35"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [
+        "itens-por-area-itens-m"
+      ],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [
+        "Geochimica Brasiliensis"
+      ],
+      "publicationYears": [
+        2023
+      ],
+      "resultsSummary": "Foram encontradas de 3 a 11 partículas de microplástico por 50 cm² de sedimento, com máximo perto do porto, e concentrações de BPA de 0,36 a 19,75 ng/g. Predominaram fibras e fragmentos verdes, possivelmente de cordas e redes de pesca.",
+      "dataAvailability": "Partículas por 50 cm² de sedimento superficial; sem declaração de dados abertos",
+      "details": "Local: Seis pontos: Ilha do Governador (dois pontos), Ilha de Paquetá, São Gonçalo, Ilha do Fundão e Porto do Rio de Janeiro\nInstituição: Instituto de Geociências, Departamento de Geologia (UFF); Instituto Oswaldo Cruz (Fiocruz); Departamento de Engenharia Sanitária e Ambiental (UERJ)\nAmostragem: sedimento superficial, coletado com draga Van Veen"
+    },
+    {
+      "ref": 50,
+      "kind": "study",
+      "name": "Estimativa de lixo lançado na Baía de Guanabara",
+      "objective": "Estimar a quantidade de lixo não coletado que chega à Baía de Guanabara.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "macrolixo",
+        "saneamento"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:baia-inteira"
+      ],
+      "parties": [
+        {
+          "party": "institution:abrelpe",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:54"
+      ],
+      "executorInstitutionTypes": [
+        "associacao-empresarial"
+      ],
+      "indicators": [
+        "massa-por-tempo-t-dia"
+      ],
+      "sourceTypes": [
+        "reportagem"
+      ],
+      "venues": [
+        "CNN Brasil",
+        "Itabapoana News"
+      ],
+      "publicationYears": [
+        2022
+      ],
+      "resultsSummary": "Estimou-se que 98 t/dia de lixo chegam à baía, vindas de pelo menos oito municípios.",
+      "dataAvailability": "As estimativas usadas na imprensa variam de 80 a 100 t/dia conforme a fonte. O relatório original não foi encontrado; as matérias citam um levantamento da Abrelpe (hoje Abrema) sem método nem ano de referência",
+      "details": "Executores: Abrelpe (hoje Abrema)\nPeríodo: O período da estimativa não é informado; o Itabapoana News (04/06/2022) cita 90 t por dia em 2020 e aumento de quase 9%\nResultados: em 2015, cálculo a pedido do jornal O Globo partiu de 296 t/dia não coletadas em sete cidades"
+    },
+    {
+      "ref": 51,
+      "kind": "study",
+      "name": "Microplastics in Brazilian aquatic ecosystems and seafood: an updated review",
+      "objective": "Revisar a ocorrência de microplásticos em ecossistemas aquáticos e no pescado do Brasil.",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "fauna"
+      ],
+      "siteTypes": [],
+      "places": [],
+      "parties": [],
+      "sources": [
+        "source:56"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "artigo-cientifico"
+      ],
+      "venues": [],
+      "publicationYears": [
+        2026
+      ],
+      "resultsSummary": "Foram citadas concentrações acima de 3.600 partículas/m³ na Baía de Guanabara, com predominância de fibras de polietileno e poliéster.",
+      "dataAvailability": "Útil como agregador de referências",
+      "details": "Local: Brasil\nPeríodo: Revisão bibliográfica, sem coleta própria"
+    },
+    {
+      "ref": 53,
+      "kind": "study",
+      "name": "Baía da Guanabara: a ciência por baixo de suas águas (divulgação)",
+      "objective": "Apresentar um panorama da pesquisa sobre o ecossistema da Baía de Guanabara (texto de divulgação científica).",
+      "start": null,
+      "end": null,
+      "ongoing": false,
+      "periodicity": [],
+      "status": null,
+      "mechanisms": [],
+      "keywords": [
+        "microplastico",
+        "fauna",
+        "sedimento-estuarino"
+      ],
+      "siteTypes": [],
+      "places": [
+        "sector:baia-inteira"
+      ],
+      "parties": [
+        {
+          "party": "institution:ufrj",
+          "role": "author",
+          "note": null
+        },
+        {
+          "party": "person:paiva-p-c",
+          "role": "author",
+          "note": null
+        }
+      ],
+      "sources": [
+        "source:42"
+      ],
+      "executorInstitutionTypes": [
+        "academica"
+      ],
+      "indicators": [],
+      "sourceTypes": [
+        "divulgacao-cientifica"
+      ],
+      "venues": [
+        "Fórum UFRJ em revista"
+      ],
+      "publicationYears": [
+        2023
+      ],
+      "resultsSummary": "A Baía de Guanabara é descrita como uma das mais poluídas do mundo quanto à quantidade de microplásticos nos sedimentos. Em algumas áreas, as fibras plásticas são mais abundantes que os anelídeos, presas de corvinas e bagres, o que aumenta a chance de ingestão por animais que se alimentam no sedimento.",
+      "dataAvailability": "Síntese",
+      "details": "Local: Panorama da baía; o texto cita áreas próximas a Duque de Caxias, Rio de Janeiro, Niterói, São Gonçalo e Itaboraí, a Ilha do Fundão, as enseadas de Jurujuba e de Botafogo, o canal central, a APA de Guapimirim e a ESEC Guanabara\nInstituição: Instituto de Biologia (UFRJ)\nPeríodo: Texto de divulgação, sem coleta própria\nAutores: o autor é vice-coordenador do PELD Baía de Guanabara"
+    }
+  ]
+}

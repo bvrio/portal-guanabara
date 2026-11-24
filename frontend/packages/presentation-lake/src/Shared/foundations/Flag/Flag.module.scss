@@ -1,0 +1,12 @@
+.root {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* A hairline edge, so white parts (France) still read on white panels. */
+.edge {
+  fill: none;
+  stroke: rgb(11 23 26 / 18%);
+  stroke-width: 0.5;
+}

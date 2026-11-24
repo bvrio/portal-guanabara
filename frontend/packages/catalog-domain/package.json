@@ -1,0 +1,35 @@
+{
+  "name": "@portal-guanabara/catalog-domain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Catalog Domain for Portal Guanabara: workbook importer (Core v2.0 rules), catalog snapshot and read services.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./contracts": {
+      "types": "./src/contracts/index.ts",
+      "default": "./src/contracts/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "import": "node src/cli/import.ts",
+    "boundaries": "node src/cli/boundaries.ts"
+  },
+  "dependencies": {
+    "read-excel-file": "^9.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "6.0.3",
+    "vitest": "^5.1.1"
+  }
+}

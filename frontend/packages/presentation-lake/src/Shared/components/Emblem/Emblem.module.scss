@@ -1,0 +1,28 @@
+.root {
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+}
+
+.logo {
+  object-fit: contain;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.flag {
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+
+/* Until the official logo is supplied. */
+.monogram {
+  display: inline-grid;
+  place-items: center;
+  background: var(--color-structure-tint);
+  border: 1px solid var(--color-baia-100);
+  color: var(--color-baia-700);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}

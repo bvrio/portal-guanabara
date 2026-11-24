@@ -1,0 +1,44 @@
+.root {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg, 12px);
+}
+
+.water {
+  fill: var(--color-agua-100);
+}
+
+/* The sector's zone in the water; the land drawn after hides its overshoot. */
+.zone {
+  fill: var(--color-agua-300);
+  fill-opacity: 0.55;
+  stroke: var(--color-agua-700);
+  stroke-dasharray: 5 4;
+  stroke-width: 1.5;
+}
+
+.land {
+  fill: var(--color-nevoa-100);
+  stroke: var(--color-nevoa-0);
+  stroke-width: 1.25;
+}
+
+.on {
+  stroke: var(--color-nevoa-950);
+  stroke-width: 1.5;
+}
+
+/* The Mapa's green (mangue 300, the third of its four steps) — green is
+   neither kind, so it never reads as “initiatives” (v0.9.14). */
+.place .on {
+  fill: var(--color-map-place-3);
+}
+
+.project .on {
+  fill: var(--color-kind-project);
+}
+
+.study .on {
+  fill: var(--color-kind-study);
+}

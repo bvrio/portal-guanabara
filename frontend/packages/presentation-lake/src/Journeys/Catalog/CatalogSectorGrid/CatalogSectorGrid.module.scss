@@ -1,0 +1,136 @@
+.root {
+  display: grid;
+  gap: var(--spacing-3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--card-grid-gap, var(--spacing-4));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*
+ * Two rows (v0.9.22): three tiles, then the rest centred under them. Since
+ * v0.9.23 each tile keeps the width it had when the five shared one row (a
+ * fifth of the row, v0.9.1–v0.9.21; at least 14.5rem since v0.9.24, for the
+ * explore cards' 20px names) and the tiles get more room between them (32px): six half-columns, each tile two wide, the group centred; the 4th of
+ * five starts one half in, so the second row sits under the first one's gaps.
+ */
+@media (min-width: 960px) {
+  .grid {
+    --sector-gap: var(--spacing-8);
+    --sector-tile: max(14.5rem, calc((100% - 4 * var(--spacing-3)) / 5));
+
+    grid-template-columns: repeat(6, calc((var(--sector-tile) - var(--sector-gap)) / 2));
+    justify-content: center;
+    gap: var(--sector-gap);
+  }
+
+  .grid > li {
+    grid-column: span 2;
+  }
+
+  .grid > li:nth-child(4):nth-last-child(2) {
+    grid-column: 2 / span 2;
+  }
+
+  /* Narrower tiles: a little less side room, so every name keeps one line. */
+  .grid .tile {
+    column-gap: var(--spacing-2);
+    padding-inline: var(--spacing-4);
+  }
+}
+
+.tile {
+  /* Name and count on the left, the sector glyph in the top-right corner (v0.9.1). */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'label icon'
+    'count icon';
+  align-content: center;
+  align-items: center;
+  gap: var(--spacing-1) var(--spacing-3);
+  height: 100%;
+  /* As tall as Início's explore cards: 20px padding ×2 + the 68px icon tile + their 4px stripe and 1px border. */
+  min-height: calc(var(--spacing-5) * 2 + 68px + 5px);
+  padding: var(--spacing-5) var(--spacing-6);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  color: inherit;
+  text-decoration: none;
+}
+
+.button {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.link {
+  transition:
+    border-color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.link:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.icon {
+  grid-area: icon;
+}
+
+/*
+ * The sector glyphs draw the bay inside a frame, so at the kinds' 48px they
+ * read smaller than the explore cards' glyphs: a 56px glyph in the same 68px
+ * tile (v0.9.24).
+ */
+.tile .icon {
+  --frame-padding: 6px;
+}
+
+.tile .icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+.label {
+  grid-area: label;
+  align-self: end;
+  color: var(--color-text-heading);
+  /* The explore cards' title and line (v0.9.24). */
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.count {
+  grid-area: count;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.note {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}

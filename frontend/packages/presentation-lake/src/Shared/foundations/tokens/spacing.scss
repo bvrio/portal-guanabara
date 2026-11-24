@@ -1,0 +1,48 @@
+:root {
+  /* 4px-based spacing scale. */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+
+  --space-page-gutter: var(--spacing-6);
+  --space-section: var(--spacing-12);
+  --space-component-gap: var(--spacing-4);
+  --space-control-padding-x: var(--spacing-4);
+  --space-control-padding-y: var(--spacing-3);
+  --space-inline-gap: var(--spacing-4);
+
+  /*
+   * Layout. Content is centred in a column that widens on the largest
+   * screens so card collections can hold three columns (see CardGrid).
+   *   < 720px     1 card per row   (phones)
+   *   720–1599px  2 cards per row  (tablets, laptops)
+   *   ≥ 1600px    3 cards per row  (large desktop screens)
+   */
+  --layout-max-width: 1120px;
+  /* Height of the sticky site header; anchored panels stick right below it. */
+  /* Site header: one row at every size (v0.9.17; two rows of 112px in v0.9–v0.9.16). */
+  --layout-header-height: 64px;
+  --layout-header-height-compact: 64px;
+  /*
+   * Room a page leaves under the header for something hanging from it (the
+   * floating Buscar of v0.9.2–v0.9.10 used 26px); 0 today.
+   */
+  --layout-header-overhang: 0px;
+  --layout-breakpoint-md: 720px;
+  --layout-breakpoint-xl: 1600px;
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --layout-max-width: 1440px;
+  }
+}

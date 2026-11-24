@@ -1,0 +1,124 @@
+.root {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+.group {
+  display: grid;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.legend,
+.label {
+  padding: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.legend {
+  margin-bottom: var(--spacing-2);
+  font-size: var(--font-size-md);
+}
+
+/* Segments like the Catálogo's kind toggle: the choice is in plain sight. */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--spacing-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.choice:focus-within {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.selected {
+  border-color: var(--color-action-primary);
+  background: var(--color-selected-bg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.note {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.fields {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.area {
+  display: grid;
+  gap: var(--spacing-1);
+}
+
+.textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-control);
+  background: var(--color-control-bg);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  resize: vertical;
+}
+
+.textarea:focus-visible {
+  border-color: var(--color-focus-ring);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-halo);
+}
+
+.error {
+  color: var(--color-status-error, #b42318);
+  font-size: var(--font-size-xs);
+}
+
+.contact {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 720px) {
+  .contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.consent {
+  display: grid;
+  gap: var(--spacing-1);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}

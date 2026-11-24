@@ -1,0 +1,212 @@
+.root {
+  flex: 1 0 auto;
+  background: var(--color-bg-canvas);
+}
+
+.content {
+  display: grid;
+  gap: var(--spacing-12);
+  max-width: var(--layout-max-width, 1120px);
+  margin: 0 auto;
+  padding: var(--spacing-10) var(--space-page-gutter) var(--spacing-16);
+}
+
+.section {
+  display: grid;
+  gap: var(--spacing-5);
+}
+
+.sectionHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+}
+
+.sectionTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.sectionIcon {
+  color: var(--color-text-heading);
+}
+
+/* Groups like BVRio's own team page: a subheading, then a row of cards. */
+.teamGroup {
+  display: grid;
+  gap: var(--spacing-3);
+}
+
+.teamTitle {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.team {
+  display: grid;
+  /* auto-fit: two fellows share the row; four BVRio cards fill it. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--spacing-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team > li > * {
+  height: 100%;
+}
+
+.sectionDescription {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* ----------------------------------------------------------- the project */
+.project {
+  display: grid;
+  gap: var(--spacing-4);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .project {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+}
+
+.projectCard,
+.panel,
+.scholarship {
+  display: grid;
+  gap: var(--spacing-3);
+  padding: var(--spacing-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.projectName {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+.lead {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+.facts {
+  display: grid;
+  gap: var(--spacing-3);
+  margin: var(--spacing-2) 0 0;
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 720px) {
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.fact dt {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fact dd {
+  margin: 2px 0 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+}
+
+.panel {
+  padding: var(--spacing-5);
+}
+
+.panelTitle {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.partners {
+  display: grid;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+}
+
+.partners li {
+  display: grid;
+  gap: 1px;
+}
+
+.partners strong {
+  color: var(--color-text-heading);
+}
+
+.partners span {
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------- scholarships */
+.scholarships {
+  display: grid;
+  gap: var(--spacing-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 720px) {
+  .scholarships {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.scholarship {
+  border-top: 4px solid var(--color-structure-accent, var(--color-comlurb-300));
+}
+
+.scholarshipTitle {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.scholarship p {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}

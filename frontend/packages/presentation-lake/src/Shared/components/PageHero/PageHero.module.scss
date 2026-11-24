@@ -1,0 +1,177 @@
+/* Zero specificity, so a consumer class can set its own overlap. */
+:where(.root) {
+  --page-hero-overlap: 56px;
+}
+
+.root {
+  background: var(--color-structure-bg);
+  color: var(--color-structure-text);
+}
+
+.inner {
+  display: grid;
+  gap: var(--spacing-8);
+  align-items: center;
+  max-width: var(--layout-max-width, 1120px);
+  margin: 0 auto;
+  padding: var(--spacing-10) var(--spacing-6);
+}
+
+/* A page can let the band's content use the whole width (Início, v0.9.21). */
+@media (min-width: 880px) {
+  .withAside {
+    max-width: var(--page-hero-max-width, var(--layout-max-width, 1120px));
+    padding-inline: var(--page-hero-padding-inline, var(--spacing-6));
+  }
+}
+
+@media (min-width: 880px) {
+  .withAside {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  }
+
+  /*
+   * Aside on the left of the text (v0.9.4): by default a column sized to it,
+   * then the text. A page can set its own columns and alignment
+   * (`--page-hero-columns`, `--page-hero-justify`, `--page-hero-align`) and
+   * lower the text (`--page-hero-body-offset`) — Início, v0.9.19–v0.9.23.
+   */
+  .withAside.asideStart {
+    grid-template-columns: var(--page-hero-columns, auto minmax(0, 1fr));
+    justify-content: var(--page-hero-justify, normal);
+    align-items: var(--page-hero-align, center);
+    column-gap: var(--page-hero-aside-gap, var(--spacing-12));
+  }
+
+  .withAside.asideStart .body {
+    padding-top: var(--page-hero-body-offset, 0);
+  }
+
+  .asideStart .aside {
+    order: -1;
+  }
+}
+
+.lg .inner {
+  /* A page can even out the band around its aside (Início, v0.9.18). */
+  padding-block: var(--page-hero-padding-top, var(--spacing-12)) var(--page-hero-padding-bottom, var(--spacing-16));
+}
+
+.sm .inner {
+  padding-block: var(--spacing-6) var(--spacing-8);
+}
+
+.overlap .inner {
+  padding-bottom: calc(var(--spacing-10) + var(--page-hero-overlap));
+}
+
+.body {
+  display: grid;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+.breadcrumb {
+  font-size: var(--font-size-sm);
+  color: var(--color-structure-text-secondary);
+}
+
+.breadcrumb :is(a, a:visited) {
+  color: var(--color-structure-text-secondary);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-structure-text);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-structure-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  max-width: 24ch;
+  color: var(--color-structure-text);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  text-wrap: balance;
+}
+
+.title.titleFull {
+  max-width: none;
+}
+
+.lg .title {
+  font-size: var(--page-hero-title-size, clamp(var(--font-size-3xl), 4vw, 2.75rem));
+}
+
+.sm .title {
+  max-width: none;
+  font-size: var(--font-size-2xl);
+}
+
+.description {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--color-structure-text-secondary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  /* A page can justify it (Início, v0.9.23). */
+  text-align: var(--page-hero-description-align, start);
+}
+
+.description.descriptionFull {
+  max-width: none;
+}
+
+.lg .description {
+  font-size: var(--font-size-lg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-3);
+}
+
+.extra {
+  margin-top: var(--spacing-2);
+}
+
+.aside {
+  display: none;
+  justify-self: center;
+}
+
+.asideEnd {
+  justify-self: end;
+}
+
+@media (min-width: 880px) {
+  .aside {
+    display: block;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* A band that only explains reads as a lead paragraph. */
+.visuallyHidden + .description {
+  font-size: var(--font-size-lg);
+  color: var(--color-structure-text);
+}

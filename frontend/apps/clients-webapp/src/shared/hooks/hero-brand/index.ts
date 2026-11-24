@@ -1,0 +1,1 @@
+export { useHeroBrand } from './useHeroBrand';

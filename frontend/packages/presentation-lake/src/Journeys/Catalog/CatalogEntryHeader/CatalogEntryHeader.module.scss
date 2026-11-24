@@ -1,0 +1,149 @@
+/* A card the width of the page content (v0.9.1): kind stripe on top, text left, photo right. */
+.root {
+  --kind-tint: var(--color-bg-subtle);
+  --kind-mark: var(--color-border);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 280px);
+  gap: var(--spacing-6);
+  padding: var(--spacing-6);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(var(--kind-mark), var(--kind-mark)) top / 100% 4px no-repeat,
+    linear-gradient(180deg, var(--kind-tint) 0%, var(--color-surface) 70%);
+  box-shadow: var(--shadow-sm);
+}
+
+.textOnly {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project {
+  --kind-tint: var(--color-kind-project-tint);
+  --kind-mark: var(--color-kind-project);
+}
+
+.study {
+  --kind-tint: var(--color-kind-study-tint);
+  --kind-mark: var(--color-kind-study);
+}
+
+.breadcrumb {
+  grid-column: 1 / -1;
+  font-size: var(--font-size-sm);
+}
+
+.text {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-4);
+  min-width: 0;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2) var(--spacing-4);
+}
+
+.reference {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  max-width: 48ch;
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.lead {
+  max-width: 72ch;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.lead :global(p) {
+  margin: 0;
+}
+
+/* When — alone and larger than the other facts. */
+.when {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.whenIcon {
+  color: var(--color-structure-bg);
+}
+
+.photo {
+  display: grid;
+  min-height: 180px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg, 12px);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoPending {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4);
+  border: 1.5px dashed var(--color-border-strong);
+  border-radius: inherit;
+  background: rgb(255 255 255 / 60%);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.photoIcon {
+  opacity: 0.6;
+}
+
+@media (max-width: 720px) {
+  .root {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--spacing-5);
+  }
+
+  .photo {
+    min-height: 140px;
+  }
+
+  /* Phones: no empty frame before the content; a real photo still shows. */
+  .photoEmpty {
+    display: none;
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .when {
+    font-size: var(--font-size-lg);
+  }
+}

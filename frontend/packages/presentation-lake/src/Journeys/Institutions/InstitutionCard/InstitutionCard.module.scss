@@ -1,0 +1,173 @@
+.root {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--spacing-4);
+  align-items: start;
+  min-width: 0;
+  padding: var(--spacing-5);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.root:hover,
+.root:focus-within {
+  border-color: var(--color-selected-border);
+  box-shadow: var(--shadow-md);
+}
+
+.root:has(.open:focus-visible) {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.body {
+  display: grid;
+  gap: var(--spacing-1);
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+.open {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-heading);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* The whole card opens the institution. */
+.open::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+}
+
+.open:focus-visible {
+  outline: none;
+}
+
+.type {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.counts,
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2) var(--spacing-4);
+  margin: var(--spacing-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.project {
+  --icon-tint: var(--color-kind-project);
+  --icon-tint-opacity: 0.35;
+  --icon-accent: var(--color-kind-project);
+
+  > svg {
+    color: var(--color-kind-project-ink);
+  }
+}
+
+.study {
+  --icon-tint: var(--color-kind-study);
+  --icon-tint-opacity: 0.3;
+  --icon-accent: var(--color-kind-study);
+
+  > svg {
+    color: var(--color-kind-study-ink);
+  }
+}
+
+.roles {
+  gap: var(--spacing-2);
+}
+
+.role {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  height: 28px;
+  padding: 0 var(--spacing-3);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.role strong {
+  color: var(--color-text-heading);
+}
+
+.arrow {
+  color: var(--color-text-muted);
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.root:hover .arrow {
+  color: var(--color-text-heading);
+  transform: translateX(3px);
+}
+
+@media (max-width: 480px) {
+  .root {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+/*
+ * Kind stripe (v0.9): a 4px band along the top, inside the rounded corners —
+ * orange for initiatives, purple for studies, half and half for both.
+ */
+.stripeProject,
+.stripeStudy,
+.stripeBoth {
+  background:
+    linear-gradient(90deg, var(--stripe-start) 0 50%, var(--stripe-end) 50% 100%) top / 100% 4px no-repeat,
+    var(--color-surface);
+}
+
+.stripeProject {
+  --stripe-start: var(--color-kind-project);
+  --stripe-end: var(--color-kind-project);
+}
+
+.stripeStudy {
+  --stripe-start: var(--color-kind-study);
+  --stripe-end: var(--color-kind-study);
+}
+
+.stripeBoth {
+  --stripe-start: var(--color-kind-project);
+  --stripe-end: var(--color-kind-study);
+}

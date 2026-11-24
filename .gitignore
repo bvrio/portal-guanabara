@@ -1,0 +1,25 @@
+# Repository-wide. Each folder keeps its own rules too (frontend/.gitignore).
+
+# Package managers and build caches (pnpm also writes a task-run state at the root)
+node_modules/
+.pnpm-store/
+.turbo/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Backend (Java)
+backend/target/
+backend/build/
+backend/.gradle/
+backend/out/
+*.class
+*.log

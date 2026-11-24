@@ -1,0 +1,72 @@
+.root {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  white-space: nowrap;
+}
+
+.sm .badge {
+  min-height: 24px;
+  padding: 1px var(--spacing-2) 1px 5px;
+  font-size: var(--font-size-xs);
+}
+
+.md .badge {
+  min-height: 30px;
+  padding: 2px var(--spacing-3) 2px var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+
+.lg .badge {
+  min-height: 40px;
+  padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
+  gap: var(--spacing-2);
+  font-size: var(--font-size-md);
+}
+
+/* Kind chips: soft colour, black text. */
+.project {
+  background: var(--color-kind-project-chip);
+  color: var(--color-kind-project-text);
+}
+
+.study {
+  background: var(--color-kind-study-chip);
+  color: var(--color-kind-study-text);
+}
+
+.status {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.live {
+  background: var(--color-status-live);
+}
+
+.progress {
+  background: var(--color-status-progress);
+}
+
+.done {
+  background: var(--color-status-done);
+}

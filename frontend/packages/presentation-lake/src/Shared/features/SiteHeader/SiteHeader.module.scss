@@ -1,0 +1,543 @@
+.root {
+  /* Sized by its own width, so it adapts under the view-size zoom too. */
+  container: site-header / inline-size;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-structure-bg-deep);
+  color: var(--color-structure-text);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 6%);
+}
+
+/*
+ * One row (v0.9.17): the brand at the far left, the tabs in the middle (centred
+ * on the page while the sides allow it), Opções and the account at the far
+ * right. `data-fit` (set by the bar's own measure) picks how much shows.
+ */
+.inner {
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+  align-items: center;
+  column-gap: var(--spacing-6);
+  height: var(--layout-header-height-compact, 64px);
+  padding: 0 var(--spacing-6);
+  overflow-x: clip;
+}
+
+/* ------------------------------------------------------------- brand */
+
+.brand {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--color-structure-text);
+  text-decoration: none;
+  transition:
+    opacity var(--duration-base, 200ms) var(--easing-standard),
+    visibility var(--duration-base, 200ms) var(--easing-standard),
+    transform var(--duration-base, 200ms) var(--easing-standard);
+}
+
+.brand:hover .name {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--color-structure-focus-ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-md, 8px);
+}
+
+.mark {
+  border-radius: 8px;
+}
+
+/* Bigger than the tabs (v0.9.17): the name is the bar's title. */
+.name {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.015em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/*
+ * Início: the mark and the name follow the hero's own (v0.9.20) — as those
+ * scroll under the bar, these fade in by the same amount (`--site-brand-reveal`,
+ * 0 → 1), keeping their place. Only where a PageHero shows its aside (from
+ * 880px, PageHero's breakpoint): on smaller screens the hero has no mark, so
+ * the bar keeps its own.
+ */
+@media (min-width: 880px) {
+  .brand {
+    opacity: var(--site-brand-reveal, 1);
+    transform: translateY(calc((1 - var(--site-brand-reveal, 1)) * -6px));
+    transition:
+      opacity 120ms linear,
+      transform 120ms linear,
+      visibility 120ms linear;
+  }
+
+  .brandHidden .brand {
+    visibility: hidden;
+  }
+}
+
+/* -------------------------------------------------------------- tabs */
+
+.nav {
+  align-self: stretch;
+  min-width: 0;
+}
+
+.list {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  height: 100%;
+  padding: 0 var(--spacing-3);
+
+  color: var(--color-structure-text-secondary);
+  /* A step up from the body-small size (v0.9.22): the tabs read first. */
+  font-size: calc((var(--font-size-sm) + var(--font-size-md)) / 2);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.item:hover {
+  color: var(--color-structure-text);
+  box-shadow: inset 0 -3px 0 var(--color-structure-border);
+}
+
+.current,
+.current:hover {
+  color: var(--color-structure-text);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: inset 0 -3px 0 var(--color-structure-accent);
+}
+
+.item .itemIcon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.85;
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--color-structure-focus-ring);
+  outline-offset: -2px;
+}
+
+/* ---------------------------------------------------- Opções, account */
+
+.actions {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.tools {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* A pill like the menus it replaces (Tamanho, Idioma): icon, word, chevron. */
+.optionsButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 var(--spacing-3) 0 var(--spacing-3);
+  border: 1px solid var(--color-structure-border);
+  border-radius: var(--radius-full);
+  background: var(--color-structure-bg);
+  color: var(--color-structure-text-secondary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.optionsButton:hover,
+.optionsButtonOpen {
+  border-color: var(--color-structure-text-muted);
+  color: var(--color-structure-text);
+}
+
+.optionsChevron {
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.optionsButtonOpen .optionsChevron {
+  transform: rotate(180deg);
+}
+
+.account {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.optionsButton:focus-visible,
+.account:focus-visible,
+.menuButton:focus-visible {
+  outline: 2px solid var(--color-structure-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Initials on the soft orange, black ink — the same pair as primary actions. */
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-action-primary, var(--color-comlurb-300));
+  color: var(--color-nevoa-950);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.account.avatar:hover {
+  box-shadow: 0 0 0 3px rgb(255 255 255 / 25%);
+}
+
+.signIn {
+  gap: var(--spacing-2);
+  min-height: 36px;
+  padding: 0 var(--spacing-4);
+  border: 1px solid var(--color-structure-border);
+  border-radius: var(--radius-full);
+  background: var(--color-structure-bg);
+  color: var(--color-structure-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+}
+
+.signIn:hover {
+  border-color: var(--color-structure-text-muted);
+}
+
+.menuButton {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-structure-border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-structure-bg);
+  color: var(--color-structure-text);
+  cursor: pointer;
+}
+
+/* ----------------------------------------------------- shedding steps */
+
+/* Step 1: the name beside the mark and the words of Opções and Entrar go. */
+@mixin icons {
+  .name,
+  .optionsLabel,
+  .optionsChevron,
+  .signInLabel {
+    display: none;
+  }
+
+  .optionsButton,
+  .signIn {
+    justify-content: center;
+    width: 36px;
+    padding: 0;
+  }
+}
+
+/* Step 2: the phone bar — mark, account and the menu button. */
+@mixin compact {
+  grid-template-columns: auto minmax(0, 1fr);
+  padding: 0 var(--spacing-4);
+
+  .name,
+  .nav,
+  .tools,
+  .optionsButton,
+  .signInLabel {
+    display: none;
+  }
+
+  .actions {
+    gap: var(--spacing-3);
+  }
+
+  .signIn {
+    justify-content: center;
+    width: 36px;
+    padding: 0;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}
+
+.inner[data-fit='icons'] {
+  @include icons;
+}
+
+.inner[data-fit='compact'] {
+  @include compact;
+}
+
+/* Before the bar has measured itself (server render, first paint). */
+@container site-header (min-width: 800px) and (max-width: 1199px) {
+  .inner:not([data-fit]) {
+    @include icons;
+  }
+}
+
+@container site-header (max-width: 799px) {
+  .inner:not([data-fit]) {
+    @include compact;
+  }
+}
+
+/* ------------------------------------------------------ Opções panel */
+
+/* Like the phone menu, tighter (v0.9.17): flags, names, and the three sizes in sight. */
+.options {
+  display: grid;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+}
+
+.optionsSection {
+  display: grid;
+  gap: var(--spacing-2);
+}
+
+.optionsHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.optionsList {
+  display: grid;
+  gap: var(--spacing-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.optionsChoice {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  min-height: 36px;
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.optionsChoice:hover {
+  border-color: var(--color-border-interactive, var(--color-border-strong));
+}
+
+.optionsChoice:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.optionsChoiceLabel {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionsChoiceCurrent {
+  border-color: var(--color-action-primary, var(--color-comlurb-300));
+  background: var(--color-selected-bg, var(--color-comlurb-50));
+  font-weight: var(--font-weight-semibold);
+}
+
+.optionsZooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2);
+}
+
+.optionsZoom {
+  justify-content: center;
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+/* -------------------------------------------------------------- menu */
+
+.menu {
+  display: grid;
+  gap: var(--spacing-5);
+}
+
+.menuList {
+  display: grid;
+  gap: var(--spacing-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  min-height: 48px;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 0;
+  border-radius: var(--radius-md, 8px);
+  background: none;
+  color: var(--color-text-heading);
+  font: inherit;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background: var(--color-nevoa-50);
+}
+
+.menuItem:focus-visible,
+.menuOption:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.menuCurrent {
+  background: var(--color-selected-bg, var(--color-comlurb-50));
+  box-shadow: inset 4px 0 0 var(--color-accent, var(--color-comlurb-300));
+}
+
+/* Idioma: a row like the others that opens in place; the chosen language under its name. */
+.menuItemText {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+
+.menuItemDetail {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular, 400);
+}
+
+.menuChevron {
+  color: var(--color-text-secondary);
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.menuChevronOpen {
+  transform: rotate(180deg);
+}
+
+.menuOptions {
+  display: grid;
+  gap: var(--spacing-1);
+  margin: var(--spacing-1) 0 var(--spacing-2);
+  padding: 0 0 0 calc(var(--spacing-3) + 24px + var(--spacing-3));
+  list-style: none;
+}
+
+.menuOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.menuOptionLabel {
+  flex: 1;
+  min-width: 0;
+}
+
+.menuOptionCurrent {
+  border-color: var(--color-action-primary, var(--color-comlurb-300));
+  background: var(--color-selected-bg, var(--color-comlurb-50));
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Tamanho (tablets): no dividing lines (v0.8), just its heading and three buttons. */
+.menuSection {
+  display: grid;
+  gap: var(--spacing-3);
+  padding: 0 var(--spacing-3);
+}
+
+.menuHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* View size lives in the menu only where it applies (tablets and up). */
+@media (max-width: 719px) {
+  .menuZoom {
+    display: none;
+  }
+}
+
+.menuZooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2);
+}

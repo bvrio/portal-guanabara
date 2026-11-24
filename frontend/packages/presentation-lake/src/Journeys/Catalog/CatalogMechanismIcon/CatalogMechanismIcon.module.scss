@@ -1,0 +1,14 @@
+/* Initiatives' orange: mechanisms belong to initiatives only. */
+.slot.slot,
+.tile {
+  border: 1px solid var(--color-kind-project-chip);
+  border-radius: var(--radius-full);
+  background: var(--color-kind-project-tint);
+  color: var(--color-kind-project-ink);
+}
+
+.tile {
+  display: inline-grid;
+  flex-shrink: 0;
+  place-items: center;
+}

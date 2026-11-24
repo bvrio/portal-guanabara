@@ -1,0 +1,84 @@
+.root {
+  display: grid;
+  gap: var(--spacing-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Horizontal variation (v0.9.8): tiles side by side, four or so per row on computers. */
+.grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+  gap: var(--spacing-2);
+}
+
+.grid .row {
+  height: 100%;
+  border-color: var(--color-border);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--spacing-2);
+  /* Swatch and total centred on the row's height (name over its two counts). */
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md, 8px);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard);
+}
+
+.row:hover,
+.highlighted {
+  border-color: var(--color-nevoa-200);
+  background: var(--color-nevoa-50);
+}
+
+.row:focus-visible {
+  outline: 2px solid var(--color-focus-ring, var(--color-baia-500));
+  outline-offset: 1px;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--map-fill);
+  box-shadow: inset 0 0 0 1px rgb(11 23 26 / 12%);
+}
+
+.text {
+  display: grid;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug, 1.35);
+}
+
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md);
+  font-variant-numeric: tabular-nums;
+}
+
+.chevron {
+  color: var(--color-text-secondary);
+}

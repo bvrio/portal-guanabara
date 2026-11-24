@@ -1,0 +1,96 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--spacing-6);
+}
+
+.group {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-2);
+}
+
+.role {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.list {
+  display: grid;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.party {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: var(--spacing-2);
+  align-items: center;
+}
+
+/* Logo slot (v0.9): the official logo when BVRio supplies it, a monogram until then. */
+.emblem {
+  border-radius: var(--radius-sm);
+}
+
+/* An institution that opens its entries: the whole name is the button. */
+.open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-1);
+  width: 100%;
+  margin: -2px 0;
+  padding: 2px var(--spacing-1);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.open:hover {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-heading);
+}
+
+.open:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.partyIcon {
+  align-self: center;
+  color: var(--color-structure-bg);
+}
+
+.name {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.partyNote {
+  grid-column: 2;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.note {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}

@@ -1,0 +1,95 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  min-width: 0;
+
+  padding: var(--spacing-5);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.interactive {
+  overflow: hidden;
+  padding-bottom: 0;
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.interactive:hover {
+  border-color: var(--color-selected-border);
+  box-shadow: var(--shadow-md);
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The icon sits in the top-right corner (v0.9.1); the number and label keep clear of it. */
+.icon {
+  position: absolute;
+  top: var(--spacing-5);
+  right: var(--spacing-5);
+  display: inline-flex;
+  color: var(--color-structure-bg);
+}
+
+.withIcon .value,
+.withIcon .label {
+  padding-right: calc(48px + var(--spacing-3));
+}
+
+.value {
+  color: var(--color-text-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.label {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-snug);
+}
+
+/* Footer line of an interactive tile: what the click does, on the right with its arrow. */
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin: auto calc(-1 * var(--spacing-5)) 0;
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-5);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.arrow {
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.interactive:hover .arrow {
+  transform: translateX(3px);
+}

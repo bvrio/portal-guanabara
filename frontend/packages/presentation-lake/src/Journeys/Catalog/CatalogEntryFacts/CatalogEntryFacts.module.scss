@@ -1,0 +1,25 @@
+.term {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.term > svg {
+  color: var(--color-structure-bg);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A mechanism chip with its icon slot (v0.9). */
+.mechanism {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}

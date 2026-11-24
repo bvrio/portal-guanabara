@@ -1,0 +1,36 @@
+{
+  "name": "clients-webapp",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1 --port 3000",
+    "build": "nuxt build",
+    "start": "PORT=3000 HOST=127.0.0.1 node .output/server/index.mjs",
+    "preview": "nuxt preview --port 3000",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@formatjs/intl": "^6.2.0",
+    "@portal-guanabara/catalog-domain": "workspace:*",
+    "@portal-guanabara/journey-manifests": "workspace:*",
+    "@portal-guanabara/presentation-lake": "workspace:*",
+    "h3": "^1.15.11",
+    "nuxt": "^4.6.4",
+    "vue": "^3.5.46",
+    "vue-intl": "^8.1.7",
+    "vue-router": "^5.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "4.4.0",
+    "@types/node": "^24.10.0",
+    "@vue/test-utils": "^2.6.0",
+    "happy-dom": "21.0.4",
+    "sass": "^1.108.2",
+    "typescript": "6.0.3",
+    "vitest": "^5.1.1",
+    "vue-tsc": "^3.3.14"
+  }
+}

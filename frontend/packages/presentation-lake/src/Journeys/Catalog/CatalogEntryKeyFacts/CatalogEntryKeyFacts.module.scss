@@ -1,0 +1,90 @@
+/* One line of facts, separated by thin rules; wraps on small screens. */
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2) 0;
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.fact {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0 var(--spacing-4);
+  border-left: 1px solid var(--color-border);
+}
+
+.fact:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.term {
+  display: inline-flex;
+  color: var(--color-text-secondary);
+}
+
+.value {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.reference .value {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular, 400);
+}
+
+/* Phones: one fact per line, no rules at the start of wrapped lines. */
+.stack {
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.stack .fact {
+  align-items: flex-start;
+  padding: 0;
+  border-left: 0;
+}
+
+/* Side by side, no rules; a fact that does not fit wraps to the next line
+   (v0.9.14: the sector to the right of the municipality in the map card). */
+.row {
+  gap: var(--spacing-2) var(--spacing-6);
+}
+
+.row .fact {
+  align-items: flex-start;
+  padding: 0;
+  border-left: 0;
+}
+
+@media (max-width: 640px) {
+  .root {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .fact {
+    padding: 0;
+    border-left: 0;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Phones too: the row stays a row while the facts fit. */
+@media (max-width: 640px) {
+  .root.row {
+    flex-direction: row;
+    gap: var(--spacing-2) var(--spacing-6);
+  }
+}

@@ -1,0 +1,152 @@
+.card {
+  --explore-mark: var(--color-border);
+
+  /* The card is a size container: its layout follows its own width, not the
+     viewport's, so two cards side by side at a high zoom still fit. */
+  container: explore-card / inline-size;
+  display: grid;
+  align-content: center;
+  padding: var(--spacing-5) var(--spacing-6);
+
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--explore-mark);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    transform var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgb(11 58 71 / 16%);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.project {
+  --explore-mark: var(--color-kind-project);
+}
+
+.study {
+  --explore-mark: var(--color-kind-study);
+}
+
+/* Grey and green: the same steps as the kinds' orange and purple. */
+.institution {
+  --explore-mark: var(--color-institution);
+  --explore-ink: var(--color-institution-ink);
+  --explore-tint: var(--color-institution-tint);
+}
+
+.place {
+  --explore-mark: var(--color-place);
+  --explore-ink: var(--color-place-ink);
+  --explore-tint: var(--color-place-tint);
+}
+
+.body {
+  display: grid;
+  grid-template-areas: 'icon text count arrow';
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.icon {
+  grid-area: icon;
+}
+
+/* The tile CatalogIcon draws for the kinds, for the other two tones. */
+.tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: var(--radius-lg);
+  background: var(--explore-tint);
+  color: var(--explore-ink);
+
+  --icon-tint: var(--explore-mark);
+  --icon-tint-opacity: 0.45;
+}
+
+.text {
+  grid-area: text;
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.line {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.count {
+  grid-area: count;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.arrow {
+  grid-area: arrow;
+  color: var(--color-text-muted);
+  transition: transform var(--duration-fast) var(--easing-standard);
+}
+
+.card:hover .arrow {
+  color: var(--color-text-heading);
+  transform: translateX(3px);
+}
+
+/* Narrow card: the arrow goes; the whole card is still the link. */
+@container explore-card (max-width: 26rem) {
+  .body {
+    grid-template-areas: 'icon text count';
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+/* Very narrow card: icon and number on top, the words underneath. */
+@container explore-card (max-width: 19rem) {
+  .body {
+    grid-template-areas:
+      'icon count'
+      'text text';
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--spacing-3);
+  }
+
+  .count {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--spacing-4);
+  }
+}

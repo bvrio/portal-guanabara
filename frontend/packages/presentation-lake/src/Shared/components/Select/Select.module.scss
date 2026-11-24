@@ -1,0 +1,83 @@
+.field {
+  width: min(100%, 360px);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.control {
+  position: relative;
+  width: 100%;
+  padding-top: var(--spacing-2);
+}
+
+.select {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+
+  padding: var(--spacing-3) var(--spacing-10) var(--spacing-3) var(--spacing-4);
+
+  appearance: none;
+  border: 1px solid var(--color-border-interactive);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-control-bg);
+  color: var(--color-text-primary);
+
+  font: inherit;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  text-overflow: ellipsis;
+  cursor: pointer;
+
+  transition:
+    background-color var(--duration-normal) var(--easing-standard),
+    border-color var(--duration-normal) var(--easing-standard),
+    box-shadow var(--duration-normal) var(--easing-standard);
+}
+
+.select:hover:not(:disabled) {
+  background: var(--color-control-bg-hover);
+  border-color: var(--color-border-strong);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 3px var(--color-focus-halo);
+}
+
+.select:disabled {
+  background: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+  cursor: not-allowed;
+}
+
+.chevron {
+  position: absolute;
+  top: calc(50% + var(--spacing-1));
+  right: var(--spacing-4);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-text-secondary);
+  border-bottom: 2px solid var(--color-text-secondary);
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: var(--spacing-3);
+
+  padding: 0 var(--spacing-1);
+
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  pointer-events: none;
+}

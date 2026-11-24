@@ -1,0 +1,290 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.dimensionIcon {
+  color: var(--color-structure-bg);
+}
+
+.titleText {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.eyebrow {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.body {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.count {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.list {
+  display: grid;
+  gap: var(--spacing-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: opacity var(--duration-normal) var(--easing-standard);
+}
+
+.loading {
+  opacity: 0.6;
+}
+
+.skeleton {
+  height: 132px;
+  border-radius: var(--radius-card);
+  background: linear-gradient(90deg, var(--color-bg-muted), var(--color-surface), var(--color-bg-muted));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.showing {
+  margin-right: auto;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* + Filtro (header action) */
+.add {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  height: 40px;
+  padding: 0 var(--spacing-4) 0 var(--spacing-3);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-action-primary);
+  color: var(--color-action-primary-contrast);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.add:hover {
+  background: var(--color-action-primary-hover);
+}
+
+.add:focus-visible,
+.choice:focus-visible,
+.back:focus-visible,
+.remove:focus-visible,
+.clear:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.adder {
+  display: grid;
+  gap: var(--spacing-1);
+  max-height: min(26rem, 70vh);
+  padding: var(--spacing-2);
+  overflow-y: auto;
+}
+
+.adderHeading {
+  margin: var(--spacing-1) var(--spacing-2) var(--spacing-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.choices {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.choice,
+.back {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-2);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.choice:hover:not(:disabled),
+.back:hover {
+  background: var(--color-bg-muted);
+}
+
+.choice:disabled {
+  color: var(--color-text-muted);
+  cursor: default;
+}
+
+.back {
+  gap: var(--spacing-2);
+  color: var(--color-text-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.choiceLabel {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionCount,
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.hint {
+  margin: 0;
+  padding: var(--spacing-2);
+}
+
+.choice .hint {
+  padding: 0;
+}
+
+.search {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: var(--spacing-1) 0 var(--spacing-2);
+  padding: 0 var(--spacing-3);
+  height: 2.5rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-control);
+  color: var(--color-text-muted);
+}
+
+.search:focus-within {
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 3px var(--color-focus-halo);
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+}
+
+/* Stacked filters (toolbar) */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.stackLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  height: 32px;
+  padding: 0 var(--spacing-1) 0 var(--spacing-3);
+  border: 1px solid var(--color-selected-border);
+  border-radius: var(--radius-full);
+  background: var(--color-selected-bg);
+  color: var(--color-action-primary-contrast);
+  font-size: var(--font-size-sm);
+}
+
+.chipDimension {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.remove {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 70%);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.clear {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 0;
+  background: transparent;
+  color: var(--color-link);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* "+ Filtro" with nothing left that would change the results. */
+.adderEmpty {
+  margin: 0;
+  padding: var(--spacing-2) var(--spacing-3);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}

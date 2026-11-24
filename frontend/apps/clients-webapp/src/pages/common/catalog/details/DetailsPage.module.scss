@@ -1,0 +1,111 @@
+.root {
+  flex: 1 0 auto;
+  background: var(--color-bg-canvas);
+}
+
+.entry {
+  display: grid;
+}
+
+.content {
+  display: grid;
+  gap: var(--spacing-6);
+  max-width: var(--layout-max-width, 1120px);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-8) var(--space-page-gutter) var(--spacing-16);
+}
+
+.state {
+  padding-top: var(--spacing-10);
+}
+
+.layout {
+  display: grid;
+  gap: var(--spacing-6);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+/* Onde | O quê: two short columns inside one card, stacked on narrow screens. */
+.factsCard {
+  container-type: inline-size;
+}
+
+.factGroups {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+@container (min-width: 560px) {
+  .factGroups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .factGroup + .factGroup {
+    padding-left: var(--spacing-6);
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+.factGroup {
+  min-width: 0;
+}
+
+@container (min-width: 560px) {
+  .single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.factGroup .cardTitle {
+  margin-bottom: var(--spacing-3);
+  font-size: var(--font-size-md);
+}
+
+.mapCard {
+  display: grid;
+  gap: var(--spacing-3);
+}
+
+.mapCard .cardTitle {
+  margin-bottom: 0;
+}
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  justify-self: start;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.main,
+.aside {
+  display: grid;
+  gap: var(--spacing-6);
+  min-width: 0;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0 0 var(--spacing-5);
+  color: var(--color-text-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cardIcon {
+  color: var(--color-structure-bg);
+
+  --icon-tint: var(--color-agua-500);
+  --icon-tint-opacity: 0.2;
+}

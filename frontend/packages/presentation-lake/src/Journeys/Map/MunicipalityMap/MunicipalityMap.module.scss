@@ -1,0 +1,427 @@
+.root {
+  /* The figure measures itself (markers, caption); the caption is placed against it. */
+  container: municipality-map / inline-size;
+  position: relative;
+  display: grid;
+  gap: var(--spacing-3);
+  margin: 0;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle, var(--color-nevoa-200));
+  border-radius: var(--radius-lg, 12px);
+  background: var(--color-agua-100);
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.water {
+  fill: var(--color-agua-100);
+}
+
+.context {
+  fill: var(--color-nevoa-100);
+  stroke: var(--color-nevoa-0);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.municipality {
+  cursor: pointer;
+  outline: none;
+}
+
+.shape {
+  fill: var(--map-fill);
+  stroke: var(--color-nevoa-0);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  transition:
+    stroke var(--duration-fast) var(--easing-standard),
+    filter var(--duration-fast) var(--easing-standard);
+}
+
+.highlighted .shape,
+.municipality:focus-visible .shape {
+  stroke: var(--color-nevoa-950);
+  stroke-width: 3.5;
+  filter: drop-shadow(0 4px 10px rgb(11 23 26 / 25%));
+}
+
+/* Markers (v0.8): orange badge = initiatives, purple circle = studies (sized by count). */
+.marker {
+  cursor: pointer;
+}
+
+.marker circle {
+  stroke: var(--color-nevoa-950);
+  stroke-width: 2;
+  transition: stroke-width var(--duration-fast) var(--easing-standard);
+}
+
+/* A marker opens its place filtered by its kind (v0.9.6): it answers the pointer. */
+.marker:hover circle {
+  stroke-width: 3.5;
+}
+
+.markerProject circle {
+  fill: var(--color-kind-project);
+}
+
+.markerStudy circle {
+  fill: var(--color-kind-study);
+}
+
+.marker text {
+  fill: var(--color-nevoa-950);
+  font-family: var(--font-family-sans);
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--font-weight-bold);
+  pointer-events: none;
+}
+
+.highlighted .marker circle {
+  stroke-width: 3.5;
+}
+
+/* Bay sectors: dashed zones in the water; the land drawn after hides the overshoot. */
+.zone {
+  cursor: pointer;
+  outline: none;
+}
+
+.zoneShape {
+  fill: var(--color-agua-200);
+  fill-opacity: 0;
+  stroke: var(--color-agua-700);
+  stroke-dasharray: 7 6;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  transition: fill-opacity var(--duration-fast) var(--easing-standard);
+}
+
+.zoneHighlighted .zoneShape,
+.zone:focus-visible .zoneShape {
+  fill-opacity: 0.85;
+  stroke: var(--color-nevoa-950);
+}
+
+.sectorLabel {
+  cursor: pointer;
+}
+
+/*
+ * Municipality names (v0.9.30): dark capitals with a white halo, smaller than
+ * the sectors' teal names, so places on land and zones in the water read
+ * apart. The layer lets the pointer through to the shapes.
+ */
+.municipalityNames {
+  pointer-events: none;
+}
+
+.municipalityName {
+  fill: var(--color-nevoa-900);
+  font-family: var(--font-family-sans);
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  paint-order: stroke;
+  stroke: var(--color-nevoa-0);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.municipalityNameActive {
+  fill: var(--color-structure-bg);
+}
+
+/* On phones the map is too small for names to read (about 5px); the caption names the place on tap. */
+@media (max-width: 559px) {
+  .municipalityNames {
+    display: none;
+  }
+}
+
+.sectorName {
+  fill: var(--color-structure-bg);
+  font-family: var(--font-family-sans);
+  font-size: 19px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  paint-order: stroke;
+  stroke: var(--color-nevoa-0);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+/* Name and counts of the municipality under the pointer or focus. */
+/*
+ * The caption (v0.9.13): larger, a little lower, and — where the Page gives it
+ * room (--map-caption-left, negative) — across the map's left edge, half on
+ * the white panel. White inside, outlined in the colour of the place.
+ */
+.caption {
+  position: absolute;
+  z-index: 1;
+  /* A Page can line things up with the caption's top (Mapa's band, v0.9.23). */
+  top: var(--map-caption-top, var(--spacing-8));
+  left: var(--map-caption-left, var(--spacing-3));
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-2);
+  width: 15rem;
+  min-height: 9.5rem;
+  margin: 0;
+  padding: var(--spacing-4) var(--spacing-5);
+  border-radius: var(--radius-lg, 12px);
+  background: var(--color-nevoa-0, #fff);
+  box-shadow:
+    0 0 0 1px rgb(11 23 26 / 12%),
+    var(--shadow-md, 0 8px 24px rgb(11 23 26 / 12%));
+  color: var(--color-text-heading);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-snug, 1.35);
+  pointer-events: none;
+}
+
+.captionName {
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Before any place is pointed at, the hint sits in the middle of the same box. */
+.caption:not(.captionPlace) {
+  align-content: center;
+}
+
+.hint {
+  color: var(--color-text-secondary);
+}
+
+/* Outlined in the colour of the place under the pointer (v0.9.10). */
+.captionPlace {
+  /* 4px of the place's colour inside a hairline, so even the lightest green shows. */
+  box-shadow:
+    inset 0 0 0 4px var(--caption-fill),
+    0 0 0 1px rgb(11 23 26 / 18%),
+    var(--shadow-md, 0 8px 24px rgb(11 23 26 / 12%));
+  transition: box-shadow var(--duration-fast) var(--easing-standard);
+}
+
+/* Initiatives over studies: a big number and its word, on the lightest orange and purple… */
+.captionKind {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-md, 8px);
+  color: var(--color-nevoa-950);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: background var(--duration-fast) var(--easing-standard);
+}
+
+.captionCount {
+  min-width: 1.5ch;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.captionProject {
+  background: var(--color-kind-project-chip);
+}
+
+.captionStudy {
+  background: var(--color-kind-study-chip);
+}
+
+/* …and in the marker's own colour while the pointer is on that marker. */
+.captionProject.captionKindActive {
+  background: var(--color-kind-project);
+}
+
+.captionStudy.captionKindActive {
+  background: var(--color-kind-study);
+}
+
+/* --------------------------------------------------- the whole bay pill */
+.wholeBay {
+  position: absolute;
+  right: var(--spacing-3);
+  bottom: var(--spacing-3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+}
+
+.wholeBayButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-1) var(--spacing-1) var(--spacing-3);
+  border: 2px dashed var(--color-agua-700);
+  border-radius: var(--radius-full);
+  background: rgb(255 255 255 / 85%);
+  color: var(--color-text-heading);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--easing-standard);
+}
+
+.wholeBayButton:hover,
+.wholeBayHighlighted {
+  background: var(--color-agua-200);
+}
+
+.wholeBayButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.wholeBayName {
+  margin-right: var(--spacing-1);
+}
+
+.pillMarker {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 6px;
+  border: 2px solid var(--color-nevoa-950);
+  border-radius: var(--radius-full);
+  color: var(--color-nevoa-950);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.pillMarker:hover {
+  border-width: 3px;
+}
+
+.pillProject {
+  background: var(--color-kind-project);
+}
+
+.pillStudy {
+  background: var(--color-kind-study);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2) var(--spacing-4);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.legendTitle {
+  color: var(--color-text-heading);
+  font-weight: var(--font-weight-semibold);
+}
+
+.legendList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2) var(--spacing-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legendList li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--map-fill);
+  box-shadow: inset 0 0 0 1px rgb(11 23 26 / 12%);
+}
+
+.swatchNone {
+  background: var(--color-nevoa-100);
+}
+
+.swatchWater {
+  background: var(--color-agua-100);
+}
+
+.swatchSector {
+  background: var(--color-agua-100);
+  box-shadow: none;
+  outline: 2px dashed var(--color-agua-700);
+  outline-offset: -2px;
+}
+
+.legendGroup {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2) var(--spacing-3);
+}
+
+.legendCircle,
+.legendBadge {
+  display: block;
+}
+
+.legendBadge circle {
+  fill: var(--color-kind-project);
+  stroke: var(--color-nevoa-950);
+  stroke-width: 1.25;
+}
+
+.legendCircle circle {
+  fill: var(--color-kind-study);
+  stroke: var(--color-nevoa-950);
+  stroke-width: 1.25;
+}
+
+/* Small maps (phones): bigger badges, and the caption under the map, not over it. */
+/* Markers keep a readable size as the map narrows (v0.9.6: a middle step for the three-column Mapa). */
+@container municipality-map (min-width: 561px) and (max-width: 760px) {
+  .cluster {
+    transform: scale(1.35);
+  }
+}
+
+@container municipality-map (max-width: 560px) {
+  .cluster {
+    transform: scale(1.7);
+  }
+
+  .caption {
+    position: static;
+    width: auto;
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape {
+    transition: none;
+  }
+}
