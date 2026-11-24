@@ -1,3 +1,8 @@
+
+
+
+
+
 # Portal Guanabara
 
 **Who studies and who acts for Guanabara Bay, in one place.** Portal Guanabara gathers the initiatives that clean, collect and restore the bay and the studies that measure litter in its waters, rivers and mangroves — with the institutions behind them — from the mapping by Instituto BVRio, an applied research project with FAPERJ scholarships.
